@@ -1,0 +1,2 @@
+[26-Jan-2024 06:35:23 UTC] PHP Warning:  Array to string conversion in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/CMPE2550/ica02/index.php on line 3
+[26-Jan-2024 06:35:43 UTC] PHP Warning:  Undefined array key "currPlayer" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/CMPE2550/ica02/index.php on line 3

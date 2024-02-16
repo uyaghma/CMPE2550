@@ -1,0 +1,13 @@
+[31-Jan-2024 22:32:00 UTC] In DB Util File
+[31-Jan-2024 22:32:00 UTC] Connection is successful
+[31-Jan-2024 22:32:00 UTC] Inside MyselectQuery function
+[31-Jan-2024 22:32:00 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Unknown column 'sim' in 'field list' in /home/aulakhha/public_html/1232/CMPE2550A02/Demos/Demo03/dbUtil.php:64
+Stack trace:
+#0 /home/aulakhha/public_html/1232/CMPE2550A02/Demos/Demo03/dbUtil.php(64): mysqli->query('call getDataWit...')
+#1 /home/aulakhha/public_html/1232/CMPE2550A02/Demos/Demo03/Demo03.php(86): mySelectQuery('call getDataWit...')
+#2 {main}
+  thrown in /home/aulakhha/public_html/1232/CMPE2550A02/Demos/Demo03/dbUtil.php on line 64
+[31-Jan-2024 22:33:49 UTC] In DB Util File
+[31-Jan-2024 22:33:49 UTC] Connection is successful
+[31-Jan-2024 22:33:49 UTC] Inside MyselectQuery function
+[31-Jan-2024 22:33:49 UTC] Before returning results

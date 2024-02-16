@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap');
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: #040D12;
+    color: #93B1A6;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h1 {
+    font-size: 55px;
+    margin-left: 15px;
+    text-align: center;
+}
+
+#site {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#status {
+    height: 50px;
+    margin-bottom: 25px;
+}
+
+.right {
+    border-left: 2px #5C8374 solid;
+    width: 100px;
+    height: 100px;
+}
+
+.left {
+    border-right: 2px #5C8374 solid;
+    width: 100px;
+    height: 100px;
+}
+
+.top {
+    border-bottom: 4px #5C8374 solid;
+    width: 100px;
+    height: 100px;
+}
+
+.bottom {
+    border-top: 4px #5C8374 solid;
+    width: 100px;
+    height: 100px;
+}
+
+.middle {
+    border-left: 2px #5C8374 solid;
+    border-right: 2px #5C8374 solid;
+    width: 100px;
+    height: 100px;
+}
+
+#gamebox {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-top: 5%;
+}
+
+.game {
+    width: 308px;
+    height: 308px;
+}
+
+.toprow, .bottomrow, .centerrow {
+    display: flex;
+    flex-direction: row;
+}
+
+input[type=text] {
+    width: 200px;
+}
+
+input[name=p1name], input[name=p2name] {
+    font-family: inherit;
+    padding: 5px;
+    margin: 0;
+}
+
+#player-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 1%;
+}
+
+#inputs, #buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 90px;
+}
+
+#buttons {
+    margin-top: 15px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+input[name=square] {
+    width: 96px;
+    height: 96px;
+    border: none;
+    background-color: transparent;
+    margin: 0;
+    color: #93B1A6;
+    text-align: center;
+    font-size: 65px;
+    padding-top: 6px;
+    font-weight: bold;
+}
+
+input[name=square]:focus {
+    outline: none;
+}
+
+input[name=pname] {
+    background-color: #183D3D;
+    color: #93B1A6;
+    padding: 5px;
+    border: 1px #5C8374 solid;
+}
+
+input[name=pname]:focus {
+    outline: none;
+}
+
+input {
+    font-size: 14pt;
+    font-family: inherit;
+}
+
+input[type=button] {
+    border: none;
+    background-color: #93B1A6;
+    color: #040D12;
+    padding: 8px 12px 5px 12px;
+    border-radius: 6px;
+}
+
+input[type=button]:hover {
+    background-color: #729789;
+}
+
+input[type=button]:active {
+    background-color: #496a5d;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}
+
+.area{
+    background: #040D12;  
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.exes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.exes li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 120px;
+	height: 120px;
+    animation: exes 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    border: 20px #183D3D solid;
+    border-radius: 50%;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+}
+
+.circles li:nth-child(1),
+.circles li:nth-child(2),
+.circles li:nth-child(3),
+.circles li:nth-child(4),
+.circles li:nth-child(5),
+.circles li:nth-child(6),
+.circles li:nth-child(7),
+.circles li:nth-child(8) {
+    width: 80px;
+    height: 80px;
+}
+
+.exes li:nth-child(1),
+.exes li:nth-child(2),
+.exes li:nth-child(3),
+.exes li:nth-child(4),
+.exes li:nth-child(5),
+.exes li:nth-child(6),
+.exes li:nth-child(7),
+.exes li:nth-child(8) {
+    width: 120px;
+    height: 120px;
+    background: linear-gradient(to bottom, transparent 40%, #183D3D 40%, #183D3D 60%, transparent 60%), linear-gradient(to right, transparent 40%, #183D3D 40%, #183D3D 60%, transparent 60%);
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes exes {
+    0% {
+        transform: translateY(0) rotate(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+    }
+}

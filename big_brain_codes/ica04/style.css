@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap');
+
+:root {
+    --main: #F6D98F;
+    --light-accent: #FFFFFF;
+    --light-shades: #C08497;
+    --dark-accent: #181D3B;
+    --dark-shades: #3C4A79;
+    --hover: #9e4740;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--dark-accent);
+    color: var(--main);
+    height: 100%;
+}
+
+#header {
+    color: #f1ebe0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 55px;
+    text-align: center;
+}
+
+#site {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+}
+
+table {
+    vertical-align: middle;
+    color: var(--light-accent);
+    border-spacing: 0px 2px;
+}
+
+#table-container {
+    z-index: 10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#headers {
+    font-weight: bold;
+    text-align: center;
+    height: 35px;
+    vertical-align: middle;
+    color: #e8a93f;
+    font-size: 19px;
+    th {
+        border-bottom: var(--light-accent) 2px solid;
+    }
+}
+
+.title-cell {
+    width: 300px;
+}
+
+#gap {
+    width: 15px;
+    background-color: var(--dark-accent);
+}
+
+#wide {
+    width: 170px;
+}
+
+.retrieve-button {
+    margin-bottom: 3px;
+}
+
+.action {
+    width: 80px;
+}
+
+.fetch {
+    width: 175px;
+    margin-bottom: 3px;
+}
+
+.buttons {
+    cursor: pointer;
+    border: var(--light-accent) 2px solid;
+    border-radius: 10px;
+    background-color: var(--dark-accent);
+    user-select: none;
+}
+
+.buttons:hover {
+    color: var(--dark-accent);
+    border: var(--light-accent) 2px solid;
+    background-color: var(--light-accent);
+}
+
+.buttons:active {
+    color: var(--dark-accent);
+    border: var(--light-accent) 2px solid;
+    background-color: #ecf0fd;
+}
+
+#fetch {
+    cursor: pointer;
+    color: var(--light-accent);
+    font-size: 35px;
+}
+
+#fetch:hover {
+    color: var(--hover);
+}
+
+p {
+    margin: 12px 0px 8px 0px;
+}
+
+hr {
+    margin: 4px 0px 4px 0px;
+    border-color: var(--dark-shades);
+}
+
+td {
+    text-align: center;
+    vertical-align: middle;
+    padding: 6px 0px 6px 0px;
+    border-bottom: var(--light-accent) 1px solid;
+}
+
+#retrieve {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: 165px;
+}
+
+.area{
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: var(--dark-accent);  
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    height: 97%;
+    overflow: hidden;
+    margin: 0;
+    padding: 15px;
+}
+
+.circles li{
+    position: absolute;
+    display: block;
+    list-style: none;
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+    color: #81949e;
+    font-size: 50px;
+}
+
+.circles li:nth-child(1),
+.circles li:nth-child(2),
+.circles li:nth-child(3),
+.circles li:nth-child(4),
+.circles li:nth-child(5),
+.circles li:nth-child(6),
+.circles li:nth-child(7),
+.circles li:nth-child(8),
+.circles li:nth-child(9),
+.circles li:nth-child(10),
+.circles li:nth-child(11),
+.circles li:nth-child(12),
+.circles li:nth-child(13),
+.circles li:nth-child(14),
+.circles li:nth-child(15) {
+    width: 50px;
+    height: 50px;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateY(0);
+        opacity: 0.1;
+    }
+
+    100% {
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+}
+
+.material-symbols-outlined {
+    font-size: 40px;
+    color: var(--light-accent);
+}

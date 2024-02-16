@@ -1,0 +1,217 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap');
+
+:root {
+    --main: #28ABE2;
+    --light-accent: #6F828C;
+    --light-shades: #F2F3F3;
+    --dark-accent: #5B5874;
+    --dark-shades: #221E2D;
+    --p2: #EBA25D;
+}
+
+html {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--dark-shades);
+    color: var(--light-shades);
+    height: 100%;
+    user-select: none;
+}
+
+h1 {
+    font-size: 55px;
+    text-align: center;
+    margin-top: 25px;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.area {
+    background: var(--dark-shades);
+    width: 100%;
+    height: 100%;
+}
+
+.gamename {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.gamename li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    opacity: 0;
+    height: 100px;
+    animation: animate 12s linear infinite;
+    z-index: -1;
+    user-select: none;
+}
+
+.gamename li:nth-child(1),
+.gamename li:nth-child(2),
+.gamename li:nth-child(3),
+.gamename li:nth-child(4),
+.gamename li:nth-child(5),
+.gamename li:nth-child(6),
+.gamename li:nth-child(7),
+.gamename li:nth-child(8),
+.gamename li:nth-child(9),
+.gamename li:nth-child(10),
+.gamename li:nth-child(11),
+.gamename li:nth-child(12),
+.gamename li:nth-child(13),
+.gamename li:nth-child(14),
+.gamename li:nth-child(15),
+.gamename li:nth-child(16) {
+    font-family: inherit;
+    color: var(--dark-accent);
+}
+
+@keyframes animate {
+    0% {
+        transform: scale(1.0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.75);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2.5);
+        opacity: 0;
+    }
+}
+
+#site {
+    margin-top: 1%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+#status {
+    height: 50px;
+    margin-bottom: 5px;
+    font-size: 23px;
+}
+
+input[name=p1name],
+input[name=p2name] {
+    font-family: inherit;
+    padding: 5px;
+    margin: 0;
+}
+
+input[name=pname] {
+    background-color: var(--dark-shades);
+    color: inherit;
+    padding: 5px;
+    border: 1px var(--dark-accent) solid;
+    width: 200px;
+}
+
+input[name=pname]:focus {
+    outline: none;
+}
+
+input {
+    font-size: 14pt;
+    font-family: inherit;
+}
+
+input[type=button] {
+    border: none;
+    background-color: var(--light-accent);
+    color: var(--light-shades);
+    padding: 8px 12px 5px 12px;
+    border-radius: 6px;
+}
+
+input[type=button]:hover {
+    background-color: #81949e;
+}
+
+input[type=button]:active {
+    background-color: #515f67;
+}
+
+#gameboard {
+    width: 584px;
+    height: 573px;
+    border: 1px var(--dark-accent) solid;
+}
+
+#gamebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.col {
+    height: 71px;
+    width: 71px;
+    display: flex;
+    flex-direction: column;
+    font-size: 120px;
+    text-align: center;
+    padding: 3px 0 0 0;
+    border: 1px var(--dark-accent) solid;
+    outline: none;
+    font-family: inherit;
+    margin: 0;
+    cursor: pointer;
+    background-color: inherit;
+    caret-color: transparent;
+}
+
+.row {
+    width: 570px;
+    height: 71px;
+    display: flex;
+    flex-direction: row;
+    background: var(--dark-shades);
+}
+
+#player-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#inputs,
+#buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 90px;
+}
+
+#buttons {
+    margin-top: 15px;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#pieces {
+    margin: 0;
+    font-size: 110px;
+    margin-top: -33px;
+}

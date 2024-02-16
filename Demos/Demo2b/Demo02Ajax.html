@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Demo 02 Ajax Calls</title>
+        <!-- Link to Ajax library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"> </script>
+        
+        <!-- Link to your script -->
+        <script src="code.js"></script>
+        <style>
+            button
+            {
+                padding: 10px;
+                background-color: maroon;
+                color: white;
+            }
+            section
+            {
+                border: 2px dashed green;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Ajax requests on this page.</h1>
+        
+        <hr>
+        <h2> Press different buttons to test Ajax calls</h2>
+        <button id="b1">No Data passed from client Expecting HTML</button><br><br>
+        <button id="b2">Data passed from client Expecting HTML</button><br><br>
+        <button id="b3">Data passed from client Expecting Array</button><br><br>
+        <button id="b4">Data passed from client Expecting JSON</button><br><br>
+
+        <button id="b5">Wrong Call </button><br><br>
+        <hr>
+        <h2>Data returned from server will be displayed below.</h2>
+        <section></section>
+
+    </body>
+</html>

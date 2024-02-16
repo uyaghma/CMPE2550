@@ -1,0 +1,104 @@
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 91
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 91
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 91
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 121
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 121
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p2" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 121
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 122
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 126
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 248
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 248
+[16-Feb-2024 18:41:04 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 136
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 91
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 91
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 91
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Trying to access array offset on value of type null in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 196
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 190
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 191
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "turn" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 121
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 121
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p2" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 121
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "p1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 122
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 126
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 248
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  foreach() argument must be of type array|object, null given in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 248
+[16-Feb-2024 18:41:06 UTC] PHP Warning:  Undefined array key "gameboard" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab01/gameplay.php on line 136
