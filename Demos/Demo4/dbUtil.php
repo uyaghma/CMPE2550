@@ -56,6 +56,7 @@
             error_log("No active connection");
             $mysql_status = "No active connection";
             return $results;
+
         }
         else
         {
@@ -69,4 +70,37 @@
             error_log("Before returning results");
             return $results;
         }
+    }
+    // function for executing non-select statements
+    function myNonSelectQuery($query)
+    {
+        error_log("Inside MyNonselectQuery function");
+        // Grab hold on to connection varaibles first
+        global $mysql_connetion, $mysql_response, $mysql_status; 
+
+        //validate your connection
+        if($mysql_connetion == null)
+        {
+            error_log("No active connection");
+            $mysql_status = "No active connection";
+            echo $mysql_status;
+
+        }
+        else
+        {
+            // query will only return true or false when no result
+            // set is retunred
+
+            if( !($mysql_connetion-> query( $query)))
+            {  // handling false case
+
+                $mysql_response[]= "Query errro {$mysql_connetion->errno}  : {$mysql_connetion->error}";
+                echo json_encode ($mysql_response);
+            }
+            // Worked fine
+
+            return $mysql_connetion-> affected_rows; // Will return the number of rows affected
+
+        }
+
     }
