@@ -40,3 +40,36 @@
         }
         echo $html;
     }
+
+    if (isset($_REQUEST['action'])) 
+    {
+        switch ($_REQUEST['action'])
+        {
+            case "delete":
+                Delete();
+                break;
+            case "update":
+                Update();
+                break;
+        }
+    }
+
+    function Delete() 
+    {
+        $id = $_REQUEST['id'];
+
+        $query = "DELETE from titles where title_id='";
+        $query .= $id . "';";
+
+        mySelectQuery($query);
+        echo "select statement: " . $query;
+    }
+
+    function Update()
+    {
+        $id = $_REQUEST['id'];
+
+        $query = "UPDATE titles ";
+        $query .= "";
+
+    }

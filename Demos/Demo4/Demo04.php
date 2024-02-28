@@ -18,7 +18,7 @@
     //error_log("After using escapestring function " .$name);
 
     //Procedural style
-                                // Connection object , Variable/value 
+                                        // Connection object , Variable/value 
     $name = mysqli_real_escape_string(  $mysql_connetion, strip_tags( trim($name)) );
 
     error_log("After using escapestring function " .$name);
@@ -40,6 +40,3 @@
     $numRows = myNonSelectQuery($query);
 
     echo "<br>Number of rows Deleted are ". $numRows;
-
-
-?>
