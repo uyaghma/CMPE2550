@@ -71,5 +71,4 @@
 
         $query = "UPDATE titles ";
         $query .= "";
-
     }
