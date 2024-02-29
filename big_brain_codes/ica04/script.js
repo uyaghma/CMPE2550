@@ -1,99 +1,75 @@
 $(document).ready(function () {
-    $("#table-container").hide();
-    // Function to get a random value within a specified range
-    function getRandomValue(min, max) {
-        return Math.random() * (max - min) + min;
-    }
+    var au_id;
 
-    // Function to generate a valid position for game elements
-    function validPos() {
-        let pos = getRandomValue(0, 90);
-        while (pos > 25 && pos < 75) {
-            pos = getRandomValue(0, 90);
-        }
-        return pos;
-    }
-
-    // Position and animate circle elements
-    $('.circles li').each(function (index, circle) {
-        $(circle).css({
-            left: `${validPos()}%`,
-            animationDelay: `${getRandomValue(1, 15)}s`
-        });
-    });
-
-    $('.fetch').click(function() {
-        $("#retrieve").hide();
-        var id = $(this).attr('id');
-
+    $(".btn").click(function () 
+    {
+        var id = $(this).attr("id"); 
         console.log(id);
+        au_id = id;
 
         data = {
+            action: 'retrieve', 
             id: id
         }
 
-        CallAjax('ws.php', data, "POST", "html", RetrieveSuccess, RetrieveError);
-    });
-
-    $("#fetch").click(function () { 
-        $("#table-container").slideDown(500);
-        $(".circles").css("height", "190%");
-        $(this).hide();
+        CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
     });
 
     function RetrieveSuccess(response) {
-        $("#retrieve").html(response);
+        $("#retrieve-container").html(response);
 
-        setTimeout(function () {
-            $("#retrieve").slideDown(500);
-        }, 250);
-
-        $(".delete").click(function () {
-            // Delete functionality
+        $('.edit').click(function () {  
+            var id = $(this).attr("id"); 
+            data = {
+                action: 'edit', 
+                id: au_id,
+                t_id: id
+            }
+    
+            CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
         });
 
-        $(".edit").click(function () {
-            var id = $(this).attr("id");
-            var deleteButton = $(`.delete#${id}`);
-            var titleCell = $(`.title-cell#${id}`);
-            var titleText = titleCell.text();
-            var inputField = $(`<input type='text' name='inputs' class='edit-input' value='${titleText}'>`);
-            
-            if ($(this).hasClass("cancel")) {
-                // Cancel functionality
-                titleCell.html(titleText);
-                $(this).html("Edit");
-                deleteButton.html("Delete");
-            } else {
-                // Edit functionality
-                titleCell.html(inputField);
-                $(this).html("Cancel");
-                deleteButton.html("Update");
+        $('.cancel').click(function () { 
+            data = {
+                action: 'retrieve', 
+                id: au_id
             }
-            $(this).toggleClass("cancel");
+    
+            CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
+        });
 
-            deleteButton.off("click"); // Remove previous click event handler
+        $('.update').click(function () { 
+            var id = $(this).attr("id"); 
+            var title = $(`.title-cell#${id}`).val();
+            var type = $(`.type-cell#${id}`).val();
+            var price = $(`.price-cell#${id}`).val();
 
-            deleteButton.click(function () {
-                var id = $(this).attr("id");
-                var editButton = $(`.edit#${id}`);
-                var title = $(`.title-cell#${id}`);
-                var input = title.find("input.edit-input").val(); // Get input field value
+            data = {
+                action: 'update', 
+                id: au_id,
+                t_id: id,
+                title: title,
+                type: type,
+                price: price
+            }
+    
+            CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
+        });
 
-                if (editButton.hasClass("cancel")) {
-                    // Update functionality
-                    title.html(input);
-                    editButton.html("Edit");
-                    $(this).html("Delete");
-                } else {
-                    // Delete functionality
-                    // Code to delete entry
-                }
-                editButton.toggleClass("cancel");
-            });
+        $('.delete').click(function () {
+            var id = $(this).attr("id");  
+            data = {
+                action: 'delete', 
+                au_id: au_id,
+                id: id
+            }
+    
+            CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
         });
     }
-    function RetrieveError(xhr, textStatus, errorThrown) {
+    
+    function RetrieveError(xhr, textStatus, errorThrown) 
+    {
         console.error("AJAX error:", textStatus, errorThrown);
     }
 
@@ -113,4 +89,4 @@ $(document).ready(function () {
         con.done(fxnSuccess);
         con.fail(fxnError);
     }
-});
+})
