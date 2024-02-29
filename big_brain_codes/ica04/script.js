@@ -1,11 +1,14 @@
 $(document).ready(function () {
     var au_id;
+    $("#retrieve-container").hide(500);
 
     $(".btn").click(function () 
     {
         var id = $(this).attr("id"); 
         console.log(id);
         au_id = id;
+
+        $("#retrieve-container").show(500);
 
         data = {
             action: 'retrieve', 
@@ -44,24 +47,68 @@ $(document).ready(function () {
             var type = $(`.type-cell#${id}`).val();
             var price = $(`.price-cell#${id}`).val();
 
-            data = {
-                action: 'update', 
-                id: au_id,
-                t_id: id,
-                title: title,
-                type: type,
-                price: price
+            if (title === null || title === "")
+            {
+                $(`.title-check#${id}`).find('caption').remove();
+                $(`.title-check#${id}`).append("<caption style='width: 100%; padding-top: 0;'>Please input a valid title.</caption>");
+                $(`.title-check#${id}`).find('input').css("border", "red 2px solid");
+                $(`.title-check#${id}`).find('input').effect("shake", { times:3 }, 350);
+                $(`.type-check#${id}`).find('caption').remove();
+                $(`.price-check#${id}`).find('caption').remove();
             }
-    
-            CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
+            else if (type === null || type === "")
+            {
+                $(`.type-check#${id}`).find('caption').remove();
+                $(`.type-check#${id}`).append("<caption style='width: 100%; padding-top: 0;'>Please select a type.</caption>");
+                $(`.type-check#${id}`).find('input').css("border", "red 2px solid");
+                $(`.type-check#${id}`).find('input').effect("shake", { times:3 }, 350);
+                $(`.title-check#${id}`).find('caption').remove();
+                $(`.price-check#${id}`).find('caption').remove();
+            }
+            else if (price === null || price === "")
+            {
+                $(`.price-check#${id}`).find('caption').remove();
+                $(`.price-check#${id}`).append("<caption style='width: 100%; padding-top: 0;'>Please input a price.</caption>");
+                $(`.price-check#${id}`).find('input').css("border", "red 2px solid");
+                $(`.price-check#${id}`).find('input').effect("shake", { times:3 }, 350);
+                $(`.title-check#${id}`).find('caption').remove();
+                $(`.type-check#${id}`).find('caption').remove();
+            }
+            else 
+            {
+                $(`.title-check#${id}`).find('caption').remove();
+                $(`.type-check#${id}`).find('caption').remove();
+                $(`.price-check#${id}`).find('caption').remove();
+
+                if (!isNaN(price)) 
+                {
+                    data = {
+                        action: 'update',
+                        id: au_id,
+                        t_id: id,
+                        title: title,
+                        type: type,
+                        price: price
+                    }
+            
+                    CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
+                }
+                else
+                {
+                    $(`.price-check#${id}`).find('caption').remove();
+                    $(`.price-check#${id}`).append("<caption style='width: 100%; padding-top: 0;'>Please input a valid number.</caption>");
+                    $(`.price-check#${id}`).find('input').css("border", "red 2px solid");
+                    $(`.price-check#${id}`).find('input').effect("shake", { times:3 }, 350);
+                }
+            }
         });
 
         $('.delete').click(function () {
             var id = $(this).attr("id");  
             data = {
                 action: 'delete', 
-                au_id: au_id,
-                id: id
+                id: au_id,
+                t_id: id
             }
     
             CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);

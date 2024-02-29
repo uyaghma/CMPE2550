@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;300;400;700&display=swap');
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+:root {
+    /* Primary: Emerald Ice Palace */
+    --primary-100: #F2FFFC;
+    --primary-200: #C2FFEB;
+    --primary-300: #90FCD3;
+    --primary-400: #5EF6B3;
+    --primary-500: #2DEB8C;
+    --primary-600: #0FBA5A;
+    --primary-700: #038836;
+    --primary-800: #00571D;
+    --primary-900: #00260A;
+
+    /* Accent: Puissant Purple */
+    --accent-100: #FCF2FF;
+    --accent-200: #E8BBFE;
+    --accent-300: #CB81F9;
+    --accent-400: #A247E9;
+    --accent-500: #6F12CC;
+    --accent-600: #4B06A3;
+    --accent-700: #2F0179;
+    --accent-800: #1A0050;
+    --accent-900: #0A0026;
+
+    /* Neutral */
+    --neutral-100: #FAFCFC;
+    --neutral-200: #E9EEEC;
+    --neutral-300: #D8DFDD;
+    --neutral-400: #C8D0CD;
+    --neutral-500: #B8C2BD;
+    --neutral-600: #919B96;
+    --neutral-700: #6B746F;
+    --neutral-800: #464D49;
+    --neutral-900: #222623;
+}
+
+.header {
+    margin: 5px 10px 0px 5px;
+    background-color: var(--neutral-100);
+    color: var(--accent-800);
+    padding-top: 15px;
+    font-weight: bold;
+    height: 75px;
+}
+
+.main {
+    background-color: var(--neutral-100);
+    margin: 0px 10px 0px 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.container-sm {
+    border: var(--primary-300) 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.ret-buttons {
+    width: 220px;
+}
+
+h1 {
+    font-weight: bold;
+    margin: 0;
+}
+
+.table td, .table th {
+    padding: .25rem;
+    vertical-align: middle;
+    border-top: 1px solid var(--primary-400);
+    text-align: center;
+}
+
+thead {
+    text-align: center;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid var(--primary-300);
+    border-top: none;
+    color: var(--accent-700);
+}
+
+.table {
+    margin-bottom: 0px;
+}
+
+.btn-primary {
+    color: var(--primary-100);
+    background-color: var(--primary-600);
+    border-color: var(--primary-600);
+    width: 100%;
+}
+
+.delete, .edit, .update, .cancel {
+    width: 48%;
+}
+
+.delete, .update {
+    margin-right: 2px;
+}
+
+caption {
+    padding-bottom: 0;
+    padding-top: 0.25rem;
+    width: 100%;
+}
+
+#retrieve-container {
+    margin-bottom: 10px;
+}

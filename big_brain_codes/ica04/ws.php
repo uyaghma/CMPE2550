@@ -31,7 +31,7 @@ function Retrieve()
             $titles = 0;
             $html = "<table class='table'>
             <thead id='headers'>
-                <th>Action</th>
+                <th class='ret-buttons'>Action</th>
                 <th>Title ID</th>
                 <th id='title-cell'>Title</th>
                 <th>Type</th>
@@ -39,7 +39,7 @@ function Retrieve()
             </thead><tbody>";
             while ($trow = $tresults->fetch_assoc()) {
                 $html .= "<tr>"
-                    . "<td><a type='button' class='btn btn-primary rounded-pill px-3 delete' id='" . $trow['title_id'] . "'>Delete</a>"
+                    . "<td class='ret-buttons'><a type='button' class='btn btn-primary rounded-pill px-3 delete' id='" . $trow['title_id'] . "'>Delete</a>"
                     . "<a type='button' class='btn btn-primary rounded-pill px-3 edit' id='" . $trow['title_id'] . "'>Edit</a></td>"
                     . "<td>" . $trow['title_id'] . "</td>"
                     . "<td class='title-cell' id='" . $trow['title_id'] . "'>" . $trow['title'] . "</td>"
@@ -69,7 +69,7 @@ function Edit()
             $titles = 0;
             $html = "<table class='table table-sm'>
             <thead id='headers'>
-                <th>Action</th>
+                <th class='ret-buttons'>Action</th>
                 <th>Title ID</th>
                 <th id='title-cell'>Title</th>
                 <th>Type</th>
@@ -80,11 +80,11 @@ function Edit()
 
                 if ($trow['title_id'] === $_REQUEST['t_id']) 
                 {
-                    $html .= "<td><a type='button' class='btn btn-primary rounded-pill px-3 update' id='" . $trow['title_id'] . "'>Update</a>"
+                    $html .= "<td class='ret-buttons'><a type='button' class='btn btn-primary rounded-pill px-3 update' id='" . $trow['title_id'] . "'>Update</a>"
                           . "<a type='button' class='btn btn-primary rounded-pill px-3 cancel' id='" . $trow['title_id'] . "'>Cancel</a></td>"
                           . "<td>" . $trow['title_id'] . "</td>"
-                          . "<td> <input class='title-cell' id='" . $trow['title_id'] . "' placeholder='" . $trow['title'] . "'></td>"
-                          . "<td><select class='form-select type-cell' aria-label='Default select example' id='" . $trow['title_id'] . "'>
+                          . "<td class='title-check' id='" . $trow['title_id'] . "'><input class='title-cell' id='" . $trow['title_id'] . "' placeholder='" . $trow['title'] . "' required></td>"
+                          . "<td class='type-check' id='" . $trow['title_id'] . "'><select class='form-select type-cell' aria-label='Default select example' id='" . $trow['title_id'] . "' required>
                                     <option selected hidden>" . $trow['type'] ."</option>
                                     <option value='business'>business</option>
                                     <option value='mod_cook'>mod_cook</option>
@@ -92,12 +92,12 @@ function Edit()
                                     <option value='psychology'>psychology</option>
                                     <option value='trad_cook'>trad_cook</option>
                                  </select></td>"
-                          . "<td> <input class='price-cell' id='" . $trow['title_id'] . "'placeholder='$" . $trow['price'] . "'></td>"
+                          . "<td class='price-check' id='" . $trow['title_id'] . "'><input class='price-cell' id='" . $trow['title_id'] . "'placeholder='$" . $trow['price'] . "' required></td>"
                           . "</tr>";
                 }
                 else 
                 {
-                    $html .= "<td><a type='button' class='btn btn-primary rounded-pill px-3 delete' id='" . $trow['title_id'] . "'>Delete</a>"
+                    $html .= "<td class='ret-buttons'><a type='button' class='btn btn-primary rounded-pill px-3 delete' id='" . $trow['title_id'] . "'>Delete</a>"
                           . "<a type='button' class='btn btn-primary rounded-pill px-3 edit' id='" . $trow['title_id'] . "'>Edit</a></td>"
                           . "<td>" . $trow['title_id'] . "</td>"
                           . "<td class='title-cell' id='" . $trow['title_id'] . "'>" . $trow['title'] . "</td>"
@@ -140,7 +140,7 @@ function Delete()
 {
     if (isset($_REQUEST['id'])) 
     {
-        $id = $_REQUEST['id'];
+        $id = $_REQUEST['t_id'];
 
         $tquery = "DELETE from titles ";
         $tquery .= "where title_id='" . $id . "'";
@@ -148,8 +148,8 @@ function Delete()
         $aquery = "DELETE from titleauthor ";
         $aquery .= "where title_id='" . $id . "'";
 
-        myNonSelectQuery($tquery);
         myNonSelectQuery($aquery);
+        myNonSelectQuery($tquery);
     }
     Retrieve();
 }
