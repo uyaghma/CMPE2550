@@ -51,10 +51,10 @@ function myNonSelectQuery($query)
 {
     error_log("Inside MyNonselectQuery function");
     // Grab hold on to connection varaibles first
-    global $mysql_connetion, $mysql_response, $mysql_status; 
+    global $mysql_connection, $mysql_response, $mysql_status; 
 
     //validate your connection
-    if($mysql_connetion == null)
+    if($mysql_connection == null)
     {
         error_log("No active connection");
         $mysql_status = "No active connection";
@@ -63,13 +63,13 @@ function myNonSelectQuery($query)
     }
     else
     {
-        if( !($mysql_connetion-> query( $query)))
+        if( !($mysql_connection-> query( $query)))
         {  // handling false case
 
-            $mysql_response[]= "Query error {$mysql_connetion->errno}  : {$mysql_connetion->error}";
+            $mysql_response[]= "Query error {$mysql_connection->errno}  : {$mysql_connection->error}";
             echo json_encode ($mysql_response);
         }
-        return $mysql_connetion -> affected_rows;
+        return $mysql_connection -> affected_rows;
     }
 
 }

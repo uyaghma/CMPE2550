@@ -19,7 +19,7 @@
 
     //Procedural style
                                         // Connection object , Variable/value 
-    $name = mysqli_real_escape_string(  $mysql_connetion, strip_tags( trim($name)) );
+    $name = mysqli_real_escape_string(  $mysql_connection, strip_tags( trim($name)) );
 
     error_log("After using escapestring function " .$name);
 

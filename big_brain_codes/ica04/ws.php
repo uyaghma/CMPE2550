@@ -122,58 +122,34 @@ function Update()
     if (isset($_REQUEST['id'])) {
         $id = $_REQUEST['id'];
         error_log($id);
-        // if (!($tresults = myNonSelectQuery("select ts.title_id, ts.title, ts.type, ts.price from author s join titleauthor t on s.au_id = t.au_id join titles ts on t.title_id = ts.title_id where s.au_id = '$id'"))) {
-        //     echo "Selection query failed";
-        // }
-        if (!($tresults = mySelectQuery("select ts.title_id, ts.title, ts.type, ts.price from author s join titleauthor t on s.au_id = t.au_id join titles ts on t.title_id = ts.title_id where s.au_id = '$id'"))) {
-            echo "Selection query failed";
-        } else {
-            $titles = 0;
-            $html = "<table class='table'>
-            <thead id='headers'>
-                <th>Action</th>
-                <th>Title ID</th>
-                <th id='title-cell'>Title</th>
-                <th>Type</th>
-                <th>Price</th>
-            </thead><tbody>";
-            while ($trow = $tresults->fetch_assoc()) {
-                $html .= "<tr>";
 
-                if ($trow['title_id'] === $_REQUEST['t_id']) 
-                {
-                    $html .= "<td><a type='button' class='btn btn-primary rounded-pill px-3 delete' id='" . $trow['title_id'] . "'>Delete</a>"
-                          . "<a type='button' class='btn btn-primary rounded-pill px-3 edit' id='" . $trow['title_id'] . "'>Edit</a></td>"
-                          . "<td>" . $trow['title_id'] . "</td>"
-                          . "<td class='title-cell' id='" . $trow['title_id'] . "'>" . $_REQUEST['title'] . "</td>"
-                          . "<td class='type-cell' id='" . $trow['title_id'] . "'>" . $_REQUEST['type'] . "</td>"
-                          . "<td class='price-cell' id='" . $trow['title_id'] . "'>$" . $_REQUEST['price'] . "</td>"
-                          . "</tr>";
-                }
-                else 
-                {
-                    $html .= "<td><a type='button' class='btn btn-primary rounded-pill px-3 delete' id='" . $trow['title_id'] . "'>Delete</a>"
-                          . "<a type='button' class='btn btn-primary rounded-pill px-3 edit' id='" . $trow['title_id'] . "'>Edit</a></td>"
-                          . "<td>" . $trow['title_id'] . "</td>"
-                          . "<td class='title-cell' id='" . $trow['title_id'] . "'>" . $trow['title'] . "</td>"
-                          . "<td class='type-cell' id='" . $trow['title_id'] . "'>" . $trow['type'] . "</td>"
-                          . "<td class='price-cell' id='" . $trow['title_id'] . "'>$" . $trow['price'] . "</td>"
-                          . "</tr>";
-                }
-                $titles++;
-            }
-            if ($titles == 0) {
-                $html = "<caption style='width: 100%;'>No titles for this author.</caption>";
-            } else {
-                $html .= "</tbody><caption>Retrieved " . $titles . " author record(s).</caption></table>";
-            }
-        }
-        echo $html;
+        $query = "UPDATE titles ";
+        $query .= "set title='" . $_REQUEST['title'];
+        $query .= "', type='" . $_REQUEST['type'];
+        $query .= "', price='" . $_REQUEST['price'];
+        $query .= "' where title_id='" . $_REQUEST['t_id'] ."'";
+
+        myNonSelectQuery($query);
+        
+        error_log($query);
     }
-    //Retrieve();
+    Retrieve();
 }
 
 function Delete()
 {
+    if (isset($_REQUEST['id'])) 
+    {
+        $id = $_REQUEST['id'];
+
+        $tquery = "DELETE from titles ";
+        $tquery .= "where title_id='" . $id . "'";
+        
+        $aquery = "DELETE from titleauthor ";
+        $aquery .= "where title_id='" . $id . "'";
+
+        myNonSelectQuery($tquery);
+        myNonSelectQuery($aquery);
+    }
     Retrieve();
 }
