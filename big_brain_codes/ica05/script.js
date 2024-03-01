@@ -2,7 +2,7 @@ $(document).ready(function () {
     var au_id;
     $("#retrieve-container").hide(500);
 
-    $(".btn").click(function () 
+    $(".retrieve").click(function () 
     {
         var id = $(this).attr("id"); 
         console.log(id);
@@ -80,7 +80,7 @@ $(document).ready(function () {
                 $(`.type-check#${id}`).find('caption').remove();
                 $(`.price-check#${id}`).find('caption').remove();
 
-                if (!isNaN(price)) 
+                if (!isNaN(price) && price > 0) 
                 {
                     data = {
                         action: 'update',
@@ -114,6 +114,27 @@ $(document).ready(function () {
             CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
         });
     }
+
+    $('.add-book').click(function () {
+        var id = $('#title-id').val();
+        var title = $('#title').val();
+        var type = $('#type').val();
+        var price = $('#price').val();
+        var author = $('#author').val();
+        
+        console.log(id, title, type, price, author);
+
+        data = {
+            action: 'insert',
+            id: id,
+            title: title,
+            type: type,
+            price: price,
+            author: author
+        }
+
+        CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
+    });
     
     function RetrieveError(xhr, textStatus, errorThrown) 
     {

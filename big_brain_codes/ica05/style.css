@@ -117,3 +117,8 @@ caption {
 #retrieve-container {
     margin-bottom: 10px;
 }
+
+#insert-container {
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,63 @@
+[01-Mar-2024 20:52:04 UTC] Connection is successful
+[01-Mar-2024 20:52:04 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:52:04 UTC] Before returning results
+[01-Mar-2024 20:52:04 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:52:04 UTC] Before returning results
+[01-Mar-2024 20:52:04 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:52:04 UTC] Before returning results
+[01-Mar-2024 20:52:08 UTC] Connection is successful
+[01-Mar-2024 20:52:08 UTC] 527-72-3246
+[01-Mar-2024 20:52:08 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:52:08 UTC] Before returning results
+[01-Mar-2024 20:53:13 UTC] Connection is successful
+[01-Mar-2024 20:53:13 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:53:13 UTC] Before returning results
+[01-Mar-2024 20:53:13 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:53:13 UTC] Before returning results
+[01-Mar-2024 20:53:13 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:53:13 UTC] Before returning results
+[01-Mar-2024 20:53:14 UTC] Connection is successful
+[01-Mar-2024 20:53:14 UTC] 427-17-2319
+[01-Mar-2024 20:53:14 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:53:14 UTC] Before returning results
+[01-Mar-2024 20:53:29 UTC] Connection is successful
+[01-Mar-2024 20:54:44 UTC] Connection is successful
+[01-Mar-2024 20:54:44 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:54:44 UTC] Before returning results
+[01-Mar-2024 20:54:44 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:54:44 UTC] Before returning results
+[01-Mar-2024 20:54:44 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:54:44 UTC] Before returning results
+[01-Mar-2024 20:54:45 UTC] Connection is successful
+[01-Mar-2024 20:54:45 UTC] 427-17-2319
+[01-Mar-2024 20:54:45 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:54:45 UTC] Before returning results
+[01-Mar-2024 20:54:58 UTC] Connection is successful
+[01-Mar-2024 20:55:50 UTC] Connection is successful
+[01-Mar-2024 20:55:50 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:55:50 UTC] Before returning results
+[01-Mar-2024 20:55:50 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:55:50 UTC] Before returning results
+[01-Mar-2024 20:55:50 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:55:50 UTC] Before returning results
+[01-Mar-2024 20:55:52 UTC] Connection is successful
+[01-Mar-2024 20:55:52 UTC] 527-72-3246
+[01-Mar-2024 20:55:52 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:55:52 UTC] Before returning results
+[01-Mar-2024 20:56:06 UTC] Connection is successful
+[01-Mar-2024 20:56:41 UTC] Connection is successful
+[01-Mar-2024 20:56:41 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:56:41 UTC] Before returning results
+[01-Mar-2024 20:56:41 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:56:41 UTC] Before returning results
+[01-Mar-2024 20:56:41 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:56:41 UTC] Before returning results
+[01-Mar-2024 20:56:52 UTC] Connection is successful
+[01-Mar-2024 20:56:52 UTC] INSERT INTO titles (title_id, title, type, price) VALUES (nice, cool, popular_comp, 12.56)
+[01-Mar-2024 20:56:52 UTC] INSERT INTO titleauthor (au_id, title_id, au_ord, royaltyper VALUES (172-32-1176, nice, 1, 2)
+[01-Mar-2024 20:56:52 UTC] INSERT INTO titleauthor (au_id, title_id, au_ord, royaltyper VALUES (213-46-8915, nice, 2, 2)
+[01-Mar-2024 20:56:52 UTC] INSERT INTO titleauthor (au_id, title_id, au_ord, royaltyper VALUES (238-95-7766, nice, 3, 2)
+[01-Mar-2024 20:56:52 UTC] INSERT INTO titleauthor (au_id, title_id, au_ord, royaltyper VALUES (267-41-2394, nice, 4, 2)
+[01-Mar-2024 20:56:52 UTC] nice
+[01-Mar-2024 20:56:52 UTC] Inside MyselectQuery function
+[01-Mar-2024 20:56:52 UTC] Before returning results
