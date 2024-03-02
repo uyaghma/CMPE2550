@@ -98,6 +98,17 @@ thead {
     background-color: var(--primary-600);
     border-color: var(--primary-600);
     width: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-700);
+    border-color: var(--primary-700);
+}
+
+.btn-primary:active {
+    background-color: var(--primary-800);
+    border-color: var(--primary-800);
 }
 
 .delete, .edit, .update, .cancel {
@@ -114,11 +125,28 @@ caption {
     width: 100%;
 }
 
-#retrieve-container {
-    margin-bottom: 10px;
-}
-
 #insert-container {
     display: flex;
     flex-direction: column;
+    margin-bottom: 10px;
+    padding: auto;
+}
+
+#innercontainer {
+    border: none;
+}
+
+.row {
+    justify-content: center;
+    text-align: right;
+}
+
+caption {
+    width: 100%;
+}
+
+.none {
+    margin: 0;
+    color: #868e96;
+    text-align: left;
 }

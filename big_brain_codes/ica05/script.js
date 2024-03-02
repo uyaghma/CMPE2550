@@ -133,9 +133,64 @@ $(document).ready(function () {
             author: author
         }
 
-        CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
+        if (Validator(data))
+        {
+            $('#title-id').val('');
+            $('#title').val('');
+            $('#type').val('');
+            $('#price').val('');
+            $('#author').val('');
+            CallAjax('ws.php', data, "GET", "html", RetrieveSuccess, RetrieveError);
+        }
     });
     
+    function Validator(item) {
+        var id = $('#title-id');
+        var title = $('#title');
+        var type = $('#type');
+        var price = $('#price');
+        var author = $('#author');
+
+        id.removeAttr("style");
+        title.removeAttr("style");
+        type.removeAttr("style");
+        price.removeAttr("style");
+        author.removeAttr("style");
+
+        if ((item['id'] != "" || item['id'] != null) && (item['title'] != "" || item['title'] != null) && (item['type'] != "" || item['type'] != null) 
+        && (item['price'] != "" || item['price'] != null) && (item['author'] != "" || item['author'] != null) && (!isNaN[item['price']] && item['price'] > 0)) 
+        {
+            return true;
+        }
+
+        if (item['id'] === "" || item['id'] === null)
+        {
+            id.css("border", "red 2px solid");
+            id.effect("shake", { times:3 }, 350);
+        }
+        if (item['title'] === "" || item['title'] === null)
+        {
+            title.css("border", "red 2px solid");
+            title.effect("shake", { times:3 }, 350);
+        }
+        if (item['type'] === "" || item['type'] === null)
+        {
+            type.css("border", "red 2px solid");
+            type.effect("shake", { times:3 }, 350);
+        }
+        if (item['price'] === "" || item['price'] === null)
+        {
+            price.css("border", "red 2px solid");
+            price.effect("shake", { times:3 }, 350);
+        }
+        if (item['author'] === "" || item['author'] === null)
+        {
+            author.css("border", "red 2px solid");
+            author.effect("shake", { times:3 }, 350);
+        }
+        return false;
+    }
+
     function RetrieveError(xhr, textStatus, errorThrown) 
     {
         console.error("AJAX error:", textStatus, errorThrown);

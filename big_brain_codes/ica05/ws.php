@@ -53,7 +53,7 @@ function Retrieve()
                 $au_name = $trow['au_fname'] . " " . $trow['au_lname'];
             }
             if ($titles == 0) {
-                $html = "<caption style='width: 100%;'>No titles for this author.</caption>";
+                $html = "<label class='none'>No titles for this author.</label>";
             } else {
                 $html .= "</tbody><caption>Retrieved " . $titles . " title(s) for " . $au_name . ".</caption></table>";
             }
@@ -110,7 +110,7 @@ function Edit()
                 $titles++;
             }
             if ($titles == 0) {
-                $html = "<caption style='width: 100%;'>No titles for this author.</caption>";
+                $html = "<label class='none'>No titles for this author.</label>";
             } else {
                 $html .= "</tbody><caption>Retrieved " . $titles . " author record(s).</caption></table>";
             }
@@ -165,17 +165,18 @@ function Insert()
         $author = $_REQUEST['author'];
 
         $num_au = sizeof($author);
-        $royalty = $num_au / 2;
+        $royalty = (int)(100 / $num_au);
+        $price = number_format((float)$price, 2, ".", "");
 
         $query = "INSERT INTO titles (title_id, title, type, price) VALUES ";
-        $query .= "($id, $title, $type, $price)";
-        error_log($query);
+        $query .= "('$id', '$title', '$type', $price)";
+        myNonSelectQuery($query);
 
         for ($i = 0; $i < $num_au; $i++) {
             $j = $i+1;
             $tquery = "INSERT INTO titleauthor (au_id, title_id, au_ord, royaltyper) VALUES ";
-            $tquery .= "($author[$i], $id, $j, $royalty)";
-            error_log($tquery);
+            $tquery .= "('$author[$i]', '$id', $j, $royalty)";
+            myNonSelectQuery($tquery);
         }
     }
     Retrieve();
