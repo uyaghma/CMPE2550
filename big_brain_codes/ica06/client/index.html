@@ -8,14 +8,89 @@
     <meta name="Description" content="Enter your description here" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="style.css">
     <title>ICA06</title>
 </head>
 
 <body>
     <header>
-        
+        <h1 style="text-align: center;">Tim Hortons</h1>
     </header>
+    <main>
+        <div class="order-process container-sm">
+            <div class="location">
+                <h2>Location</h2>
+                <div class="form-group">
+                    <label for="location" class="col-sm-5 col-form-label">Location</label>
+                    <div class="col-sm-5">
+                        <select class="form-control" name="location" id="location">
+                            <option>Nait Campus</option>
+                            <option>Kingsway</option>
+                            <option>University of Alberta</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="menu">
+                <h2>Menu</h2>
+                <ol>
+                    <li>Muffins: $2.29</li>
+                    <li>Croissants: $2.19</li>
+                    <li>Cookies: $1.49</li>
+                    <li>Iced Coffee: $2.49</li>
+                    <li>Pumpkin Spice Iced Capp: $4.29</li>
+                    <li>Caramel Toffee Cold Brew: $3.99</li>
+                </ol>
+            </div>
+            <div class="processing">
+                <h2>Order Processing</h2>
+                <div class="form-group">
+                    <label for="name" class="col-sm-2 col-form-label">Name</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" id="name" placeholder="Name">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="menu" class="col-sm-2 col-form-label">Items Ordered</label>
+                    <div class="col-sm-5">
+                        <select class="form-control" id="menu">
+                            <option value="muffins">Muffins: $2.29</option>
+                            <option value="croissants">Croissants: $2.19</option>
+                            <option value="cookies">Cookies: $1.49</option>
+                            <option value="icedcoffee">Iced Coffee: $4.29</option>
+                            <option value="pumpkin">Pumpkin Spice Iced Capp: $4.29</option>
+                            <option value="caramel">Caramel Toffee Cold Brew: $3.99</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="title-id" class="col-sm-2 col-form-label">How many items?</label>
+                    <div class="col-sm-5">
+                        <input type="number" class="form-control" id="title-id" placeholder="Quantity" maxlength="2">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="payment" class="col-sm-5 col-form-label">How would you like to pay
+                        [credit/debit/cash]?</label>
+                    <div class="col-sm-5">
+                        <select class="form-control" id="payment">
+                            <option value="credit">Credit</option>
+                            <option value="debit">Debit</option>
+                            <option value="cash">Cash</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group" id="button">
+                    <div class="col-sm-5">
+                        <a type='button' class='btn btn-primary rounded-pill px-3 add-book'>Place Order</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="order-deets container-sm">
+
+        </div>
+    </main>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>

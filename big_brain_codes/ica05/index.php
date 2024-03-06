@@ -117,7 +117,6 @@ mySQLConnection();
                         <a type='button' class='btn btn-primary rounded-pill px-3 add-book'>Add Book</a>
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
