@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title> ASP Demo 01</title>
+        <!-- Link to AJAX and Jquery library-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+        <!-- Add a link Harsimran to your own js-->
+        <script src="code.js"></script>
+    </head>
+    <body>
+        <h3> Form submit by GET</h3>
+        <form action="https://localhost:7092/registerGet" method ="GET">
+            FirstName: <input type="text" name="getFirst"><br/>
+            Favourite Color : <input type="text" name="getColor"><br/>
+            Age: <input type="text" name="getAge"><br/>
+
+            <button type="submit" name="getSubmit">Submit</button>
+        </form>
+        <hr>
+
+        <h3> Form submit by POST</h3>
+        <!--<form action="https://localhost:7092/registerPOST" method ="post">-->
+            FirstName: <input type="text" id="postFirst"><br/>
+            Favourite Color : <input type="text" id="postColor"><br/>
+            Age: <input type="text" id="postAge"><br/>
+
+            <button type="submit" id="postSubmit">Submit</button>
+        <!--</form>-->
+        <hr>
+
+    </body>
+</html>
