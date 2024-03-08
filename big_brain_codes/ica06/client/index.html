@@ -13,8 +13,8 @@
 </head>
 
 <body>
-    <header>
-        <h1 style="text-align: center;">Tim Hortons</h1>
+    <header class="header">
+
     </header>
     <main>
         <div class="order-process container-sm">
@@ -47,13 +47,14 @@
                 <div class="form-group">
                     <label for="name" class="col-sm-2 col-form-label">Name</label>
                     <div class="col-sm-5">
-                        <input type="text" class="form-control" id="name" placeholder="Name">
+                        <input type="text" class="form-control" id="name" placeholder="Your Name">
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="menu" class="col-sm-2 col-form-label">Items Ordered</label>
                     <div class="col-sm-5">
                         <select class="form-control" id="menu">
+                            <option selected hidden>Select Menu Item</option>
                             <option value="muffins">Muffins: $2.29</option>
                             <option value="croissants">Croissants: $2.19</option>
                             <option value="cookies">Cookies: $1.49</option>
@@ -64,9 +65,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label for="title-id" class="col-sm-2 col-form-label">How many items?</label>
+                    <label for="quantity" class="col-sm-2 col-form-label">How many items?</label>
                     <div class="col-sm-5">
-                        <input type="number" class="form-control" id="title-id" placeholder="Quantity" maxlength="2">
+                        <input type="number" class="form-control" id="quantity" placeholder="Quantity" maxlength="2" min="0">
                     </div>
                 </div>
                 <div class="form-group">
@@ -74,6 +75,7 @@
                         [credit/debit/cash]?</label>
                     <div class="col-sm-5">
                         <select class="form-control" id="payment">
+                            <option selected hidden>Select Payment Type</option>
                             <option value="credit">Credit</option>
                             <option value="debit">Debit</option>
                             <option value="cash">Cash</option>
@@ -82,7 +84,7 @@
                 </div>
                 <div class="form-group" id="button">
                     <div class="col-sm-5">
-                        <a type='button' class='btn btn-primary rounded-pill px-3 add-book'>Place Order</a>
+                        <a type='button' class='btn btn-primary rounded-pill px-3 place'>Place Order</a>
                     </div>
                 </div>
             </div>
@@ -94,6 +96,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
 </body>
 
 </html>
