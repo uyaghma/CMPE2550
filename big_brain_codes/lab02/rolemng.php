@@ -1,6 +1,6 @@
 <?
-    require_once("dbUtil.php");
-    mySQLConnection();
+require_once("dbUtil.php");
+mySQLConnection();
 ?>
 
 <!DOCTYPE html>
@@ -14,11 +14,11 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Index</title>
+    <title>Role Management</title>
 </head>
 
 <body>
-        <div class="container-fluid page-container">
+    <div class="container-fluid page-container">
         <div class="container-fluid parent">
             <div class="container-sm main add-user rounded-lg" style="width: 400px;">
                 
@@ -28,7 +28,10 @@
             </div>
         </div>
         <div class="container-fluid aside">
-            <h1 class="display-1">Index</h1>
+            <h1 class="display-1">Role Management</h1>
+            <div class="container-fluid table-container">
+
+            </div>
         </div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
