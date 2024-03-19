@@ -36,7 +36,7 @@ $(document).ready(function () {
             action: 'login'
         }
         
-        CallAjax('ws.php', data, 'POST', 'JSON', LoginSuccess, Error)
+        CallAjax('../utility/ws.php', data, 'POST', 'JSON', LoginSuccess, Error)
     });
 
     $("#add-user").click(function () { 
@@ -51,7 +51,7 @@ $(document).ready(function () {
             action: 'add-user'
         }
 
-        CallAjax('ws.php', data, 'POST', 'JSON', AddSuccess, Error)
+        CallAjax('../utility/ws.php', data, 'POST', 'JSON', AddSuccess, Error)
     });
 
     function RegisterSuccess(response)
@@ -62,16 +62,14 @@ $(document).ready(function () {
 
     function LoginSuccess(response) 
     {
-        console.log(response.status);
-        if (!response.error)
-        {
-            $(".display-1").html(`Welcome, ${response.username}`);
-        }
-        console.log(response.error);
-
         if (response.redirect)
         {
             window.location.replace(response.redirect);
+        }
+
+        if (!response.error)
+        {
+            $(".display-1").html(`Welcome, ${response.username}`);
         }
     }
 
@@ -85,10 +83,10 @@ $(document).ready(function () {
         console.log(response.error);
     }
 
-    $('#password-register').blur(function (e) { 
-        e.preventDefault();
-        $('.pass').css('display', 'none');
-    });
+    // $('#password-register').blur(function (e) { 
+    //     e.preventDefault();
+    //     $('.pass').css('display', 'none');
+    // });
 
     $('#password-register').focus(function (e) { 
         e.preventDefault();

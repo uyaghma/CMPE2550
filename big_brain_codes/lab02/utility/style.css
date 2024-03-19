@@ -12,7 +12,6 @@ html {
     background-color: var(--main);
     color: var(--dark-accent);
     height: 100%;
-    background-image: url("background.jpg");
 }
 
 body {
@@ -21,7 +20,6 @@ body {
     height: 100%;
     background-color: inherit;
     color: inherit;
-    background-image: url("background.jpg");
 }
 
 .parent {
@@ -113,7 +111,7 @@ thead {
     border-bottom-right-radius: 0.25rem;
 }
 
-.bi-person-fill, .bi-key-fill
+.bi-person-fill, .bi-key-fill, .bi-person-fill-gear, .bi-info-circle-fill
 {
     display: block;
     height: calc(1.5em + 0.75rem + 2px);
