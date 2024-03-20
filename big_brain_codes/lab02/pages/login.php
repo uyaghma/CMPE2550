@@ -20,7 +20,7 @@
 
 <body>
     <div class="container-fluid page-container">
-        <div class="container-fluid parent">
+        <div class="container-fluid parent" style="width: 40%;">
             <div class="container-sm main login rounded-lg" style="width: 400px; padding-bottom: 25px;">
                 <h1 style="text-align: center; margin-bottom: 1.5rem">Login</h1>
                 <form class="needs-validation">
@@ -32,6 +32,9 @@
                                 </svg>
                             </div>
                             <input type="text" name="username" id="username-login" class="form-control" placeholder="Username" aria-describedby="user-validity">
+                        </div>
+                        <div class="user-valid" style="display: none;">
+                            <small id="user-dne" class="muted">User does not exist</small><br>
                         </div>
                     </div>
                     <div class="form-group">
@@ -72,6 +75,9 @@
                             <div class="user" style="display: none;">
                                 <small id="user-validity" class="text-muted">Username must be 8 to 15 characters in length</small>
                             </div>
+                            <div class="status" style="display: none;">
+                                <small id="status"></small><br>
+                            </div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -108,7 +114,7 @@
             </div>
         </div>
         <div class="container-fluid aside">
-            <h1 class="display-1">Welcome</h1>
+            <h1 class="display-1" id="welcome">Welcome</h1>
         </div>
     </div>
 

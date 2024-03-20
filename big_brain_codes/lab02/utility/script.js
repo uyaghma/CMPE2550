@@ -22,7 +22,7 @@ $(document).ready(function () {
                 action: 'register'
             }
             console.log(data);
-            CallAjax('ws.php', data, 'POST', 'JSON', RegisterSuccess, Error)
+            CallAjax('../utility/ws.php', data, 'POST', 'JSON', RegisterSuccess, Error)
         }
     });
 
@@ -42,7 +42,7 @@ $(document).ready(function () {
     $("#add-user").click(function () { 
         var username = $('#username-add').val();
         var password = $('#password-add').val();
-        var role = $('#roles').val();
+        var role = $('#roles-add').val();
 
         data = {
             password: password,
@@ -54,8 +54,103 @@ $(document).ready(function () {
         CallAjax('../utility/ws.php', data, 'POST', 'JSON', AddSuccess, Error)
     });
 
+    $('.delete').click(function (e) { 
+        var userid = $(this).attr('id');
+        var role = $(this).attr('rid');
+        console.log(role);
+
+        data = {
+            id: userid,
+            role: role,
+            action: 'delete'
+        }
+
+        CallAjax('../utility/ws.php', data, 'POST', 'JSON', DeleteSuccess, Error);
+    });
+
+    $('.update').click(function (e) { 
+        var userid = $(this).attr('id');
+        var role = $('#roles').val();
+
+        console.log(userid);
+        console.log(role);
+
+        data = {
+            id: userid,
+            role: role,
+            action: 'update'
+        }
+
+        CallAjax('../utility/ws.php', data, 'POST', 'JSON', UpdateSuccess, Error);
+    });
+
+    $('#add-role').click(function (e) { 
+        var roleName = $('#roleName').val();
+        var desc = $('#roleDesc').val();
+
+        data = {
+            roleName: roleName,
+            desc: desc,
+            action: 'add-role'
+        }
+
+        CallAjax('../utility/ws.php', data, 'POST', 'JSON', AddRoleSuccess, Error);
+    });
+
+    $('#logout').click(function (e) { 
+        data = { action: 'logout' }
+
+        CallAjax('../utility/ws.php', data, 'POST', 'JSON', LogoutSuccess, Error);
+    });
+
+    function LogoutSuccess(response)
+    {
+        window.location.replace(response.redirect);
+    }
+
+    function AddRoleSuccess(response) 
+    {
+        if (!response.error)
+        {
+            $('.table-container').html(response.output);
+            $('.status').css('display', 'none');
+        }
+        else 
+        {
+            $("#status").html(response.error);
+            $(".status").removeAttr('style');
+        }
+    }
+
+    function DeleteSuccess(response)
+    {
+        $('.table-container').html(response.output);
+    }
+
+    function UpdateSuccess(response)
+    {
+        $('.table-container').html(response.output);
+    }
+
+    function AddSuccess(response)
+    {
+        if (!response.error)
+        {
+            $('.table-container').html(response.output);
+            $('.status').css('display', 'none');
+        }
+        else 
+        {
+            $("#status").html(response.error);
+            $(".status").removeAttr('style');
+        }
+    }
+
     function RegisterSuccess(response)
     {
+        $('#username-register').val('');
+        $('#password-register').val('');
+        $('.pass').css('display', 'none');
         console.log(response.status);
         console.log(response.error);
     }
@@ -67,15 +162,19 @@ $(document).ready(function () {
             window.location.replace(response.redirect);
         }
 
-        if (!response.error)
+        if (!response.error && !response.dne)
         {
-            $(".display-1").html(`Welcome, ${response.username}`);
+            $(".output").html(`Welcome, ${response.username}`);
         }
-    }
+        else
+        {
+            $('.pass').removeAttr('style');
+        }
 
-    function AddSuccess(response)
-    {
-        console.log(response.status);
+        if (response.dne)
+        {
+            $('.user-valid').removeAttr('style');
+        }
     }
 
     function Error(response)
@@ -83,10 +182,26 @@ $(document).ready(function () {
         console.log(response.error);
     }
 
-    // $('#password-register').blur(function (e) { 
-    //     e.preventDefault();
-    //     $('.pass').css('display', 'none');
-    // });
+    function CallAjax(url, reqData, type, dataType, fxnSuccess, fxnError) {
+        let ajaxOptions = {
+            url: url,
+            data: reqData,
+            type: type,
+            dataType: dataType
+        };
+
+        // Initiate the AJAX call
+        let con = $.ajax(ajaxOptions);
+
+        // Handle AJAX success and failure
+        con.done(fxnSuccess);
+        con.fail(fxnError);
+    }
+
+    $('#username-login').focus(function (e) { 
+        $('.user-valid').css('display', 'none');
+        $('.pass').css('display', 'none');
+    });
 
     $('#password-register').focus(function (e) { 
         e.preventDefault();
@@ -220,25 +335,4 @@ $(document).ready(function () {
         $(".register").hide();
         $(".login").show();
     });
-
-    function RetrieveError(xhr, textStatus, errorThrown) 
-    {
-        console.error("AJAX error:", textStatus, errorThrown);
-    }
-
-    function CallAjax(url, reqData, type, dataType, fxnSuccess, fxnError) {
-        let ajaxOptions = {
-            url: url,
-            data: reqData,
-            type: type,
-            dataType: dataType
-        };
-
-        // Initiate the AJAX call
-        let con = $.ajax(ajaxOptions);
-
-        // Handle AJAX success and failure
-        con.done(fxnSuccess);
-        con.fail(fxnError);
-    }
 });

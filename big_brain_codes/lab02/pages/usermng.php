@@ -1,13 +1,15 @@
 <?
-    session_start();
-    require_once("../utility/auth.php");
-    CheckRole(2);
+session_start();
+require_once("../utility/auth.php");
+CheckRole(2);
 
-    require_once("../utility/dbUtil.php");
-    mySQLConnection();
+require_once("../utility/dbUtil.php");
+mySQLConnection();
 
-    $username = $_SESSION['username'];
-    $role = $_SESSION['role'];
+require_once("../utility/ws.php");
+
+$username = $_SESSION['username'];
+$role = $_SESSION['role'];
 ?>
 
 <!DOCTYPE html>
@@ -26,120 +28,71 @@
 
 <body>
     <div class="container-fluid page-container">
-        <div class="container-fluid parent">
+        <div class="container-fluid parent" style="width: 40%;">
             <div class="container-sm main role-mng rounded-lg" style="width: 400px;">
-                <h1 style='text-align: center; margin-bottom: 1.5rem'>Add Users</h1>
-                    <form class='needs-validation'>
-                        <div class='form-group'>
-                            <div class='input-group'>
-                                <div class='input-group-addon'>
-                                    <svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' class='bi bi-person-fill' viewBox='0 0 16 16'>
-                                        <path d='M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6' />
-                                    </svg>
-                                </div>
-                                <input type='text' name='username' id='username-add' class='form-control' placeholder='Username' aria-describedby='user-validity'>
-                                <div class='user' style='display: none;'>
-                                    <small id='user-validity' class='text-muted'>Username must be 8 to 15 characters in length</small>
-                                </div>
+                <h1 style='text-align: center; margin-bottom: 1.5rem'>Add User</h1>
+                <form class='needs-validation'>
+                    <div class='form-group'>
+                        <div class='input-group'>
+                            <div class='input-group-addon'>
+                                <svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' class='bi bi-person-fill' viewBox='0 0 16 16'>
+                                    <path d='M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6' />
+                                </svg>
+                            </div>
+                            <input type='text' name='username' id='username-add' class='form-control' placeholder='Username' aria-describedby='user-validity'>
+                            <div class='user' style='display: none;'>
+                                <small id='user-validity' class='text-muted'>Username must be 8 to 15 characters in length</small>
                             </div>
                         </div>
-                        <div class='form-group'>
-                            <div class='input-group'>
-                                <div class='input-group-addon'>
-                                    <svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' class='bi bi-key-fill' viewBox='0 0 16 16'>
-                                        <path d='M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
-                                    </svg>
-                                </div>
-                                <input type='password' name='password' id='password-add' class='form-control' placeholder='Password'>
-                                <div class='input-group-addon' id='show-pass-add'>
-                                    <a href=''><i class='fa fa-eye-slash' aria-hidden='true' style='margin-top: 11px; margin-right: 10px;'></i></a>
-                                </div>
+                        <div class="status" style="display: none;">
+                            <small id="status"></small><br>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='input-group'>
+                            <div class='input-group-addon'>
+                                <svg xmlns='http://www.w3.org/2000/svg' width='30' height='30' fill='currentColor' class='bi bi-key-fill' viewBox='0 0 16 16'>
+                                    <path d='M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2' />
+                                </svg>
                             </div>
-                            <div class='pass' style='display: none;'>
-                                <small id='pass-title' class='muted'>Password must: </small><br>
-                                <small id='pass-length' class='muted'>be at least 8 characters in length</small><br>
-                                <small id='pass-upper' class='muted'>contain at least 1 uppercase letter</small><br>
-                                <small id='pass-lower' class='muted'>contain at least 1 lowercase letter</small><br>
-                                <small id='pass-special' class='muted'>contain at least 1 special character</small><br>
-                                <small id='pass-number' class='muted'>contain at least 1 number</small>
+                            <input type='password' name='password' id='password-add' class='form-control' placeholder='Password'>
+                            <div class='input-group-addon' id='show-pass-add'>
+                                <a href=''><i class='fa fa-eye-slash' aria-hidden='true' style='margin-top: 11px; margin-right: 10px;'></i></a>
                             </div>
                         </div>
-                        <div class='form-group'>
-                            <div class='input-group'>
-                                <select name='roles' class='form-control' id='roles'>
-                                    <option selected hidden>Select a role</option>"
-                    <?
-                    $query = 'SELECT DISTINCT * FROM roles';
-                    if (!($results = mySelectQuery($query))) {
-                        echo 'Selection query failed';
-                    } else {
-                        while ($row = $results->fetch_assoc()) {
-                            if ($row['role_id'] > $role) {
-                                $addusers = "<option value='" . $row['role_id'] . "'>" . $row['name'] . '</option>';
-                            }
-                        }
-                        $addusers .= "</select>
-                                            </div>
-                                        </div>
-                                        <div class='form-group register-btn'>
-                                            <a type='submit' class='btn btn-primary rounded-pill' id='add-user'>Add User</a>
-                                        </div>
-                                    </form>";
-                    }
-                    echo $addusers;
-                    ?>
+                        <div class='pass' style='display: none;'>
+                            <small id='pass-title' class='muted'>Password must: </small><br>
+                            <small id='pass-length' class='muted'>be at least 8 characters in length</small><br>
+                            <small id='pass-upper' class='muted'>contain at least 1 uppercase letter</small><br>
+                            <small id='pass-lower' class='muted'>contain at least 1 lowercase letter</small><br>
+                            <small id='pass-special' class='muted'>contain at least 1 special character</small><br>
+                            <small id='pass-number' class='muted'>contain at least 1 number</small>
+                        </div>
+                    </div>
+                    <div class='form-group'>
+                        <div class='input-group'>
+                            <select name='roles' class='form-control' id='roles-add'>
+                                <option selected hidden>Select a role</option>
+                                <?
+                                    echo FetchRoles();
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                    <div class='form-group register-btn'>
+                        <a type='submit' class='btn btn-primary rounded-pill' id='add-user'>Add User</a>
+                    </div>
+                    <div class='form-group logout-btn'>
+                        <a type='button' class='btn btn-primary rounded-pill' id='logout'>Logout</a>
+                    </div>
+                </form>
             </div>
         </div>
         <div class="container-fluid aside">
             <h1 class="display-1">User Management</h1>
             <div class="container-fluid table-container">
-                <?                
-                    $query = "SELECT * FROM userinfo";
-                    if (!($results = mySelectQuery($query))) {
-                        echo "Selection query failed";
-                    } else {
-                        while ($row = $results->fetch_assoc()) {
-                            $table = "<table class='table'>
-                            <thead>";
-                            if ($role == 1) {
-                                $table .= "<th>Action</th>";
-                            }
-                            $table .= "<th>userID</th>
-                                <th>Username</th>
-                                <th>Hashed Password</th>
-                                <th>Change role</th>
-                            </thead>
-                            <tbody class='table-body'>";
-                            $table .= "<tr>";
-                            if ($role == 1) {
-                                $table .= "<td class='delete-cell'><a type='button' class='btn btn-primary rounded-pill px-3 delete' id='" . $row['user_id'] . "'>Delete</a></td>";
-                            }
-                            $table .= "<td class='id-cell'>" . $row['user_id'] . "</td>"
-                                . "<td class='username-cell' id='" . $row['user_id'] . "'>" . $row['username'] . "</td>"
-                                . "<td class='pass-cell' id='" . $row['user_id'] . "'>" . $row['pass'] . "</td>"
-                                . "<td class='role-cell' id='" . $row['user_id'] . "'>";
-                            $table .= "<select name='roles' class='form-control' id='roles'>";
-                            $rquery = 'SELECT DISTINCT * FROM roles';
-                            if (!($rresults = mySelectQuery($rquery))) {
-                                echo 'Selection query failed';
-                            } else {
-                                while ($rrow = $rresults->fetch_assoc()) {
-                                    if ($rrow['role_id'] > $role) {
-                                        if ($rrow['role_id'] == $role)
-                                            $table .= "<option value='" . $rrow['role_id'] . "' selected>" . $rrow['name'] . '</option>';
-                                        else
-                                            $table .= "<option value='" . $rrow['role_id'] . "'>" . $rrow['name'] . '</option>';
-                                    }
-                                }
-                                $table .= "</select>";
-                            }
-                            $table .= "</td>"
-                                . "</tr>";
-                        }
-                        $table .= "</tbody>
-                        </table>";
-                    }
-                    echo $table;
+                <?
+                echo RetrieveData($role);
                 ?>
             </div>
         </div>

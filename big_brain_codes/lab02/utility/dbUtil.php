@@ -59,11 +59,10 @@ function myNonSelectQuery($query)
         error_log("No active connection");
         $mysql_status = "No active connection";
         echo $mysql_status;
-
     }
     else
     {
-        if( !($mysql_connection-> query( $query)))
+        if( !($mysql_connection-> query($query)))
         {  // handling false case
 
             $mysql_response[]= "Query error {$mysql_connection->errno}  : {$mysql_connection->error}";
@@ -72,4 +71,56 @@ function myNonSelectQuery($query)
         return $mysql_connection -> affected_rows;
     }
 
+}
+
+function callStoredProcedure($procedureName, $params) {
+    global $mysql_connection; // Assuming $mysql_connection is your MySQLi connection variable
+
+    // Build the parameter placeholders for the prepared statement
+    $paramPlaceholders = implode(',', array_fill(0, count($params), '?'));
+
+    // Prepare the call to the stored procedure
+    $stmt = $mysql_connection->prepare("CALL $procedureName($paramPlaceholders)");
+
+    // Bind parameters if there are any
+    if (!empty($params)) {
+        $types = '';
+        $values = array();
+        foreach ($params as $param) {
+            // Determine the type of the parameter
+            if (is_int($param)) {
+                $types .= 'i'; // Integer
+            } elseif (is_double($param)) {
+                $types .= 'd'; // Double
+            } elseif (is_string($param)) {
+                $types .= 's'; // String
+            } else {
+                $types .= 's'; // Default to string
+            }
+            $values[] = $param;
+        }
+
+        // Bind parameters dynamically based on their types
+        $stmt->bind_param($types, ...$values);
+    }
+
+    // Execute the stored procedure
+    $stmt->execute();
+
+    // Get the result set
+    $result = $stmt->get_result();
+
+    // Fetch results if available
+    $resultArray = array();
+    if ($result) {
+        while ($row = $result->fetch_assoc()) {
+            $resultArray[] = $row;
+        }
+    }
+
+    // Close the statement
+    $stmt->close();
+
+    // Return the result array
+    return $resultArray;
 }
