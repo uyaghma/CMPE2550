@@ -68,6 +68,9 @@ $role = $_SESSION['role'];
                             <small id='pass-special' class='muted'>contain at least 1 special character</small><br>
                             <small id='pass-number' class='muted'>contain at least 1 number</small>
                         </div>
+                        <div class="pass-status" style="display: none;">
+                            <small id="pass-status"></small><br>
+                        </div>
                     </div>
                     <div class='form-group'>
                         <div class='input-group'>

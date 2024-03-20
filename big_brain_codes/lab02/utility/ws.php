@@ -30,74 +30,66 @@ switch ($_POST["action"]) {
 
 function Register()
 {
-    if (isset ($_POST['username']) && isset ($_POST['password'])) {
+    if (isset($_POST['username']) && isset($_POST['password'])) {
         $user = strip_tags(trim($_POST['username']));
         $pass = strip_tags(trim($_POST['password']));
         $hashedpass = password_hash($pass, PASSWORD_BCRYPT);
-
-        if (!($results = mySelectQuery("SELECT * FROM userinfo WHERE username='$user'"))) {
-            error_log("Selection query failed");
-        } else {
-            $rows = $results->fetch_assoc();
-            if ($rows < 1) {
-                $query = "INSERT INTO userinfo (username, pass, role_id) VALUES ('$user', '$hashedpass', 4)";
-                myNonSelectQuery($query);
-                echo json_encode(['status' => "Successfully registered"]);
-            } else {
-                echo json_encode(['error' => "User already exists"]);
-            }
+    
+        // Call the stored procedure to insert the new user
+        $resultArray = callStoredProcedure('Register', array($user, $hashedpass));
+    
+        // Check if any error occurred during user registration
+        if (!empty($resultArray) && isset($resultArray[0]['error'])) {
+            echo json_encode(['error' => $resultArray[0]['error']]);
+            return;
         }
+    
+        // If registration is successful, output success message
+        echo json_encode(['status' => "Successfully registered"]);
     }
 }
 
 function Login()
 {
-    error_log("Inside login from postman");
-    if (isset ($_POST['username']) && isset ($_POST['password'])) {
+    if (isset($_POST['username']) && isset($_POST['password'])) {
         $user = strip_tags(trim($_POST['username']));
         $pass = strip_tags(trim($_POST['password']));
-
-        $query = "SELECT * FROM userinfo where username='$user'";
-        error_log($query);
-        $rows = 0;
-
-        if (!($results = mySelectQuery($query))) {
-            error_log("Selection query failed");
+    
+        // Call the stored procedure to check if the user exists
+        $resultArray = callStoredProcedure('CheckUsers', array($user));
+    
+        // Check if any rows were returned
+        if (empty($resultArray)) {
+            $dne = "User doesn't exist";
         } else {
-            while ($row = $results->fetch_assoc()) {
-                $rows++;
+            $error = "Incorrect password";
+            $redirect = ''; // Initialize redirect variable
+    
+            // Iterate through the result array to verify the password
+            foreach ($resultArray as $row) {
                 if (password_verify($pass, $row['pass'])) {
                     $_SESSION['username'] = $user;
                     $_SESSION['role'] = $row['role_id'];
                     $redirect = 'https://thor.cnt.sast.ca/~uyaghma1/CMPE2550_Projects/big_brain_codes/lab02/pages/index.php';
-                } else {
-                    $error = "Incorrect password";
+                    $error = ''; // Clear error message if password is correct
+                    break; // Exit the loop after successful login
                 }
-            }
-            if ($rows < 1) {
-                $dne = "User doesn't exist";
             }
         }
     }
+    
     echo json_encode(['error' => $error, 'redirect' => $redirect, 'dne' => $dne]);
 }
 
 function Delete()
 {
-    if (isset ($_POST['role'])) {
+    if (isset($_POST['role'])) {
         $role = $_POST['role'];
-
-        $query = "DELETE FROM roles WHERE role_id=$role";
-        $uquery = "DELETE FROM userinfo WHERE role_id=$role";
-        myNonSelectQuery($query);
-        myNonSelectQuery($uquery);
-
+        callStoredProcedure('DeleteData', array($role, NULL));
         $output = RetrieveRoles($_SESSION['role']);
     } else {
         $userid = $_POST['id'];
-
-        $query = "DELETE FROM userinfo WHERE user_id=$userid";
-        myNonSelectQuery($query);
+        callStoredProcedure('DeleteData', array(NULL, $userid));
         $output = RetrieveData($_SESSION['role']);
     }
 
@@ -106,36 +98,56 @@ function Delete()
 
 function Update()
 {
-    if (isset ($_POST['role'])) {
+    if (isset($_POST['role'])) {
         $userid = $_POST['id'];
         $role = $_POST['role'];
-
-        $query = "UPDATE userinfo"
-            . " set role_id=$role"
-            . " WHERE user_id=$userid";
-
-        error_log($query);
-
-        myNonSelectQuery($query);
+    
+        // Call the stored procedure to update the user's role
+        $resultArray = callStoredProcedure('UpdateRole', array($userid, $role));
+    
+        // Check if any error occurred during the update
+        if (!empty($resultArray) && isset($resultArray[0]['error'])) {
+            echo json_encode(['error' => $resultArray[0]['error']]);
+            return;
+        }
+    
+        // If update is successful, retrieve updated data and output
         $output = RetrieveData($_SESSION['role']);
         echo json_encode(['output' => $output]);
     }
-    error_log("update function");
-    echo json_encode(['status' => "Updated "]);
 }
 
 function AddUser()
 {
-    if (isset ($_POST['username']) && isset ($_POST['password'])) {
+    if (is_nan($_POST['role'])) {
+        echo json_encode(['passerror' => 'Select a valid role']);
+    }
+    if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'])) {
         $user = strip_tags(trim($_POST['username']));
         $pass = strip_tags(trim($_POST['password']));
         $role = strip_tags(trim($_POST['role']));
         $hashedpass = password_hash($pass, PASSWORD_BCRYPT);
 
-        $query = "INSERT INTO userinfo (username, pass, role_id) VALUES ('$user', '$hashedpass', $role)";
-        error_log($query);
-        myNonSelectQuery($query);
+        if (strlen($_POST['username']) < 8 || strlen($_POST['username']) > 15) {
+            echo json_encode(['error' => 'Username must be 8 to 15 characters long']);
+        }
 
+        // Call the stored procedure to add the new user
+        $resultArray = callStoredProcedure('AddUser', array($user, $hashedpass, $role));
+
+        // Check if any error occurred during user addition
+        if (!empty($resultArray) && isset($resultArray[0]['error'])) {
+            echo json_encode(['error' => $resultArray[0]['error']]);
+            return;
+        }
+
+        // Check if user already exists
+        if (!empty($resultArray) && isset($resultArray[0]['user_exists'])) {
+            echo json_encode(['error' => 'User already exists']);
+            return;
+        }
+
+        // If user addition is successful, retrieve updated data and output
         $output = RetrieveData($_SESSION['role']);
 
         echo json_encode(['output' => $output, 'status' => "Successfully added"]);
@@ -154,7 +166,7 @@ function AddRole()
         $params = array($desc, $roleName);
 
         // Call the stored procedure to add a role
-        $resultArray = callStoredProcedure('AddRoleProcedure', $params);
+        $resultArray = callStoredProcedure('AddRole', $params);
 
         // Check if there's any error returned by the stored procedure
         if (!empty ($resultArray) && isset ($resultArray[0]['error'])) {
@@ -169,15 +181,9 @@ function AddRole()
     }
 }
 
-function Redirect($url)
-{
-    echo json_encode(['redirect' => $url]);
-    exit;
-}
-
 function RetrieveRoles($role)
 {
-    $procedureName = 'CheckRoles';
+    $procedureName = 'GetRoles';
     $params = array();
     $resultArray = callStoredProcedure($procedureName, $params);
 
@@ -239,7 +245,7 @@ function RetrieveData($role)
                 . "<td class='role-cell' id='" . $row['user_id'] . "'>";
             $table .= "<select name='roles' class='form-control' id='roles'>";
             // Call the stored procedure to fetch roles data
-            $rolesResultArray = callStoredProcedure('CheckRoles', array());
+            $rolesResultArray = callStoredProcedure('GetRoles', array());
             if (!empty ($rolesResultArray)) {
                 foreach ($rolesResultArray as $roleRow) {
                     if ($roleRow['role_id'] >= $role) {
@@ -265,7 +271,7 @@ function RetrieveData($role)
 function FetchRoles()
 {
     // Call the stored procedure to fetch roles data
-    $rolesResultArray = callStoredProcedure('CheckRoles', array());
+    $rolesResultArray = callStoredProcedure('GetRoles', array());
 
     // Check if there are any rows returned
     if (empty ($rolesResultArray)) {

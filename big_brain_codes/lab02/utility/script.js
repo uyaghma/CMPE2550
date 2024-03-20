@@ -1,6 +1,6 @@
 $(document).ready(function () {
     var flag = false;
-    var valid = 0;
+    var valid = false;
 
     $(".register").hide();
     
@@ -11,7 +11,7 @@ $(document).ready(function () {
         {
             $('.user').removeAttr('style');
         }
-        else
+        else if (valid)
         {
             $('.user').css('display', 'none');
             var password = $('#password-register').val();
@@ -134,7 +134,7 @@ $(document).ready(function () {
 
     function AddSuccess(response)
     {
-        if (!response.error)
+        if (!response.error && !response.passerror)
         {
             $('.table-container').html(response.output);
             $('.status').css('display', 'none');
@@ -143,6 +143,12 @@ $(document).ready(function () {
         {
             $("#status").html(response.error);
             $(".status").removeAttr('style');
+        }
+
+        if (response.passerror)
+        {
+            $("#pass-status").html(response.error);
+            $(".pass-status").removeAttr('style');
         }
     }
 
@@ -166,7 +172,8 @@ $(document).ready(function () {
         {
             $(".output").html(`Welcome, ${response.username}`);
         }
-        else
+        
+        if (response.error)
         {
             $('.pass').removeAttr('style');
         }
@@ -210,72 +217,44 @@ $(document).ready(function () {
         }
     });
 
-    $('#password-register').keyup(function () { 
-        flag = true;
+    $('#password-register').keyup(function () {
         var password = $(this).val();
-        var numbers = /[0-9]/g;
-        var upperCaseLetters = /[A-Z]/g;
-        var lowerCaseLetters = /[a-z]/g;
-        var special = /[>>!@^*#$%&?()~"<<]/g;
-
-        if (valid == 5)
-        {
-            $('.pass').css('display', 'none');
-        }
-        else
-        {
+        var passwordValidity = validatePassword(password);
+    
+        $('.pass').css('display', 'none'); // Reset styles for all indicators
+    
+        if (passwordValidity.numValid && passwordValidity.upperValid && passwordValidity.lowerValid && passwordValidity.specialValid && passwordValidity.lengthValid) {
+            valid = true;
+        } else {
             $('.pass').removeAttr('style');
+            valid = false;
         }
+    
+        $('#pass-special').css('color', passwordValidity.specialValid ? 'green' : 'red');
+        $('#pass-upper').css('color', passwordValidity.upperValid ? 'green' : 'red');
+        $('#pass-lower').css('color', passwordValidity.lowerValid ? 'green' : 'red');
+        $('#pass-number').css('color', passwordValidity.numValid ? 'green' : 'red');
+        $('#pass-length').css('color', passwordValidity.lengthValid ? 'green' : 'red');
+    });
 
-        if (password.match(special))
-        {
-            $('#pass-special').css('color', 'green');
-            valid++;
+    $('#password-add').keyup(function () {
+        var password = $(this).val();
+        var passwordValidity = validatePassword(password);
+    
+        $('.pass').css('display', 'none'); // Reset styles for all indicators
+    
+        if (passwordValidity.numValid && passwordValidity.upperValid && passwordValidity.lowerValid && passwordValidity.specialValid && passwordValidity.lengthValid) {
+            valid = true;
+        } else {
+            $('.pass').removeAttr('style');
+            valid = false;
         }
-        else
-        {
-            $('#pass-special').css('color', 'red');
-        }
-
-        if (password.match(upperCaseLetters))
-        {
-            $('#pass-upper').css('color', 'green');
-            valid++;
-        }
-        else
-        {
-            $('#pass-upper').css('color', 'red');
-        }
-
-        if (password.match(lowerCaseLetters))
-        {
-            $('#pass-lower').css('color', 'green');
-            valid++;
-        }
-        else
-        {
-            $('#pass-lower').css('color', 'red');
-        }
-
-        if (password.match(numbers))
-        {
-            $('#pass-number').css('color', 'green');
-            valid++;
-        }
-        else
-        {
-            $('#pass-number').css('color', 'red');
-        }
-
-        if (password.length < 8)
-        {
-            $('#pass-length').css('color', 'red');
-        }
-        else
-        {
-            $('#pass-length').css('color', 'green');
-            valid++;
-        }
+    
+        $('#pass-special').css('color', passwordValidity.specialValid ? 'green' : 'red');
+        $('#pass-upper').css('color', passwordValidity.upperValid ? 'green' : 'red');
+        $('#pass-lower').css('color', passwordValidity.lowerValid ? 'green' : 'red');
+        $('#pass-number').css('color', passwordValidity.numValid ? 'green' : 'red');
+        $('#pass-length').css('color', passwordValidity.lengthValid ? 'green' : 'red');
     });
 
     $('#show-pass-login').click(function (e) { 
@@ -336,3 +315,19 @@ $(document).ready(function () {
         $(".login").show();
     });
 });
+
+function validatePassword(password) {
+    var numValid = /[0-9]/.test(password);
+    var upperValid = /[A-Z]/.test(password);
+    var lowerValid = /[a-z]/.test(password);
+    var specialValid = /[!@^*#$%&?()~]/.test(password); // Update special characters as needed
+    var lengthValid = password.length >= 8;
+
+    return {
+        numValid: numValid,
+        upperValid: upperValid,
+        lowerValid: lowerValid,
+        specialValid: specialValid,
+        lengthValid: lengthValid
+    };
+}
