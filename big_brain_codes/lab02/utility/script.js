@@ -219,18 +219,15 @@ $(document).ready(function () {
         $('.pass').css('display', 'none');
     });
 
-    $('#password-register').focus(function (e) { 
-        e.preventDefault();
-        if (flag) {
-            $('.pass').removeAttr('style');
-        }
+    $('#username-register').focus(function (e) { 
+        $('.user').css('display', 'none');
     });
 
     $('#password-register').keyup(function () {
         var password = $(this).val();
         var passwordValidity = validatePassword(password);
     
-        $('.pass').css('display', 'none'); // Reset styles for all indicators
+        $('.pass').css('display', 'none');
     
         if (passwordValidity.numValid && passwordValidity.upperValid && passwordValidity.lowerValid && passwordValidity.specialValid && passwordValidity.lengthValid) {
             valid = true;
@@ -250,7 +247,7 @@ $(document).ready(function () {
         var password = $(this).val();
         var passwordValidity = validatePassword(password);
     
-        $('.pass').css('display', 'none'); // Reset styles for all indicators
+        $('.pass').css('display', 'none');
     
         if (passwordValidity.numValid && passwordValidity.upperValid && passwordValidity.lowerValid && passwordValidity.specialValid && passwordValidity.lengthValid) {
             valid = true;
