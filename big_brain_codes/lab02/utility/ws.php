@@ -176,7 +176,7 @@ function RetrieveRoles($role)
     $table .= "<thead><th>Action</th><th>ID</th><th>Name</th><th>Description</th></thead><tbody>";
 
     foreach ($resultArray as $row) {
-        if ($row['role_id'] > $role) {
+        if ($row['role_id'] >= $role) {
             $table .= "<tr>";
             $table .= "<td class='action' id='" . $row['role_id'] . "'>" . "<a type='button' class='btn btn-primary rounded-pill px-3 delete' rid='" . $row['role_id'] . "'>Delete</a></td>";
             $table .= "<td id='role-id-" . $row['role_id'] . "' class='role-id'>" . $row['role_id'] . "</td>";
@@ -214,7 +214,7 @@ function RetrieveData($role)
     <tbody class='table-body'>";
 
     foreach ($resultArray as $row) {
-        if ($row['role_id'] != 1) {
+        if ($row['role_id'] >= $role) {
             $table .= "<tr>";
             if ($role == 1) {
                 $table .= "<td class='delete-cell'><a type='button' class='btn btn-primary rounded-pill px-3 delete' id='" . $row['user_id'] . "'>Delete</a></td>";
@@ -248,7 +248,7 @@ function RetrieveData($role)
     return $table;
 }
 
-function FetchRoles()
+function FetchRoles($role)
 {
     $rolesResultArray = callStoredProcedure('GetRoles', array());
 
@@ -257,7 +257,7 @@ function FetchRoles()
     } else {
         $addusers = "";
         foreach ($rolesResultArray as $row) {
-            if ($row['role_id'] > 1) {
+            if ($row['role_id'] >= $role) {
                 $addusers .= "<option value='" . $row['role_id'] . "'>" . $row['name'] . '</option>';
             }
         }

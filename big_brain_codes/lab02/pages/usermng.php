@@ -80,7 +80,7 @@ $role = $_SESSION['role'];
                             <select name='roles' class='form-control' id='roles-add'>
                                 <option selected hidden>Select a role</option>
                                 <?
-                                    echo FetchRoles();
+                                    echo FetchRoles($role);
                                 ?>
                             </select>
                         </div>
