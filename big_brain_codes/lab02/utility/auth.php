@@ -16,4 +16,3 @@ function CheckRole($maxrole)
         exit();
     }
 }
-

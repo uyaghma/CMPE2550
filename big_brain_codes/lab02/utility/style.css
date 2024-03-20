@@ -171,6 +171,19 @@ thead {
     padding: none;
 }
 
-#logout {
+#logout, #goto-index {
     margin-top: 25px;
+}
+
+#logout {
+    margin-left: 5px;
+}
+
+#goto-index {
+    margin-right: 5px;
+}
+
+.logout-btn {
+    display: flex;
+    flex-direction: row;
 }

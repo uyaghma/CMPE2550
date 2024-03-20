@@ -73,6 +73,9 @@ $role = $_SESSION['role'];
                         </div>
                     </div>
                     <div class='form-group'>
+                        <div class="role-status" style="display: none;">
+                            <small id="role-status"></small><br>
+                        </div>
                         <div class='input-group'>
                             <select name='roles' class='form-control' id='roles-add'>
                                 <option selected hidden>Select a role</option>
@@ -86,6 +89,7 @@ $role = $_SESSION['role'];
                         <a type='submit' class='btn btn-primary rounded-pill' id='add-user'>Add User</a>
                     </div>
                     <div class='form-group logout-btn'>
+                        <a type='button' class='btn btn-primary rounded-pill' id='goto-index'>Back to Index</a>
                         <a type='button' class='btn btn-primary rounded-pill' id='logout'>Logout</a>
                     </div>
                 </form>

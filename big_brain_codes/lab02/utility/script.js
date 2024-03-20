@@ -54,7 +54,7 @@ $(document).ready(function () {
         CallAjax('../utility/ws.php', data, 'POST', 'JSON', AddSuccess, Error)
     });
 
-    $('.delete').click(function (e) { 
+    $(document).on('click', '.delete', function (e) { 
         var userid = $(this).attr('id');
         var role = $(this).attr('rid');
         console.log(role);
@@ -66,6 +66,10 @@ $(document).ready(function () {
         }
 
         CallAjax('../utility/ws.php', data, 'POST', 'JSON', DeleteSuccess, Error);
+    });
+
+    $('#goto-index').click(function (e) { 
+        window.location.replace('https://thor.cnt.sast.ca/~uyaghma1/CMPE2550_Projects/big_brain_codes/lab02/pages/index.php');
     });
 
     $('.update').click(function (e) { 
@@ -114,6 +118,8 @@ $(document).ready(function () {
         {
             $('.table-container').html(response.output);
             $('.status').css('display', 'none');
+            $('#roleName').val('');
+            $('#roleDesc').val('');
         }
         else 
         {
@@ -134,21 +140,24 @@ $(document).ready(function () {
 
     function AddSuccess(response)
     {
-        if (!response.error && !response.passerror)
+        if (!response.error && !response.roleerror)
         {
             $('.table-container').html(response.output);
             $('.status').css('display', 'none');
+            $('.user').css('display', 'none');
+            $('.role-status').css('display', 'none');
+            $('#username-add').val('');
+            $('#password-add').val('');
+            $('#roles-add').val('');
         }
-        else 
+        else if (response.error)
         {
-            $("#status").html(response.error);
-            $(".status").removeAttr('style');
+            $(".user").removeAttr('style');
         }
-
-        if (response.passerror)
+        else if (response.roleerror)
         {
-            $("#pass-status").html(response.error);
-            $(".pass-status").removeAttr('style');
+            $("#role-status").html(response.roleerror);
+            $(".role-status").removeAttr('style');
         }
     }
 

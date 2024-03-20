@@ -1,0 +1,253 @@
+[20-Mar-2024 01:10:11 UTC] Connection is successful
+[20-Mar-2024 01:10:11 UTC] Inside ws.php
+[20-Mar-2024 01:10:11 UTC] PHP Warning:  Undefined variable $output in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 174
+[20-Mar-2024 01:10:27 UTC] Connection is successful
+[20-Mar-2024 01:10:27 UTC] Inside ws.php
+[20-Mar-2024 01:10:27 UTC] Inside MyselectQuery function
+[20-Mar-2024 01:10:27 UTC] Before returning results
+[20-Mar-2024 01:13:34 UTC] Connection is successful
+[20-Mar-2024 01:13:34 UTC] Inside ws.php
+[20-Mar-2024 01:14:03 UTC] Connection is successful
+[20-Mar-2024 01:14:03 UTC] Inside ws.php
+[20-Mar-2024 01:14:03 UTC] Inside MyselectQuery function
+[20-Mar-2024 01:14:03 UTC] Before returning results
+[20-Mar-2024 01:14:03 UTC] Inside MyNonselectQuery function
+[20-Mar-2024 01:15:14 UTC] Connection is successful
+[20-Mar-2024 01:15:14 UTC] Inside ws.php
+[20-Mar-2024 01:15:14 UTC] Inside MyselectQuery function
+[20-Mar-2024 01:15:14 UTC] Before returning results
+[20-Mar-2024 01:15:14 UTC] Inside MyNonselectQuery function
+[20-Mar-2024 02:21:26 UTC] Connection is successful
+[20-Mar-2024 02:21:26 UTC] Inside ws.php
+[20-Mar-2024 02:21:26 UTC] Inside login from postman
+[20-Mar-2024 02:21:26 UTC] SELECT * FROM userinfo where username='big_brain'
+[20-Mar-2024 02:21:26 UTC] Inside MyselectQuery function
+[20-Mar-2024 02:21:26 UTC] Before returning results
+[20-Mar-2024 02:21:26 UTC] PHP Warning:  Undefined variable $error in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:21:26 UTC] PHP Warning:  Undefined variable $dne in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:23:42 UTC] PHP Parse error:  syntax error, unexpected integer "1" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 77
+[20-Mar-2024 02:24:42 UTC] Connection is successful
+[20-Mar-2024 02:24:42 UTC] Inside ws.php
+[20-Mar-2024 02:24:42 UTC] Inside login from postman
+[20-Mar-2024 02:24:42 UTC] SELECT * FROM userinfo where username='big_brain'
+[20-Mar-2024 02:24:42 UTC] Inside MyselectQuery function
+[20-Mar-2024 02:24:42 UTC] Before returning results
+[20-Mar-2024 02:24:42 UTC] PHP Warning:  Undefined variable $error in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:24:42 UTC] PHP Warning:  Undefined variable $dne in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:26:17 UTC] Connection is successful
+[20-Mar-2024 02:26:17 UTC] Inside ws.php
+[20-Mar-2024 02:26:19 UTC] Connection is successful
+[20-Mar-2024 02:26:19 UTC] Inside ws.php
+[20-Mar-2024 02:26:19 UTC] Inside login from postman
+[20-Mar-2024 02:26:19 UTC] SELECT * FROM userinfo where username='big_brain'
+[20-Mar-2024 02:26:19 UTC] Inside MyselectQuery function
+[20-Mar-2024 02:26:19 UTC] Before returning results
+[20-Mar-2024 02:26:19 UTC] PHP Warning:  Undefined variable $error in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:26:19 UTC] PHP Warning:  Undefined variable $dne in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:43:32 UTC] Connection is successful
+[20-Mar-2024 02:43:32 UTC] Inside ws.php
+[20-Mar-2024 02:43:34 UTC] Connection is successful
+[20-Mar-2024 02:43:34 UTC] Inside ws.php
+[20-Mar-2024 02:43:34 UTC] Inside login from postman
+[20-Mar-2024 02:43:34 UTC] SELECT * FROM userinfo where username='big_brain'
+[20-Mar-2024 02:43:34 UTC] Inside MyselectQuery function
+[20-Mar-2024 02:43:34 UTC] Before returning results
+[20-Mar-2024 02:43:34 UTC] PHP Warning:  Undefined variable $error in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:43:34 UTC] PHP Warning:  Undefined variable $dne in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:49:52 UTC] Connection is successful
+[20-Mar-2024 02:49:52 UTC] Inside ws.php
+[20-Mar-2024 02:49:52 UTC] INSERT INTO userinfo (username, pass, role_id) VALUES ('', '$2y$10$P92x43vDyczccpSNXhvfHeak6b08QiWXFKcAuJncI.2ywLP5kKxqm', Select a role)
+[20-Mar-2024 02:49:52 UTC] Inside MyNonselectQuery function
+[20-Mar-2024 02:49:52 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'Select a role)' at line 1 in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:65
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(65): mysqli->query('INSERT INTO use...')
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(137): myNonSelectQuery('INSERT INTO use...')
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(21): AddUser()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 65
+[20-Mar-2024 02:50:30 UTC] Connection is successful
+[20-Mar-2024 02:50:30 UTC] Inside ws.php
+[20-Mar-2024 02:50:34 UTC] Connection is successful
+[20-Mar-2024 02:50:34 UTC] Inside ws.php
+[20-Mar-2024 02:50:34 UTC] Inside login from postman
+[20-Mar-2024 02:50:34 UTC] SELECT * FROM userinfo where username='jonathan'
+[20-Mar-2024 02:50:34 UTC] Inside MyselectQuery function
+[20-Mar-2024 02:50:34 UTC] Before returning results
+[20-Mar-2024 02:50:34 UTC] PHP Warning:  Undefined variable $error in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:50:34 UTC] PHP Warning:  Undefined variable $dne in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 02:50:38 UTC] Connection is successful
+[20-Mar-2024 02:50:38 UTC] Inside ws.php
+[20-Mar-2024 03:02:28 UTC] Connection is successful
+[20-Mar-2024 03:02:28 UTC] Inside ws.php
+[20-Mar-2024 03:02:28 UTC] Inside login from postman
+[20-Mar-2024 03:02:28 UTC] SELECT * FROM userinfo WHERE username='big_brain'
+[20-Mar-2024 03:02:28 UTC] Inside MyselectQuery function
+[20-Mar-2024 03:02:28 UTC] Before returning results
+[20-Mar-2024 03:02:28 UTC] PHP Warning:  Undefined variable $error in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 03:02:28 UTC] PHP Warning:  Undefined variable $dne in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 82
+[20-Mar-2024 03:02:33 UTC] Connection is successful
+[20-Mar-2024 03:02:33 UTC] Inside ws.php
+[20-Mar-2024 03:09:48 UTC] Connection is successful
+[20-Mar-2024 03:09:48 UTC] Inside ws.php
+[20-Mar-2024 03:10:08 UTC] Connection is successful
+[20-Mar-2024 03:10:08 UTC] Inside ws.php
+[20-Mar-2024 03:10:08 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: PROCEDURE uyaghma1_cmpe2550A02.InsertUser does not exist in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(39): callStoredProcedure('InsertUser', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(9): Register()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 03:11:27 UTC] Connection is successful
+[20-Mar-2024 03:11:27 UTC] Inside ws.php
+[20-Mar-2024 03:11:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Error during user registration in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(39): callStoredProcedure('Register', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(9): Register()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 03:11:46 UTC] Connection is successful
+[20-Mar-2024 03:11:46 UTC] Inside ws.php
+[20-Mar-2024 03:11:46 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Error during user registration in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(39): callStoredProcedure('Register', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(9): Register()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 03:18:42 UTC] Connection is successful
+[20-Mar-2024 03:18:42 UTC] Inside ws.php
+[20-Mar-2024 03:18:42 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Error during user registration in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(39): callStoredProcedure('Register', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(9): Register()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 03:23:46 UTC] Connection is successful
+[20-Mar-2024 03:23:46 UTC] Inside ws.php
+[20-Mar-2024 03:23:46 UTC] Inside login from postman
+[20-Mar-2024 03:23:46 UTC] SELECT * FROM userinfo WHERE username='big_brain'
+[20-Mar-2024 03:23:46 UTC] Inside MyselectQuery function
+[20-Mar-2024 03:23:46 UTC] Before returning results
+[20-Mar-2024 03:23:46 UTC] PHP Warning:  Undefined variable $error in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 81
+[20-Mar-2024 03:23:46 UTC] PHP Warning:  Undefined variable $dne in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 81
+[20-Mar-2024 03:36:27 UTC] Connection is successful
+[20-Mar-2024 03:36:27 UTC] Inside ws.php
+[20-Mar-2024 03:36:27 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Error during user addition in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(132): callStoredProcedure('AddUser', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(21): AddUser()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 03:36:33 UTC] Connection is successful
+[20-Mar-2024 03:36:33 UTC] Inside ws.php
+[20-Mar-2024 03:36:33 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Error during user addition in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(132): callStoredProcedure('AddUser', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(21): AddUser()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 03:43:58 UTC] Connection is successful
+[20-Mar-2024 03:43:58 UTC] Inside ws.php
+[20-Mar-2024 03:43:58 UTC] PHP Warning:  Undefined variable $error in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 81
+[20-Mar-2024 03:43:58 UTC] PHP Warning:  Undefined variable $redirect in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 81
+[20-Mar-2024 03:45:25 UTC] Connection is successful
+[20-Mar-2024 03:45:25 UTC] Inside ws.php
+[20-Mar-2024 03:45:25 UTC] PHP Warning:  Undefined variable $error in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 81
+[20-Mar-2024 03:45:25 UTC] PHP Warning:  Undefined variable $redirect in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 81
+[20-Mar-2024 03:47:40 UTC] Connection is successful
+[20-Mar-2024 03:47:40 UTC] Inside ws.php
+[20-Mar-2024 03:54:58 UTC] Connection is successful
+[20-Mar-2024 03:54:58 UTC] Inside ws.php
+[20-Mar-2024 03:56:37 UTC] Connection is successful
+[20-Mar-2024 03:56:37 UTC] Inside ws.php
+[20-Mar-2024 03:56:37 UTC] PHP Warning:  Undefined variable $dne in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 81
+[20-Mar-2024 03:57:20 UTC] Connection is successful
+[20-Mar-2024 03:57:20 UTC] Inside ws.php
+[20-Mar-2024 03:57:20 UTC] PHP Fatal error:  Uncaught TypeError: is_nan(): Argument #1 ($num) must be of type float, string given in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php:122
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(122): is_nan('Select a role')
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(21): AddUser()
+#2 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 122
+[20-Mar-2024 04:02:56 UTC] Connection is successful
+[20-Mar-2024 04:02:56 UTC] Inside ws.php
+[20-Mar-2024 04:02:56 UTC] PHP Fatal error:  Uncaught TypeError: is_nan(): Argument #1 ($num) must be of type float, string given in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php:122
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(122): is_nan('Select a role')
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(21): AddUser()
+#2 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 122
+[20-Mar-2024 04:05:15 UTC] Connection is successful
+[20-Mar-2024 04:05:15 UTC] Inside ws.php
+[20-Mar-2024 04:05:15 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Incorrect integer value: 'Select a role' for column 'p_role_id' at row 1 in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(136): callStoredProcedure('AddUser', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(21): AddUser()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 04:06:56 UTC] Connection is successful
+[20-Mar-2024 04:06:56 UTC] Inside ws.php
+[20-Mar-2024 04:07:44 UTC] Connection is successful
+[20-Mar-2024 04:07:44 UTC] Inside ws.php
+[20-Mar-2024 04:08:26 UTC] Connection is successful
+[20-Mar-2024 04:08:26 UTC] Inside ws.php
+[20-Mar-2024 04:08:26 UTC] PHP Fatal error:  Uncaught TypeError: is_nan(): Argument #1 ($num) must be of type float, string given in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php:122
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(122): is_nan('Select a role')
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(21): AddUser()
+#2 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 122
+[20-Mar-2024 04:09:29 UTC] Connection is successful
+[20-Mar-2024 04:09:29 UTC] Inside ws.php
+[20-Mar-2024 04:10:37 UTC] Connection is successful
+[20-Mar-2024 04:10:37 UTC] Inside ws.php
+[20-Mar-2024 04:10:53 UTC] Connection is successful
+[20-Mar-2024 04:10:53 UTC] Inside ws.php
+[20-Mar-2024 04:11:54 UTC] Connection is successful
+[20-Mar-2024 04:11:54 UTC] Inside ws.php
+[20-Mar-2024 04:11:57 UTC] Connection is successful
+[20-Mar-2024 04:11:57 UTC] Inside ws.php
+[20-Mar-2024 04:11:57 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Error during user addition in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(138): callStoredProcedure('AddUser', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(21): AddUser()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 04:12:13 UTC] Connection is successful
+[20-Mar-2024 04:12:13 UTC] Inside ws.php
+[20-Mar-2024 04:12:55 UTC] Connection is successful
+[20-Mar-2024 04:12:55 UTC] Inside ws.php
+[20-Mar-2024 04:13:01 UTC] Connection is successful
+[20-Mar-2024 04:13:01 UTC] Inside ws.php
+[20-Mar-2024 04:13:04 UTC] Connection is successful
+[20-Mar-2024 04:13:04 UTC] Inside ws.php
+[20-Mar-2024 04:13:04 UTC] PHP Warning:  Undefined variable $dne in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php on line 81
+[20-Mar-2024 04:13:26 UTC] Connection is successful
+[20-Mar-2024 04:13:26 UTC] Inside ws.php
+[20-Mar-2024 04:13:26 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Incorrect number of arguments for PROCEDURE uyaghma1_cmpe2550A02.AddRole; expected 3, got 2 in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(172): callStoredProcedure('AddRole', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(24): AddRole()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 04:15:31 UTC] Connection is successful
+[20-Mar-2024 04:15:31 UTC] Inside ws.php
+[20-Mar-2024 04:15:31 UTC] PHP Fatal error:  Uncaught mysqli_sql_exception: Incorrect number of arguments for PROCEDURE uyaghma1_cmpe2550A02.AddRole; expected 3, got 2 in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php:108
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php(108): mysqli_stmt->execute()
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(172): callStoredProcedure('AddRole', Array)
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/ws.php(24): AddRole()
+#3 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab02/utility/dbUtil.php on line 108
+[20-Mar-2024 04:19:44 UTC] Connection is successful
+[20-Mar-2024 04:19:44 UTC] Inside ws.php
+[20-Mar-2024 04:21:48 UTC] Connection is successful
+[20-Mar-2024 04:21:48 UTC] Inside ws.php

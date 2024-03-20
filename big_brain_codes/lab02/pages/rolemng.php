@@ -59,6 +59,7 @@ $role = $_SESSION['role'];
                         <a type='submit' class='btn btn-primary rounded-pill' id='add-role'>Add Role</a>
                     </div>
                     <div class='form-group logout-btn'>
+                        <a type='button' class='btn btn-primary rounded-pill' id='goto-index'>Back to Index</a>
                         <a type='button' class='btn btn-primary rounded-pill' id='logout'>Logout</a>
                     </div>
                 </form>
