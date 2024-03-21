@@ -23,7 +23,7 @@
 
 <body>
     <div class="container-fluid page-container">
-        <div class="container-fluid parent">
+        <div class="container-fluid parent" style="width: 40%;">
             <div class="container-sm main add-user rounded-lg" style="width: 400px;">
                 <div class='form-group logout-btn'>
                     <a type='button' class='btn btn-primary rounded-pill' id='goto-index'>Back to Index</a>

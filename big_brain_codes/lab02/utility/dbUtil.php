@@ -74,9 +74,8 @@ function myNonSelectQuery($query)
 }
 
 function callStoredProcedure($procedureName, $params) {
-    global $mysql_connection; // Assuming $mysql_connection is your MySQLi connection variable
+    global $mysql_connection;
 
-    // Build the parameter placeholders for the prepared statement
     $paramPlaceholders = implode(',', array_fill(0, count($params), '?'));
 
     // Prepare the call to the stored procedure
@@ -104,20 +103,29 @@ function callStoredProcedure($procedureName, $params) {
         $stmt->bind_param($types, ...$values);
     }
 
-    // Execute the stored procedure
-    $stmt->execute();
-
-    // Get the result set
-    $result = $stmt->get_result();
-
-    // Fetch results if available
     $resultArray = array();
-    if ($result) {
-        while ($row = $result->fetch_assoc()) {
-            $resultArray[] = $row;
+    // /* Start transaction */
+    $mysql_connection->begin_transaction();
+    try
+    {
+        // Execute the stored procedure
+        $stmt->execute();
+
+        // Get the result set
+        $result = $stmt->get_result();
+
+        // Fetch results if available
+        if ($result) {
+            while ($row = $result->fetch_assoc()) {
+                $resultArray[] = $row;
+            }
         }
     }
-
+    catch (mysqli_sql_exception $exception) {
+        $mysql_connection->rollback();
+    
+       // throw $exception;
+    }
     // Close the statement
     $stmt->close();
 

@@ -163,7 +163,7 @@ thead {
 }
 
 .output, .table-container {
-    height: 70%;
+    height: 65%;
 }
 
 #welcome {
@@ -186,4 +186,9 @@ thead {
 .logout-btn {
     display: flex;
     flex-direction: row;
+}
+
+.status-out {
+    height: 5%;
+    text-align: center;
 }

@@ -30,81 +30,80 @@ switch ($_POST["action"]) {
 
 function Register()
 {
-    if (isset($_POST['username']) && isset($_POST['password'])) {
+    if (isset ($_POST['username']) && isset ($_POST['password'])) {
         $user = strip_tags(trim($_POST['username']));
         $pass = strip_tags(trim($_POST['password']));
         $hashedpass = password_hash($pass, PASSWORD_BCRYPT);
-    
+
         $resultArray = callStoredProcedure('Register', array($user, $hashedpass));
-    
-        if (!empty($resultArray) && isset($resultArray[0]['error'])) {
-            echo json_encode(['error' => $resultArray[0]['error']]);
-            return;
+
+        if (!empty ($resultArray) && isset ($resultArray[0]['error_message'])) {
+            echo json_encode(['error' => $resultArray[0]['error_message']]);
+        } 
+        else {
+            echo json_encode(['status' => "Successfully registered, you can now login"]);
         }
-    
-        echo json_encode(['status' => "Successfully registered"]);
     }
 }
 
 function Login()
 {
-    if (isset($_POST['username']) && isset($_POST['password'])) {
+    if (isset ($_POST['username']) && isset ($_POST['password'])) {
         $user = strip_tags(trim($_POST['username']));
         $pass = strip_tags(trim($_POST['password']));
-    
+
         $resultArray = callStoredProcedure('CheckUsers', array($user));
-    
-        if (empty($resultArray)) {
-            $dne = "User doesn't exist";
+
+        if (empty ($resultArray)) {
+            echo json_encode(['error' => 'User does not exist']);
         } else {
-            $error = "Incorrect password";
-            $redirect = ''; 
-    
             foreach ($resultArray as $row) {
                 if (password_verify($pass, $row['pass'])) {
                     $_SESSION['username'] = $user;
                     $_SESSION['role'] = $row['role_id'];
-                    $redirect = 'https://thor.cnt.sast.ca/~uyaghma1/CMPE2550_Projects/big_brain_codes/lab02/pages/index.php';
-                    $error = ''; 
-                    break; 
+                    echo json_encode(['redirect' => 'https://thor.cnt.sast.ca/~uyaghma1/CMPE2550_Projects/big_brain_codes/lab02/pages/index.php']);
+                }
+                else {
+                    echo json_encode(['error' => "Incorrect password"]);
                 }
             }
         }
     }
-    
-    echo json_encode(['error' => $error, 'redirect' => $redirect, 'dne' => $dne]);
 }
 
 function Delete()
 {
-    if (isset($_POST['role'])) {
+    if (isset ($_POST['role'])) {
         $role = $_POST['role'];
+        $rolename = $_POST['rolename'];
         callStoredProcedure('DeleteData', array($role, NULL));
         $output = RetrieveRoles($_SESSION['role']);
+        $status = "Deleted $rolename successfully";
     } else {
+        $username = $_POST['user'];
         $userid = $_POST['id'];
         callStoredProcedure('DeleteData', array(NULL, $userid));
         $output = RetrieveData($_SESSION['role']);
+        $status = "Deleted $username successfully";
     }
 
-    echo json_encode(['status' => "delete", 'output' => $output]);
+    echo json_encode(['status' => $status, 'output' => $output]);
 }
 
 function Update()
 {
-    if (isset($_POST['role'])) {
+    if (isset ($_POST['role'])) {
+        $username = $_POST['user'];
         $userid = $_POST['id'];
         $role = $_POST['role'];
-    
         $resultArray = callStoredProcedure('UpdateRole', array($userid, $role));
-    
-        if (!empty($resultArray) && isset($resultArray[0]['error'])) {
+
+        if (!empty ($resultArray) && isset ($resultArray[0]['error'])) {
             echo json_encode(['error' => $resultArray[0]['error']]);
-            return;
+        } else {
+            $output = RetrieveData($_SESSION['role']);
+            echo json_encode(['output' => $output, 'status' => "Updated $username's role successfully"]);
         }
-    
-        $output = RetrieveData($_SESSION['role']);
-        echo json_encode(['output' => $output]);
     }
 }
 
@@ -112,57 +111,48 @@ function AddUser()
 {
     if (intval($_POST['role']) == 0) {
         echo json_encode(['roleerror' => 'Select a valid role']);
-    }
-    else 
-    {
-        if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['role'])) {
+    } 
+    else {
+        if (isset ($_POST['username']) && isset ($_POST['password']) && isset ($_POST['role'])) {
             $user = strip_tags(trim($_POST['username']));
             $pass = strip_tags(trim($_POST['password']));
             $role = strip_tags(trim($_POST['role']));
             $hashedpass = password_hash($pass, PASSWORD_BCRYPT);
-    
-            if (strlen($_POST['username']) < 8 || strlen($_POST['username']) > 15) {
-                echo json_encode(['error' => 'Username must be 8 to 15 characters long']);
+
+            if (strlen($user) < 8 || strlen($user) > 15) {
+                echo json_encode(['usererror' => 'Username must be 8 to 15 characters long']);
             }
-    
-            $resultArray = callStoredProcedure('AddUser', array($user, $hashedpass, $role));
-    
-            if (!empty($resultArray) && isset($resultArray[0]['error'])) {
-                echo json_encode(['error' => $resultArray[0]['error']]);
-                return;
+            else {
+                $resultArray = callStoredProcedure('AddUser', array($user, $hashedpass, $role));
+                if (!empty ($resultArray) && isset ($resultArray[0]['error_message'])) {
+                    echo json_encode(['error' => $resultArray[0]['error_message']]);
+                } 
+                else {
+                    $output = RetrieveData($_SESSION['role']);
+                    echo json_encode(['output' => $output, 'status' => "Successfully added $user"]);
+                }
             }
-    
-            if (!empty($resultArray) && isset($resultArray[0]['user_exists'])) {
-                echo json_encode(['error' => 'User already exists']);
-                return;
-            }
-    
-            $output = RetrieveData($_SESSION['role']);
-    
-            echo json_encode(['output' => $output, 'status' => "Successfully added"]);
         }
     }
 }
 
 function AddRole()
 {
-    global $mysql_connection;
-
     if (isset ($_POST['desc']) && isset ($_POST['roleName'])) {
         $desc = strip_tags(trim($_POST['desc']));
         $roleName = strip_tags(trim($_POST['roleName']));
 
-        $params = array($desc, $roleName,'');
+        $params = array($desc, $roleName, '');
 
         $resultArray = callStoredProcedure('AddRole', $params);
 
         if (!empty ($resultArray) && isset ($resultArray[0]['error'])) {
             echo json_encode(['error' => $resultArray[0]['error']]);
-            return;
+        } 
+        else {
+            $output = RetrieveRoles($_SESSION['role']);
+            echo json_encode(['output' => $output, 'status' => "Successfully added $roleName"]);
         }
-
-        $output = RetrieveRoles($_SESSION['role']);
-        echo json_encode(['output' => $output]);
     }
 }
 
@@ -179,9 +169,9 @@ function RetrieveRoles($role)
         if ($row['role_id'] >= $role) {
             $table .= "<tr>";
             $table .= "<td class='action' id='" . $row['role_id'] . "'>" . "<a type='button' class='btn btn-primary rounded-pill px-3 delete' rid='" . $row['role_id'] . "'>Delete</a></td>";
-            $table .= "<td id='role-id-" . $row['role_id'] . "' class='role-id'>" . $row['role_id'] . "</td>";
-            $table .= "<td id='role-name-" . $row['role_id'] . "' class='role-name'>" . $row['name'] . "</td>";
-            $table .= "<td id='role-description-" . $row['role_id'] . "' class='role-description'>" . $row['description'] . "</td>";
+            $table .= "<td id='" . $row['role_id'] . "' class='role-id'>" . $row['role_id'] . "</td>";
+            $table .= "<td id='" . $row['role_id'] . "' class='role-name'>" . $row['name'] . "</td>";
+            $table .= "<td id='" . $row['role_id'] . "' class='role-description'>" . $row['description'] . "</td>";
             $table .= "</tr>";
         }
     }
@@ -224,7 +214,7 @@ function RetrieveData($role)
                 . "<td class='username-cell' id='" . $row['user_id'] . "'>" . $row['username'] . "</td>"
                 . "<td class='pass-cell' id='" . $row['user_id'] . "'>" . $row['pass'] . "</td>"
                 . "<td class='role-cell' id='" . $row['user_id'] . "'>";
-            $table .= "<select name='roles' class='form-control' id='roles'>";
+            $table .= "<select name='roles' class='form-control select-cell' id='" . $row['user_id'] . "'>";
             $rolesResultArray = callStoredProcedure('GetRoles', array());
             if (!empty ($rolesResultArray)) {
                 foreach ($rolesResultArray as $roleRow) {
@@ -257,6 +247,7 @@ function FetchRoles($role)
     } else {
         $addusers = "";
         foreach ($rolesResultArray as $row) {
+            $addusers .= "<option value='default' selected hidden>Select a role</option>";
             if ($row['role_id'] >= $role) {
                 $addusers .= "<option value='" . $row['role_id'] . "'>" . $row['name'] . '</option>';
             }

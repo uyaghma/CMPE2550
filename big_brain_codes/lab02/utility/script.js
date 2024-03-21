@@ -21,7 +21,6 @@ $(document).ready(function () {
                 username: username,
                 action: 'register'
             }
-            console.log(data);
             CallAjax('../utility/ws.php', data, 'POST', 'JSON', RegisterSuccess, Error)
         }
     });
@@ -56,10 +55,13 @@ $(document).ready(function () {
 
     $(document).on('click', '.delete', function (e) { 
         var userid = $(this).attr('id');
+        var username = $(`#${userid}.username-cell`).html();
         var role = $(this).attr('rid');
-        console.log(role);
+        var rolename = $(`#${role}.role-name`).html();
 
         data = {
+            user: username,
+            rolename: rolename,
             id: userid,
             role: role,
             action: 'delete'
@@ -72,14 +74,13 @@ $(document).ready(function () {
         window.location.replace('https://thor.cnt.sast.ca/~uyaghma1/CMPE2550_Projects/big_brain_codes/lab02/pages/index.php');
     });
 
-    $('.update').click(function (e) { 
+    $(document).on('click', '.update', function (e) { 
         var userid = $(this).attr('id');
-        var role = $('#roles').val();
-
-        console.log(userid);
-        console.log(role);
+        var username = $(`#${userid}.username-cell`).html();
+        var role = $(`#${userid}.select-cell`).val();
 
         data = {
+            user: username,
             id: userid,
             role: role,
             action: 'update'
@@ -117,30 +118,33 @@ $(document).ready(function () {
         if (!response.error)
         {
             $('.table-container').html(response.output);
-            $('.status').css('display', 'none');
             $('#roleName').val('');
             $('#roleDesc').val('');
+            $(".status-out").html(response.status);
         }
         else 
         {
-            $("#status").html(response.error);
-            $(".status").removeAttr('style');
+            $('#roleName').val('');
+            $('#roleDesc').val('');
+            $(".status-out").html(response.error);
         }
     }
 
     function DeleteSuccess(response)
     {
         $('.table-container').html(response.output);
+        $('.status-out').html(response.status);
     }
 
     function UpdateSuccess(response)
     {
         $('.table-container').html(response.output);
+        $('.status-out').html(response.status);
     }
 
     function AddSuccess(response)
     {
-        if (!response.error && !response.roleerror)
+        if (!response.error && !response.roleerror && !response.usererror)
         {
             $('.table-container').html(response.output);
             $('.status').css('display', 'none');
@@ -149,15 +153,28 @@ $(document).ready(function () {
             $('#username-add').val('');
             $('#password-add').val('');
             $('#roles-add').val('');
+            $('.status-out').html(response.status);
         }
-        else if (response.error)
+        else if (response.usererror)
         {
-            $(".user").removeAttr('style');
+            $('.status-out').html(response.usererror);
+            $('#username-add').val('');
+            $('#password-add').val('');
+            $('#roles-add').val('default');
         }
         else if (response.roleerror)
         {
             $("#role-status").html(response.roleerror);
             $(".role-status").removeAttr('style');
+            $('#username-add').val('');
+            $('#password-add').val('');
+            $('#roles-add').val('default');
+        }
+        else if (response.error) {
+            $('.status-out').html(response.error);
+            $('#username-add').val('');
+            $('#password-add').val('');
+            $('#roles-add').val('default');
         }
     }
 
@@ -165,9 +182,15 @@ $(document).ready(function () {
     {
         $('#username-register').val('');
         $('#password-register').val('');
-        $('.pass').css('display', 'none');
-        console.log(response.status);
-        console.log(response.error);
+
+        if (response.error) {
+            $('.status-out').html(response.error);
+        }
+        if (response.status) {
+            $(".status-out").html(response.status);
+            $(".register").hide();
+            $(".login").show();
+        }
     }
 
     function LoginSuccess(response) 
@@ -175,27 +198,18 @@ $(document).ready(function () {
         if (response.redirect)
         {
             window.location.replace(response.redirect);
-        }
-
-        if (!response.error && !response.dne)
-        {
             $(".output").html(`Welcome, ${response.username}`);
         }
-        
+
         if (response.error)
         {
-            $('.pass').removeAttr('style');
-        }
-
-        if (response.dne)
-        {
-            $('.user-valid').removeAttr('style');
+            $('.status-out').html(response.error);
         }
     }
 
     function Error(response)
     {
-        console.log(response.error);
+        console.log(response);
     }
 
     function CallAjax(url, reqData, type, dataType, fxnSuccess, fxnError) {
@@ -314,11 +328,13 @@ $(document).ready(function () {
     $('#register-btn').click(function (e) { 
         $(".register").show();
         $(".login").hide();
+        $('.status-out').html('');
     });
 
     $('#login-btn').click(function (e) { 
         $(".register").hide();
         $(".login").show();
+        $('.status-out').html('');
     });
 });
 

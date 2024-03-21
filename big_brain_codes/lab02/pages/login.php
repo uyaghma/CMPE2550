@@ -31,7 +31,7 @@
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                 </svg>
                             </div>
-                            <input type="text" name="username" id="username-login" class="form-control" placeholder="Username" aria-describedby="user-validity">
+                            <input type="text" name="username" id="username-login" class="form-control" placeholder="Username" aria-describedby="user-validity" autocomplete="off">
                         </div>
                         <div class="user-valid" style="display: none;">
                             <small id="user-dne" class="muted">User does not exist</small><br>
@@ -44,7 +44,7 @@
                                     <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
                                 </svg>
                             </div>
-                            <input type="password" name="password" id="password-login" class="form-control" placeholder="Password">
+                            <input type="password" name="password" id="password-login" class="form-control" placeholder="Password" autocomplete="off">
                             <div class="input-group-addon" id="show-pass-login">
                                 <a href=""><i class="fa fa-eye-slash" aria-hidden="true" style="margin-top: 11px; margin-right: 10px;"></i></a>
                             </div>
@@ -71,12 +71,9 @@
                                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                                 </svg>
                             </div>
-                            <input type="text" name="username" id="username-register" class="form-control" placeholder="Username" aria-describedby="user-validity">
+                            <input type="text" name="username" id="username-register" class="form-control" placeholder="Username" aria-describedby="user-validity" autocomplete="off">
                             <div class="user" style="display: none;">
                                 <small id="user-validity" class="text-muted">Username must be 8 to 15 characters in length</small>
-                            </div>
-                            <div class="status" style="display: none;">
-                                <small id="status"></small><br>
                             </div>
                         </div>
                     </div>
@@ -87,7 +84,7 @@
                                     <path d="M3.5 11.5a3.5 3.5 0 1 1 3.163-5H14L15.5 8 14 9.5l-1-1-1 1-1-1-1 1-1-1-1 1H6.663a3.5 3.5 0 0 1-3.163 2M2.5 9a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
                                 </svg>
                             </div>
-                            <input type="password" name="password" id="password-register" class="form-control" placeholder="Password">
+                            <input type="password" name="password" id="password-register" class="form-control" placeholder="Password" autocomplete="off">
                             <div class="input-group-addon" id="show-pass-register">
                                 <a href=""><i class="fa fa-eye-slash" aria-hidden="true" style="margin-top: 11px; margin-right: 10px;"></i></a>
                             </div>
@@ -109,8 +106,8 @@
                     </div>
                 </form>
             </div>
-            <div class="container-sm">
-
+            <div class="container-sm status-out">
+                
             </div>
         </div>
         <div class="container-fluid aside">
