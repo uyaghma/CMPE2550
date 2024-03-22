@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+    <link type="text/css" rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tug of War</title>
+</head>
+
+<body>
+    <div class="container-sm header">
+        <h1 class="display-1">Tug of War</h1>
+    </div>
+    <div class="container-fluid player-info">
+        <div class="container-sm status"> <h3>Enter your names below:</h3> </div>
+        <div class="container-sm form">
+            <div class="form-group col">
+                <div class="form-group row">
+                    <input type="text" name="p1" id="p1" class="form-control" placeholder="Player 1 name"
+                        aria-invalid="false" aria-errormessage="error-p1" aria-required="true">
+                    <small id="error-p1" class="errormessage">Name must be at least 1 character</small>
+                </div>
+                <div class="form-group row">
+                    <a name="new-game" id="new-game" class="btn btn-primary rounded-pill form-control" role="button">New Game</a>
+                </div>
+            </div>
+            <div class="form-group col">
+                <div class="form-group row">
+                    <input type="text" name="p2" id="p2" class="form-control" placeholder="Player 2 name"
+                        aria-invalid="false" aria-errormessage="error-p2">
+                    <small id="error-p2" class="errormessage">Name must be at least 1 character</small>
+                </div>
+                <div class="form-group row">
+                    <a name="quit-game" id="quit-game" class="btn btn-primary rounded-pill form-control"
+                        role="button">Quit Game</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid gamebox">
+        <div class="p1block"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+          </svg></div>
+        <div class="p2block"><svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+          </svg></div>
+        <div class="game-piece"></div>
+    </div>
+    <div class="container-fluid pull">
+        <div class="form-group">
+            <a name="pull" id="pull" class="btn btn-primary rounded-pill px-5" role="button">Pull</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,81 @@
+body, html {
+    height: 100%;
+}
+
+[aria-invalid="true"]~.errormessage {
+    visibility: visible;
+    color: red;
+}
+
+[aria-invalid="false"]~.errormessage {
+    visibility: hidden;
+    color: inherit;
+}
+
+.form {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    width: 35%;
+    align-items: center;
+}
+
+.display-1 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.header {
+    height: 20%;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn {
+    width: 60%;
+}
+
+.player-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25%;
+}
+
+h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.gamebox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 40%;
+    gap: 40%;
+    align-items: flex-end;
+}
+
+.game-piece {
+    top: 65%;
+    left: 45%;
+    width: 10%;
+    height: 1%;
+    position: absolute;
+    z-index: 10;
+    background-color: black;
+}
+
+.pull {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+#pull {
+    width: 100%;
+}
