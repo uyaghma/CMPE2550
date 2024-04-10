@@ -1,0 +1,665 @@
+[15-Mar-2024 17:00:14 UTC] Inside API.php GET:{"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[15-Mar-2024 17:00:14 UTC] Inside API.php Request:"usermessage\/place\/40"
+[15-Mar-2024 17:00:14 UTC] Inside constructor: GET
+[15-Mar-2024 17:00:14 UTC] Request: usermessage/place/40
+[15-Mar-2024 17:00:14 UTC] GET: {"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[15-Mar-2024 17:00:14 UTC] Post: []
+[15-Mar-2024 17:00:14 UTC] 
+[15-Mar-2024 17:00:14 UTC] Mehtod: "GET"
+[15-Mar-2024 17:00:14 UTC] Endpoint: "usermessage"
+[15-Mar-2024 17:00:14 UTC] Verb: "place"
+[15-Mar-2024 17:00:14 UTC] Arguments: ["40"]
+[15-Mar-2024 17:00:14 UTC] File: null
+[15-Mar-2024 17:00:14 UTC] 
+[15-Mar-2024 17:00:14 UTC] Inside API.PHP after constructor call
+[15-Mar-2024 17:00:14 UTC] Before calling Example function
+[15-Mar-2024 17:00:14 UTC] Inside usermessage function
+[15-Mar-2024 17:00:14 UTC] Inside Response function
+[15-Mar-2024 17:00:14 UTC] Inside Response Status  function
+[15-Mar-2024 17:00:14 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:32:39 UTC] Inside API.php GET:{"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:32:39 UTC] Inside API.php Request:"usermessage\/place\/40"
+[27-Mar-2024 03:32:39 UTC] Inside constructor: GET
+[27-Mar-2024 03:32:39 UTC] Request: usermessage/place/40
+[27-Mar-2024 03:32:39 UTC] GET: {"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:32:39 UTC] Post: []
+[27-Mar-2024 03:32:39 UTC] 
+[27-Mar-2024 03:32:39 UTC] Method: "GET"
+[27-Mar-2024 03:32:39 UTC] Endpoint: "usermessage"
+[27-Mar-2024 03:32:39 UTC] Verb: "place"
+[27-Mar-2024 03:32:39 UTC] Arguments: ["40"]
+[27-Mar-2024 03:32:39 UTC] File: null
+[27-Mar-2024 03:32:39 UTC] 
+[27-Mar-2024 03:32:39 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:32:39 UTC] Before calling Example function
+[27-Mar-2024 03:32:39 UTC] Inside usermessage function
+[27-Mar-2024 03:32:39 UTC] Inside Response function
+[27-Mar-2024 03:32:39 UTC] Inside Response Status  function
+[27-Mar-2024 03:32:39 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:32:41 UTC] Inside API.php GET:{"request":"example\/place\/30"}
+[27-Mar-2024 03:32:41 UTC] Inside API.php Request:"example\/place\/30"
+[27-Mar-2024 03:32:41 UTC] Inside constructor: POST
+[27-Mar-2024 03:32:41 UTC] Request: example/place/30
+[27-Mar-2024 03:32:41 UTC] GET: {"request":"example\/place\/30"}
+[27-Mar-2024 03:32:41 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:32:41 UTC] 
+[27-Mar-2024 03:32:41 UTC] Method: "POST"
+[27-Mar-2024 03:32:41 UTC] Endpoint: "example"
+[27-Mar-2024 03:32:41 UTC] Verb: "place"
+[27-Mar-2024 03:32:41 UTC] Arguments: ["30"]
+[27-Mar-2024 03:32:41 UTC] File: null
+[27-Mar-2024 03:32:41 UTC] 
+[27-Mar-2024 03:32:41 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:32:41 UTC] Before calling Example function
+[27-Mar-2024 03:32:41 UTC] Inside Example function
+[27-Mar-2024 03:32:41 UTC] Inside Response function
+[27-Mar-2024 03:32:41 UTC] Inside Response Status  function
+[27-Mar-2024 03:32:41 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:32:42 UTC] Inside API.php GET:{"request":"example\/place\/20"}
+[27-Mar-2024 03:32:42 UTC] Inside API.php Request:"example\/place\/20"
+[27-Mar-2024 03:32:42 UTC] Inside constructor: PUT
+[27-Mar-2024 03:32:42 UTC] Request: example/place/20
+[27-Mar-2024 03:32:42 UTC] GET: {"request":"example\/place\/20"}
+[27-Mar-2024 03:32:42 UTC] Post: []
+[27-Mar-2024 03:32:42 UTC] 
+[27-Mar-2024 03:32:42 UTC] Method: "PUT"
+[27-Mar-2024 03:32:42 UTC] Endpoint: "example"
+[27-Mar-2024 03:32:42 UTC] Verb: "place"
+[27-Mar-2024 03:32:42 UTC] Arguments: ["20"]
+[27-Mar-2024 03:32:42 UTC] File: {"PUTtest":"My Test PUT data."}
+[27-Mar-2024 03:32:42 UTC] 
+[27-Mar-2024 03:32:42 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:32:42 UTC] Before calling Example function
+[27-Mar-2024 03:32:42 UTC] Inside Example function
+[27-Mar-2024 03:32:42 UTC] Inside Response function
+[27-Mar-2024 03:32:42 UTC] Inside Response Status  function
+[27-Mar-2024 03:32:42 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:32:45 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:32:45 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:32:45 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:32:45 UTC] Request: example/place/10
+[27-Mar-2024 03:32:45 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:32:45 UTC] Post: []
+[27-Mar-2024 03:32:45 UTC] 
+[27-Mar-2024 03:32:45 UTC] Method: "DELETE"
+[27-Mar-2024 03:32:45 UTC] Endpoint: "example"
+[27-Mar-2024 03:32:45 UTC] Verb: "place"
+[27-Mar-2024 03:32:45 UTC] Arguments: ["10"]
+[27-Mar-2024 03:32:45 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:32:45 UTC] 
+[27-Mar-2024 03:32:45 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:32:45 UTC] Before calling Example function
+[27-Mar-2024 03:32:45 UTC] Inside Example function
+[27-Mar-2024 03:32:45 UTC] Inside Response function
+[27-Mar-2024 03:32:45 UTC] Inside Response Status  function
+[27-Mar-2024 03:32:45 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:32:47 UTC] Inside API.php GET:{"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:32:47 UTC] Inside API.php Request:"usermessage\/place\/40"
+[27-Mar-2024 03:32:47 UTC] Inside constructor: GET
+[27-Mar-2024 03:32:47 UTC] Request: usermessage/place/40
+[27-Mar-2024 03:32:47 UTC] GET: {"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:32:47 UTC] Post: []
+[27-Mar-2024 03:32:47 UTC] 
+[27-Mar-2024 03:32:47 UTC] Method: "GET"
+[27-Mar-2024 03:32:47 UTC] Endpoint: "usermessage"
+[27-Mar-2024 03:32:47 UTC] Verb: "place"
+[27-Mar-2024 03:32:47 UTC] Arguments: ["40"]
+[27-Mar-2024 03:32:47 UTC] File: null
+[27-Mar-2024 03:32:47 UTC] 
+[27-Mar-2024 03:32:47 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:32:47 UTC] Before calling Example function
+[27-Mar-2024 03:32:47 UTC] Inside usermessage function
+[27-Mar-2024 03:32:47 UTC] Inside Response function
+[27-Mar-2024 03:32:47 UTC] Inside Response Status  function
+[27-Mar-2024 03:32:47 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:33:23 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:33:23 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:33:23 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:33:23 UTC] Request: example/place/10
+[27-Mar-2024 03:33:23 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:33:23 UTC] Post: []
+[27-Mar-2024 03:33:23 UTC] 
+[27-Mar-2024 03:33:23 UTC] Method: "DELETE"
+[27-Mar-2024 03:33:23 UTC] Endpoint: "example"
+[27-Mar-2024 03:33:23 UTC] Verb: "place"
+[27-Mar-2024 03:33:23 UTC] Arguments: ["10"]
+[27-Mar-2024 03:33:23 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:33:23 UTC] 
+[27-Mar-2024 03:33:23 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:33:23 UTC] Before calling Example function
+[27-Mar-2024 03:33:23 UTC] Inside Example function
+[27-Mar-2024 03:33:23 UTC] Inside Response function
+[27-Mar-2024 03:33:23 UTC] Inside Response Status  function
+[27-Mar-2024 03:33:23 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:05 UTC] Inside API.php GET:{"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:34:05 UTC] Inside API.php Request:"usermessage\/place\/40"
+[27-Mar-2024 03:34:05 UTC] Inside constructor: GET
+[27-Mar-2024 03:34:05 UTC] Request: usermessage/place/40
+[27-Mar-2024 03:34:05 UTC] GET: {"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:34:05 UTC] Post: []
+[27-Mar-2024 03:34:05 UTC] 
+[27-Mar-2024 03:34:05 UTC] Method: "GET"
+[27-Mar-2024 03:34:05 UTC] Endpoint: "usermessage"
+[27-Mar-2024 03:34:05 UTC] Verb: "place"
+[27-Mar-2024 03:34:05 UTC] Arguments: ["40"]
+[27-Mar-2024 03:34:05 UTC] File: null
+[27-Mar-2024 03:34:05 UTC] 
+[27-Mar-2024 03:34:05 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:05 UTC] Before calling Example function
+[27-Mar-2024 03:34:05 UTC] Inside usermessage function
+[27-Mar-2024 03:34:05 UTC] Inside Response function
+[27-Mar-2024 03:34:05 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:05 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:06 UTC] Inside API.php GET:{"request":"example\/place\/30"}
+[27-Mar-2024 03:34:06 UTC] Inside API.php Request:"example\/place\/30"
+[27-Mar-2024 03:34:06 UTC] Inside constructor: POST
+[27-Mar-2024 03:34:06 UTC] Request: example/place/30
+[27-Mar-2024 03:34:06 UTC] GET: {"request":"example\/place\/30"}
+[27-Mar-2024 03:34:06 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:34:06 UTC] 
+[27-Mar-2024 03:34:06 UTC] Method: "POST"
+[27-Mar-2024 03:34:06 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:06 UTC] Verb: "place"
+[27-Mar-2024 03:34:06 UTC] Arguments: ["30"]
+[27-Mar-2024 03:34:06 UTC] File: null
+[27-Mar-2024 03:34:06 UTC] 
+[27-Mar-2024 03:34:06 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:06 UTC] Before calling Example function
+[27-Mar-2024 03:34:06 UTC] Inside Example function
+[27-Mar-2024 03:34:06 UTC] Inside Response function
+[27-Mar-2024 03:34:06 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:06 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:13 UTC] Inside API.php GET:{"request":"example\/place\/20"}
+[27-Mar-2024 03:34:13 UTC] Inside API.php Request:"example\/place\/20"
+[27-Mar-2024 03:34:13 UTC] Inside constructor: PUT
+[27-Mar-2024 03:34:13 UTC] Request: example/place/20
+[27-Mar-2024 03:34:13 UTC] GET: {"request":"example\/place\/20"}
+[27-Mar-2024 03:34:13 UTC] Post: []
+[27-Mar-2024 03:34:13 UTC] 
+[27-Mar-2024 03:34:13 UTC] Method: "PUT"
+[27-Mar-2024 03:34:13 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:13 UTC] Verb: "place"
+[27-Mar-2024 03:34:13 UTC] Arguments: ["20"]
+[27-Mar-2024 03:34:13 UTC] File: {"PUTtest":"My Test PUT data."}
+[27-Mar-2024 03:34:13 UTC] 
+[27-Mar-2024 03:34:13 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:13 UTC] Before calling Example function
+[27-Mar-2024 03:34:13 UTC] Inside Example function
+[27-Mar-2024 03:34:13 UTC] Inside Response function
+[27-Mar-2024 03:34:13 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:13 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:14 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:34:14 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:34:14 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:34:14 UTC] Request: example/place/10
+[27-Mar-2024 03:34:14 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:34:14 UTC] Post: []
+[27-Mar-2024 03:34:14 UTC] 
+[27-Mar-2024 03:34:14 UTC] Method: "DELETE"
+[27-Mar-2024 03:34:14 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:14 UTC] Verb: "place"
+[27-Mar-2024 03:34:14 UTC] Arguments: ["10"]
+[27-Mar-2024 03:34:14 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:34:14 UTC] 
+[27-Mar-2024 03:34:14 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:14 UTC] Before calling Example function
+[27-Mar-2024 03:34:14 UTC] Inside Example function
+[27-Mar-2024 03:34:14 UTC] Inside Response function
+[27-Mar-2024 03:34:14 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:14 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:14 UTC] Inside API.php GET:{"request":"example\/place\/30"}
+[27-Mar-2024 03:34:14 UTC] Inside API.php Request:"example\/place\/30"
+[27-Mar-2024 03:34:14 UTC] Inside constructor: POST
+[27-Mar-2024 03:34:14 UTC] Request: example/place/30
+[27-Mar-2024 03:34:14 UTC] GET: {"request":"example\/place\/30"}
+[27-Mar-2024 03:34:14 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:34:14 UTC] 
+[27-Mar-2024 03:34:14 UTC] Method: "POST"
+[27-Mar-2024 03:34:14 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:14 UTC] Verb: "place"
+[27-Mar-2024 03:34:14 UTC] Arguments: ["30"]
+[27-Mar-2024 03:34:14 UTC] File: null
+[27-Mar-2024 03:34:14 UTC] 
+[27-Mar-2024 03:34:14 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:14 UTC] Before calling Example function
+[27-Mar-2024 03:34:14 UTC] Inside Example function
+[27-Mar-2024 03:34:14 UTC] Inside Response function
+[27-Mar-2024 03:34:14 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:14 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:15 UTC] Inside API.php GET:{"request":"example\/place\/20"}
+[27-Mar-2024 03:34:15 UTC] Inside API.php Request:"example\/place\/20"
+[27-Mar-2024 03:34:15 UTC] Inside constructor: PUT
+[27-Mar-2024 03:34:15 UTC] Request: example/place/20
+[27-Mar-2024 03:34:15 UTC] GET: {"request":"example\/place\/20"}
+[27-Mar-2024 03:34:15 UTC] Post: []
+[27-Mar-2024 03:34:15 UTC] 
+[27-Mar-2024 03:34:15 UTC] Method: "PUT"
+[27-Mar-2024 03:34:15 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:15 UTC] Verb: "place"
+[27-Mar-2024 03:34:15 UTC] Arguments: ["20"]
+[27-Mar-2024 03:34:15 UTC] File: {"PUTtest":"My Test PUT data."}
+[27-Mar-2024 03:34:15 UTC] 
+[27-Mar-2024 03:34:15 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:15 UTC] Before calling Example function
+[27-Mar-2024 03:34:15 UTC] Inside Example function
+[27-Mar-2024 03:34:15 UTC] Inside Response function
+[27-Mar-2024 03:34:15 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:15 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:16 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:34:16 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:34:16 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:34:16 UTC] Request: example/place/10
+[27-Mar-2024 03:34:16 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:34:16 UTC] Post: []
+[27-Mar-2024 03:34:16 UTC] 
+[27-Mar-2024 03:34:16 UTC] Method: "DELETE"
+[27-Mar-2024 03:34:16 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:16 UTC] Verb: "place"
+[27-Mar-2024 03:34:16 UTC] Arguments: ["10"]
+[27-Mar-2024 03:34:16 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:34:16 UTC] 
+[27-Mar-2024 03:34:16 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:16 UTC] Before calling Example function
+[27-Mar-2024 03:34:16 UTC] Inside Example function
+[27-Mar-2024 03:34:16 UTC] Inside Response function
+[27-Mar-2024 03:34:16 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:16 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:16 UTC] Inside API.php GET:{"request":"example\/place\/30"}
+[27-Mar-2024 03:34:16 UTC] Inside API.php Request:"example\/place\/30"
+[27-Mar-2024 03:34:16 UTC] Inside constructor: POST
+[27-Mar-2024 03:34:16 UTC] Request: example/place/30
+[27-Mar-2024 03:34:16 UTC] GET: {"request":"example\/place\/30"}
+[27-Mar-2024 03:34:16 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:34:16 UTC] 
+[27-Mar-2024 03:34:16 UTC] Method: "POST"
+[27-Mar-2024 03:34:16 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:16 UTC] Verb: "place"
+[27-Mar-2024 03:34:16 UTC] Arguments: ["30"]
+[27-Mar-2024 03:34:16 UTC] File: null
+[27-Mar-2024 03:34:16 UTC] 
+[27-Mar-2024 03:34:16 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:16 UTC] Before calling Example function
+[27-Mar-2024 03:34:16 UTC] Inside Example function
+[27-Mar-2024 03:34:16 UTC] Inside Response function
+[27-Mar-2024 03:34:16 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:16 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:17 UTC] Inside API.php GET:{"request":"example\/place\/20"}
+[27-Mar-2024 03:34:17 UTC] Inside API.php Request:"example\/place\/20"
+[27-Mar-2024 03:34:17 UTC] Inside constructor: PUT
+[27-Mar-2024 03:34:17 UTC] Request: example/place/20
+[27-Mar-2024 03:34:17 UTC] GET: {"request":"example\/place\/20"}
+[27-Mar-2024 03:34:17 UTC] Post: []
+[27-Mar-2024 03:34:17 UTC] 
+[27-Mar-2024 03:34:17 UTC] Method: "PUT"
+[27-Mar-2024 03:34:17 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:17 UTC] Verb: "place"
+[27-Mar-2024 03:34:17 UTC] Arguments: ["20"]
+[27-Mar-2024 03:34:17 UTC] File: {"PUTtest":"My Test PUT data."}
+[27-Mar-2024 03:34:17 UTC] 
+[27-Mar-2024 03:34:17 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:17 UTC] Before calling Example function
+[27-Mar-2024 03:34:17 UTC] Inside Example function
+[27-Mar-2024 03:34:17 UTC] Inside Response function
+[27-Mar-2024 03:34:17 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:17 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:17 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:34:17 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:34:17 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:34:17 UTC] Request: example/place/10
+[27-Mar-2024 03:34:17 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:34:17 UTC] Post: []
+[27-Mar-2024 03:34:17 UTC] 
+[27-Mar-2024 03:34:17 UTC] Method: "DELETE"
+[27-Mar-2024 03:34:17 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:17 UTC] Verb: "place"
+[27-Mar-2024 03:34:17 UTC] Arguments: ["10"]
+[27-Mar-2024 03:34:17 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:34:17 UTC] 
+[27-Mar-2024 03:34:17 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:17 UTC] Before calling Example function
+[27-Mar-2024 03:34:17 UTC] Inside Example function
+[27-Mar-2024 03:34:17 UTC] Inside Response function
+[27-Mar-2024 03:34:17 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:17 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:18 UTC] Inside API.php GET:{"request":"example\/place\/20"}
+[27-Mar-2024 03:34:18 UTC] Inside API.php Request:"example\/place\/20"
+[27-Mar-2024 03:34:18 UTC] Inside constructor: PUT
+[27-Mar-2024 03:34:18 UTC] Request: example/place/20
+[27-Mar-2024 03:34:18 UTC] GET: {"request":"example\/place\/20"}
+[27-Mar-2024 03:34:18 UTC] Post: []
+[27-Mar-2024 03:34:18 UTC] 
+[27-Mar-2024 03:34:18 UTC] Method: "PUT"
+[27-Mar-2024 03:34:18 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:18 UTC] Verb: "place"
+[27-Mar-2024 03:34:18 UTC] Arguments: ["20"]
+[27-Mar-2024 03:34:18 UTC] File: {"PUTtest":"My Test PUT data."}
+[27-Mar-2024 03:34:18 UTC] 
+[27-Mar-2024 03:34:18 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:18 UTC] Before calling Example function
+[27-Mar-2024 03:34:18 UTC] Inside Example function
+[27-Mar-2024 03:34:18 UTC] Inside Response function
+[27-Mar-2024 03:34:18 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:18 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:18 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:34:18 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:34:18 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:34:18 UTC] Request: example/place/10
+[27-Mar-2024 03:34:18 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:34:18 UTC] Post: []
+[27-Mar-2024 03:34:18 UTC] 
+[27-Mar-2024 03:34:18 UTC] Method: "DELETE"
+[27-Mar-2024 03:34:18 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:18 UTC] Verb: "place"
+[27-Mar-2024 03:34:18 UTC] Arguments: ["10"]
+[27-Mar-2024 03:34:18 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:34:18 UTC] 
+[27-Mar-2024 03:34:18 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:18 UTC] Before calling Example function
+[27-Mar-2024 03:34:18 UTC] Inside Example function
+[27-Mar-2024 03:34:18 UTC] Inside Response function
+[27-Mar-2024 03:34:18 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:18 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:19 UTC] Inside API.php GET:{"request":"example\/place\/30"}
+[27-Mar-2024 03:34:19 UTC] Inside API.php Request:"example\/place\/30"
+[27-Mar-2024 03:34:19 UTC] Inside constructor: POST
+[27-Mar-2024 03:34:19 UTC] Request: example/place/30
+[27-Mar-2024 03:34:19 UTC] GET: {"request":"example\/place\/30"}
+[27-Mar-2024 03:34:19 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:34:19 UTC] 
+[27-Mar-2024 03:34:19 UTC] Method: "POST"
+[27-Mar-2024 03:34:19 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:19 UTC] Verb: "place"
+[27-Mar-2024 03:34:19 UTC] Arguments: ["30"]
+[27-Mar-2024 03:34:19 UTC] File: null
+[27-Mar-2024 03:34:19 UTC] 
+[27-Mar-2024 03:34:19 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:19 UTC] Before calling Example function
+[27-Mar-2024 03:34:19 UTC] Inside Example function
+[27-Mar-2024 03:34:19 UTC] Inside Response function
+[27-Mar-2024 03:34:19 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:19 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:19 UTC] Inside API.php GET:{"request":"example\/place\/20"}
+[27-Mar-2024 03:34:19 UTC] Inside API.php Request:"example\/place\/20"
+[27-Mar-2024 03:34:19 UTC] Inside constructor: PUT
+[27-Mar-2024 03:34:19 UTC] Request: example/place/20
+[27-Mar-2024 03:34:19 UTC] GET: {"request":"example\/place\/20"}
+[27-Mar-2024 03:34:19 UTC] Post: []
+[27-Mar-2024 03:34:19 UTC] 
+[27-Mar-2024 03:34:19 UTC] Method: "PUT"
+[27-Mar-2024 03:34:19 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:19 UTC] Verb: "place"
+[27-Mar-2024 03:34:19 UTC] Arguments: ["20"]
+[27-Mar-2024 03:34:19 UTC] File: {"PUTtest":"My Test PUT data."}
+[27-Mar-2024 03:34:19 UTC] 
+[27-Mar-2024 03:34:19 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:19 UTC] Before calling Example function
+[27-Mar-2024 03:34:19 UTC] Inside Example function
+[27-Mar-2024 03:34:19 UTC] Inside Response function
+[27-Mar-2024 03:34:19 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:19 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:19 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:34:19 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:34:19 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:34:19 UTC] Request: example/place/10
+[27-Mar-2024 03:34:19 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:34:19 UTC] Post: []
+[27-Mar-2024 03:34:19 UTC] 
+[27-Mar-2024 03:34:19 UTC] Method: "DELETE"
+[27-Mar-2024 03:34:19 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:19 UTC] Verb: "place"
+[27-Mar-2024 03:34:19 UTC] Arguments: ["10"]
+[27-Mar-2024 03:34:19 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:34:19 UTC] 
+[27-Mar-2024 03:34:19 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:19 UTC] Before calling Example function
+[27-Mar-2024 03:34:19 UTC] Inside Example function
+[27-Mar-2024 03:34:19 UTC] Inside Response function
+[27-Mar-2024 03:34:19 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:19 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:20 UTC] Inside API.php GET:{"request":"example\/place\/30"}
+[27-Mar-2024 03:34:20 UTC] Inside API.php Request:"example\/place\/30"
+[27-Mar-2024 03:34:20 UTC] Inside constructor: POST
+[27-Mar-2024 03:34:20 UTC] Request: example/place/30
+[27-Mar-2024 03:34:20 UTC] GET: {"request":"example\/place\/30"}
+[27-Mar-2024 03:34:20 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:34:20 UTC] 
+[27-Mar-2024 03:34:20 UTC] Method: "POST"
+[27-Mar-2024 03:34:20 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:20 UTC] Verb: "place"
+[27-Mar-2024 03:34:20 UTC] Arguments: ["30"]
+[27-Mar-2024 03:34:20 UTC] File: null
+[27-Mar-2024 03:34:20 UTC] 
+[27-Mar-2024 03:34:20 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:20 UTC] Before calling Example function
+[27-Mar-2024 03:34:20 UTC] Inside Example function
+[27-Mar-2024 03:34:20 UTC] Inside Response function
+[27-Mar-2024 03:34:20 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:20 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:20 UTC] Inside API.php GET:{"request":"example\/place\/20"}
+[27-Mar-2024 03:34:20 UTC] Inside API.php Request:"example\/place\/20"
+[27-Mar-2024 03:34:20 UTC] Inside constructor: PUT
+[27-Mar-2024 03:34:20 UTC] Request: example/place/20
+[27-Mar-2024 03:34:20 UTC] GET: {"request":"example\/place\/20"}
+[27-Mar-2024 03:34:20 UTC] Post: []
+[27-Mar-2024 03:34:20 UTC] 
+[27-Mar-2024 03:34:20 UTC] Method: "PUT"
+[27-Mar-2024 03:34:20 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:20 UTC] Verb: "place"
+[27-Mar-2024 03:34:20 UTC] Arguments: ["20"]
+[27-Mar-2024 03:34:20 UTC] File: {"PUTtest":"My Test PUT data."}
+[27-Mar-2024 03:34:20 UTC] 
+[27-Mar-2024 03:34:20 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:20 UTC] Before calling Example function
+[27-Mar-2024 03:34:20 UTC] Inside Example function
+[27-Mar-2024 03:34:20 UTC] Inside Response function
+[27-Mar-2024 03:34:20 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:20 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:21 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:34:21 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:34:21 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:34:21 UTC] Request: example/place/10
+[27-Mar-2024 03:34:21 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:34:21 UTC] Post: []
+[27-Mar-2024 03:34:21 UTC] 
+[27-Mar-2024 03:34:21 UTC] Method: "DELETE"
+[27-Mar-2024 03:34:21 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:21 UTC] Verb: "place"
+[27-Mar-2024 03:34:21 UTC] Arguments: ["10"]
+[27-Mar-2024 03:34:21 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:34:21 UTC] 
+[27-Mar-2024 03:34:21 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:21 UTC] Before calling Example function
+[27-Mar-2024 03:34:21 UTC] Inside Example function
+[27-Mar-2024 03:34:21 UTC] Inside Response function
+[27-Mar-2024 03:34:21 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:21 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:21 UTC] Inside API.php GET:{"request":"example\/place\/30"}
+[27-Mar-2024 03:34:21 UTC] Inside API.php Request:"example\/place\/30"
+[27-Mar-2024 03:34:21 UTC] Inside constructor: POST
+[27-Mar-2024 03:34:21 UTC] Request: example/place/30
+[27-Mar-2024 03:34:21 UTC] GET: {"request":"example\/place\/30"}
+[27-Mar-2024 03:34:21 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:34:21 UTC] 
+[27-Mar-2024 03:34:21 UTC] Method: "POST"
+[27-Mar-2024 03:34:21 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:21 UTC] Verb: "place"
+[27-Mar-2024 03:34:21 UTC] Arguments: ["30"]
+[27-Mar-2024 03:34:21 UTC] File: null
+[27-Mar-2024 03:34:21 UTC] 
+[27-Mar-2024 03:34:21 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:21 UTC] Before calling Example function
+[27-Mar-2024 03:34:21 UTC] Inside Example function
+[27-Mar-2024 03:34:21 UTC] Inside Response function
+[27-Mar-2024 03:34:21 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:21 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:27 UTC] Inside API.php GET:{"request":"example\/place\/20"}
+[27-Mar-2024 03:34:27 UTC] Inside API.php Request:"example\/place\/20"
+[27-Mar-2024 03:34:27 UTC] Inside constructor: PUT
+[27-Mar-2024 03:34:27 UTC] Request: example/place/20
+[27-Mar-2024 03:34:27 UTC] GET: {"request":"example\/place\/20"}
+[27-Mar-2024 03:34:27 UTC] Post: []
+[27-Mar-2024 03:34:27 UTC] 
+[27-Mar-2024 03:34:27 UTC] Method: "PUT"
+[27-Mar-2024 03:34:27 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:27 UTC] Verb: "place"
+[27-Mar-2024 03:34:27 UTC] Arguments: ["20"]
+[27-Mar-2024 03:34:27 UTC] File: {"PUTtest":"My Test PUT data."}
+[27-Mar-2024 03:34:27 UTC] 
+[27-Mar-2024 03:34:27 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:27 UTC] Before calling Example function
+[27-Mar-2024 03:34:27 UTC] Inside Example function
+[27-Mar-2024 03:34:27 UTC] Inside Response function
+[27-Mar-2024 03:34:27 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:27 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:34:32 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:34:32 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:34:32 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:34:32 UTC] Request: example/place/10
+[27-Mar-2024 03:34:32 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:34:32 UTC] Post: []
+[27-Mar-2024 03:34:32 UTC] 
+[27-Mar-2024 03:34:32 UTC] Method: "DELETE"
+[27-Mar-2024 03:34:32 UTC] Endpoint: "example"
+[27-Mar-2024 03:34:32 UTC] Verb: "place"
+[27-Mar-2024 03:34:32 UTC] Arguments: ["10"]
+[27-Mar-2024 03:34:32 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:34:32 UTC] 
+[27-Mar-2024 03:34:32 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:34:32 UTC] Before calling Example function
+[27-Mar-2024 03:34:32 UTC] Inside Example function
+[27-Mar-2024 03:34:32 UTC] Inside Response function
+[27-Mar-2024 03:34:32 UTC] Inside Response Status  function
+[27-Mar-2024 03:34:32 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:36:41 UTC] Inside API.php GET:{"request":"example\/place\/10"}
+[27-Mar-2024 03:36:41 UTC] Inside API.php Request:"example\/place\/10"
+[27-Mar-2024 03:36:41 UTC] Inside constructor: DELETE
+[27-Mar-2024 03:36:41 UTC] Request: example/place/10
+[27-Mar-2024 03:36:41 UTC] GET: {"request":"example\/place\/10"}
+[27-Mar-2024 03:36:41 UTC] Post: []
+[27-Mar-2024 03:36:41 UTC] 
+[27-Mar-2024 03:36:41 UTC] Method: "DELETE"
+[27-Mar-2024 03:36:41 UTC] Endpoint: "example"
+[27-Mar-2024 03:36:41 UTC] Verb: "place"
+[27-Mar-2024 03:36:41 UTC] Arguments: ["10"]
+[27-Mar-2024 03:36:41 UTC] File: {"DELETEtest":"My Test DELETE data."}
+[27-Mar-2024 03:36:41 UTC] 
+[27-Mar-2024 03:36:41 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:36:41 UTC] Before calling Example function
+[27-Mar-2024 03:36:41 UTC] Inside Example function
+[27-Mar-2024 03:36:41 UTC] Inside Response function
+[27-Mar-2024 03:36:41 UTC] Inside Response Status  function
+[27-Mar-2024 03:36:41 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:36:42 UTC] Inside API.php GET:{"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:36:42 UTC] Inside API.php Request:"usermessage\/place\/40"
+[27-Mar-2024 03:36:42 UTC] Inside constructor: GET
+[27-Mar-2024 03:36:42 UTC] Request: usermessage/place/40
+[27-Mar-2024 03:36:42 UTC] GET: {"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:36:42 UTC] Post: []
+[27-Mar-2024 03:36:42 UTC] 
+[27-Mar-2024 03:36:42 UTC] Method: "GET"
+[27-Mar-2024 03:36:42 UTC] Endpoint: "usermessage"
+[27-Mar-2024 03:36:42 UTC] Verb: "place"
+[27-Mar-2024 03:36:42 UTC] Arguments: ["40"]
+[27-Mar-2024 03:36:42 UTC] File: null
+[27-Mar-2024 03:36:42 UTC] 
+[27-Mar-2024 03:36:42 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:36:42 UTC] Before calling Example function
+[27-Mar-2024 03:36:42 UTC] Inside usermessage function
+[27-Mar-2024 03:36:42 UTC] Inside Response function
+[27-Mar-2024 03:36:42 UTC] Inside Response Status  function
+[27-Mar-2024 03:36:42 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:36:43 UTC] Inside API.php GET:{"request":"example\/place\/30"}
+[27-Mar-2024 03:36:43 UTC] Inside API.php Request:"example\/place\/30"
+[27-Mar-2024 03:36:43 UTC] Inside constructor: POST
+[27-Mar-2024 03:36:43 UTC] Request: example/place/30
+[27-Mar-2024 03:36:43 UTC] GET: {"request":"example\/place\/30"}
+[27-Mar-2024 03:36:43 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:36:43 UTC] 
+[27-Mar-2024 03:36:43 UTC] Method: "POST"
+[27-Mar-2024 03:36:43 UTC] Endpoint: "example"
+[27-Mar-2024 03:36:43 UTC] Verb: "place"
+[27-Mar-2024 03:36:43 UTC] Arguments: ["30"]
+[27-Mar-2024 03:36:43 UTC] File: null
+[27-Mar-2024 03:36:43 UTC] 
+[27-Mar-2024 03:36:43 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:36:43 UTC] Before calling Example function
+[27-Mar-2024 03:36:43 UTC] Inside Example function
+[27-Mar-2024 03:36:43 UTC] Inside Response function
+[27-Mar-2024 03:36:43 UTC] Inside Response Status  function
+[27-Mar-2024 03:36:43 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:38:24 UTC] Inside API.php GET:{"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:38:24 UTC] Inside API.php Request:"usermessage\/place\/40"
+[27-Mar-2024 03:38:24 UTC] Inside constructor: GET
+[27-Mar-2024 03:38:24 UTC] Request: usermessage/place/40
+[27-Mar-2024 03:38:24 UTC] GET: {"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:38:24 UTC] Post: []
+[27-Mar-2024 03:38:24 UTC] 
+[27-Mar-2024 03:38:24 UTC] Method: "GET"
+[27-Mar-2024 03:38:24 UTC] Endpoint: "usermessage"
+[27-Mar-2024 03:38:24 UTC] Verb: "place"
+[27-Mar-2024 03:38:24 UTC] Arguments: ["40"]
+[27-Mar-2024 03:38:24 UTC] File: null
+[27-Mar-2024 03:38:24 UTC] 
+[27-Mar-2024 03:38:24 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:38:24 UTC] Before calling Example function
+[27-Mar-2024 03:38:24 UTC] Inside usermessage function
+[27-Mar-2024 03:38:24 UTC] Inside Response function
+[27-Mar-2024 03:38:24 UTC] Inside Response Status  function
+[27-Mar-2024 03:38:24 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:39:57 UTC] Inside API.php GET:{"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:39:57 UTC] Inside API.php Request:"usermessage\/place\/40"
+[27-Mar-2024 03:39:57 UTC] Inside constructor: GET
+[27-Mar-2024 03:39:57 UTC] Request: usermessage/place/40
+[27-Mar-2024 03:39:57 UTC] GET: {"request":"usermessage\/place\/40","GETtest":"This is data in the GET object."}
+[27-Mar-2024 03:39:57 UTC] Post: []
+[27-Mar-2024 03:39:57 UTC] 
+[27-Mar-2024 03:39:57 UTC] Method: "GET"
+[27-Mar-2024 03:39:57 UTC] Endpoint: "usermessage"
+[27-Mar-2024 03:39:57 UTC] Verb: "place"
+[27-Mar-2024 03:39:57 UTC] Arguments: ["40"]
+[27-Mar-2024 03:39:57 UTC] File: null
+[27-Mar-2024 03:39:57 UTC] 
+[27-Mar-2024 03:39:57 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:39:57 UTC] Before calling Example function
+[27-Mar-2024 03:39:57 UTC] Inside usermessage function
+[27-Mar-2024 03:39:57 UTC] Inside Response function
+[27-Mar-2024 03:39:57 UTC] Inside Response Status  function
+[27-Mar-2024 03:39:57 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:40:26 UTC] Inside API.php GET:{"request":"usermessage\/place\/30"}
+[27-Mar-2024 03:40:26 UTC] Inside API.php Request:"usermessage\/place\/30"
+[27-Mar-2024 03:40:26 UTC] Inside constructor: POST
+[27-Mar-2024 03:40:26 UTC] Request: usermessage/place/30
+[27-Mar-2024 03:40:26 UTC] GET: {"request":"usermessage\/place\/30"}
+[27-Mar-2024 03:40:26 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:40:26 UTC] 
+[27-Mar-2024 03:40:26 UTC] Method: "POST"
+[27-Mar-2024 03:40:26 UTC] Endpoint: "usermessage"
+[27-Mar-2024 03:40:26 UTC] Verb: "place"
+[27-Mar-2024 03:40:26 UTC] Arguments: ["30"]
+[27-Mar-2024 03:40:26 UTC] File: null
+[27-Mar-2024 03:40:26 UTC] 
+[27-Mar-2024 03:40:26 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:40:26 UTC] Before calling Example function
+[27-Mar-2024 03:40:26 UTC] Inside usermessage function
+[27-Mar-2024 03:40:26 UTC] Inside Response function
+[27-Mar-2024 03:40:26 UTC] Inside Response Status  function
+[27-Mar-2024 03:40:26 UTC] After returning data back to client inside API.php
+[27-Mar-2024 03:40:42 UTC] Inside API.php GET:{"request":"usermessage\/place\/30"}
+[27-Mar-2024 03:40:42 UTC] Inside API.php Request:"usermessage\/place\/30"
+[27-Mar-2024 03:40:42 UTC] Inside constructor: POST
+[27-Mar-2024 03:40:42 UTC] Request: usermessage/place/30
+[27-Mar-2024 03:40:42 UTC] GET: {"request":"usermessage\/place\/30"}
+[27-Mar-2024 03:40:42 UTC] Post: {"POSTtest":"This is data in the POST object."}
+[27-Mar-2024 03:40:42 UTC] 
+[27-Mar-2024 03:40:42 UTC] Method: "POST"
+[27-Mar-2024 03:40:42 UTC] Endpoint: "usermessage"
+[27-Mar-2024 03:40:42 UTC] Verb: "place"
+[27-Mar-2024 03:40:42 UTC] Arguments: ["30"]
+[27-Mar-2024 03:40:42 UTC] File: null
+[27-Mar-2024 03:40:42 UTC] 
+[27-Mar-2024 03:40:42 UTC] Inside API.PHP after constructor call
+[27-Mar-2024 03:40:42 UTC] Before calling Example function
+[27-Mar-2024 03:40:42 UTC] Inside usermessage function
+[27-Mar-2024 03:40:42 UTC] Inside Response function
+[27-Mar-2024 03:40:42 UTC] Inside Response Status  function
+[27-Mar-2024 03:40:42 UTC] After returning data back to client inside API.php

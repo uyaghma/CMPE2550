@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Enter your description here" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.6.0/lux/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>SQL Server and Data Manipulation</title>
+</head>
+
+<body>
+    <h1 class="display-1">ASP ADO - Data Manipulation</h1>
+
+    <div class="container-sm retrieve">
+
+    </div>
+
+    <div class="container-sm studentinfo" style="margin-bottom: 1rem;">
+
+    </div>
+
+    <div class="container-sm add-parent">
+        <div id="inner-container">
+            <div class="container-fluid addstudent">
+                <div class="form-group row">
+                    <label for="fname" class="col-sm-2 col-form-label">Student First Name</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="fname" id="fname" placeholder="First Name">
+                        <div class="fname-status" style="width: 100%; display: none;">
+                            <small id="fname-status" style="margin-left: 15px;">First name cannot be empty</small><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="lname" class="col-sm-2 col-form-label">Student Last Name</label>
+                    <div class="col-sm-5">
+                        <input type="text" class="form-control" name="lname" id="lname" placeholder="Last Name">
+                        <div class="lname-status" style="width: 100%; display: none;">
+                            <small id="lname-status" style="margin-left: 15px;">Last name cannot be empty</small><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="id" class="col-sm-2 col-form-label">School ID</label>
+                    <div class="col-sm-5">
+                        <input type="number" class="form-control" name="id" id="id" placeholder="School ID" min="1">
+                        <div class="id-status" style="width: 100%; display: none;">
+                            <small id="id-status" style="margin-left: 15px;">School ID cannot be empty</small><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="class-id" class="col-sm-2 col-form-label">Class ID</label>
+                    <div class="col-sm-5">
+                        <select name="class-id" id="class-id" class="form-control" multiple>
+
+                        </select>
+                        <div class="class-status" style="width: 100%; display: none;">
+                            <small id="class-status" style="margin-left: 15px;">Select at least 1 class</small><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row" id="button">
+                    <div class="col-sm-7">
+                        <a type='button' class='btn btn-primary rounded-lg add-student form-control'>Add Student</a>
+                    </div>
+                    <div class="col-sm-7"><p class="status-update" style="margin-top: 15px;"></p></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+[09-Apr-2024 10:52:11 UTC] Connection is successful
+[09-Apr-2024 10:52:11 UTC] Inside ws.php
+[09-Apr-2024 10:52:11 UTC] Inside MyselectQuery function
+[09-Apr-2024 10:52:11 UTC] Before returning results
+[09-Apr-2024 10:52:11 UTC] Array
+(
+    [user_id] => 23
+    [username] => gomenasorry
+    [pass] => $2y$10$dF1NEQvBlRurnitNSl3A9utB1gGoabHwF/zt25fXFKdP1G0f861VC
+    [role_id] => 4
+    [name] => member
+    [description] => steve
+)
+
+[09-Apr-2024 10:52:11 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[09-Apr-2024 10:52:11 UTC] Inside API.php Request:"FetchMessages\/"
+[09-Apr-2024 10:52:11 UTC] Connection is successful
+[09-Apr-2024 10:52:11 UTC] Inside ws.php
+[09-Apr-2024 10:52:11 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[09-Apr-2024 10:52:11 UTC] FetchMessages/
+[09-Apr-2024 10:52:11 UTC] Inside API.PHP after constructor call
+[09-Apr-2024 10:52:11 UTC] Before calling Example function
+[09-Apr-2024 10:52:11 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id
+[09-Apr-2024 10:52:11 UTC] sql function
+[09-Apr-2024 10:52:11 UTC] Connection is successful
+[09-Apr-2024 10:52:11 UTC] inside select query
+[09-Apr-2024 10:52:11 UTC] Inside Response function
+[09-Apr-2024 10:52:11 UTC] Inside Response Status  function
+[09-Apr-2024 10:52:11 UTC] After returning data back to client inside API.php
+[09-Apr-2024 10:52:13 UTC] Inside API.php GET:{"request":"FetchMessages\/delete\/8"}
+[09-Apr-2024 10:52:13 UTC] Inside API.php Request:"FetchMessages\/delete\/8"
+[09-Apr-2024 10:52:13 UTC] Connection is successful
+[09-Apr-2024 10:52:13 UTC] Inside ws.php
+[09-Apr-2024 10:52:13 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[09-Apr-2024 10:52:13 UTC] FetchMessages/delete/8
+[09-Apr-2024 10:52:13 UTC] Inside API.PHP after constructor call
+[09-Apr-2024 10:52:13 UTC] Before calling Example function
+[09-Apr-2024 10:52:13 UTC] DELETE FROM messages WHERE message_id=
+[09-Apr-2024 10:52:13 UTC] sql function
+[09-Apr-2024 10:52:13 UTC] Connection is successful

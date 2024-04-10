@@ -1,0 +1,33 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.display-1 {
+    font-size: 3rem;
+    margin: 2% 0%;
+    text-align: center;
+}
+
+.retrieve, .studentinfo {
+    width: 65%;
+}
+
+.table {
+    text-align: center;
+}
+
+.table th, tr {
+    border-bottom: 1px solid grey;
+}
+
+.table td {
+    padding: 0.3rem;
+}
+
+thead {
+    color: white;
+}

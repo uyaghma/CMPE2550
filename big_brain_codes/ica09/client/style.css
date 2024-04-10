@@ -1,0 +1,49 @@
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+}
+
+.display-1 {
+    font-size: 3rem;
+    margin: 2% 0%;
+    text-align: center;
+}
+
+.table {
+    text-align: center;
+}
+
+.table th, tr {
+    border-bottom: 1px solid grey;
+    vertical-align: middle;
+}
+
+.table td {
+    padding: 0.3rem;
+    vertical-align: middle;
+}
+
+thead {
+    color: white;
+}
+
+#inner-container {
+    width: 100%;
+}
+
+.addstudent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    justify-content: center;
+}
+
+small {
+    color: red;
+}
