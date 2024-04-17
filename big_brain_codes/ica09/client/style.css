@@ -47,3 +47,7 @@ thead {
 small {
     color: red;
 }
+
+p {
+    text-align: center;
+}

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\uyghu\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\ica09.csproj": {}
+    "C:\\Users\\uyaghma1\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\ica09.csproj": {}
   },
   "projects": {
-    "C:\\Users\\uyghu\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\ica09.csproj": {
+    "C:\\Users\\uyaghma1\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\ica09.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\uyghu\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\ica09.csproj",
+        "projectUniqueName": "C:\\Users\\uyaghma1\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\ica09.csproj",
         "projectName": "ica09",
-        "projectPath": "C:\\Users\\uyghu\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\ica09.csproj",
-        "packagesPath": "C:\\Users\\uyghu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\uyghu\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\obj\\",
+        "projectPath": "C:\\Users\\uyaghma1\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\ica09.csproj",
+        "packagesPath": "C:\\Users\\uyaghma1\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\uyaghma1\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica09\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\uyghu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\uyaghma1\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,6 +26,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -38,11 +39,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -52,6 +48,10 @@
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.2.0, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.6, )"
             }
           },
           "imports": [
@@ -73,7 +73,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
         }
       }
     }

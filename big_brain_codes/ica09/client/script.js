@@ -1,18 +1,5 @@
 $(document).ready(function () {
-    url = "https://localhost:7083/retrieve"
-    table = `<table class='table table-sm table-light'>
-                <thead class='bg-primary'>
-                    <tr>
-                        <th style="width: 25%;">Action</th>
-                        <th style="width: 15%;">Student ID</th>
-                        <th style="width: 15%;">First Name</th>
-                        <th style="width: 15%;">Last Name</th>
-                        <th style="width: 15%;">School ID</th>
-                        <th style="width: 15%;">Action</th>
-                    </tr>
-                </thead>`
-
-    AJAX(url, 'get', "", "JSON", Success, Error);
+    AJAX("https://localhost:7083/retrieve", 'get', "", "JSON", Success, Error);
     AJAX("https://localhost:7083/classget", 'get', "", "JSON", ClassGet, Error);
 
     $(document).on('click', '.retrieve-info', function (e) {
@@ -23,8 +10,21 @@ $(document).ready(function () {
     });
 
     function Success(response) {
+        console.log("Retrieved data");
         var data = JSON.parse(response.data);
         var rows = 0;
+
+        table = `<table class='table table-sm table-light'>
+        <thead class='bg-primary'>
+            <tr>
+                <th style="width: 25%;">Action</th>
+                <th style="width: 15%;">Student ID</th>
+                <th style="width: 15%;">First Name</th>
+                <th style="width: 15%;">Last Name</th>
+                <th style="width: 15%;">School ID</th>
+                <th style="width: 15%;">Action</th>
+            </tr>
+        </thead>`
 
         table += `<tbody>`;
         for (var i = 0; i < data.length; i++) {
@@ -82,36 +82,11 @@ $(document).ready(function () {
 
         var classes = "";
         for (var i = 0; i < data.length; i++) {
-            classes += `<option val='${data[i]["class_id"]}'>${data[i]['class_desc']}</option>`
+            classes += `<option value='${data[i]["class_id"]}'>${data[i]['class_desc']}</option>`
         }
 
         $('#class-id').html(classes);
     }
-
-    function isEmpty(value) {
-        return $.trim(value) === '';
-    }
-
-    function shakeStatus(statusDiv) {
-        statusDiv.show();
-        statusDiv.effect("shake", { times: 2, distance: 10 }, 400);
-    }
-
-    $('#fname').on('focus', function () {
-        $('.fname-status').hide();
-    });
-
-    $('#lname').on('focus', function () {
-        $('.lname-status').hide();
-    });
-
-    $('#id').on('focus', function () {
-        $('.id-status').hide();
-    });
-
-    $('#class-id').on('focus', function () {
-        $('.class-status').hide();
-    });
 
     function validateForm() {
         var isValid = true;
@@ -140,9 +115,16 @@ $(document).ready(function () {
         var schoolID = $('#id').val();
         var idStatus = $('.id-status');
         if (isEmpty(schoolID)) {
+            $('#id-status').html("Cannot be empty");
             shakeStatus(idStatus);
             isValid = false;
-        } else {
+        } 
+        else if (isNaN(schoolID) || parseInt(schoolID) <= 0) {
+            $('#id-status').html("Must be a number > 0");
+            shakeStatus(idStatus);
+            isValid = false;
+        }
+        else {
             idStatus.hide();
         }
 
@@ -172,7 +154,7 @@ $(document).ready(function () {
             data.scid = schoolID;
             data.cid = classID;
 
-            AJAX("https://localhost:7083/add", "post", data, "JSON", Success, Error);
+            AJAX(`https://localhost:7083/add?fname=${firstName}&lname=${lastName}&scid=${schoolID}&classID=${classID}`, "post", data, "JSON", ManipulationSuccess, Error);
         } else {
             console.log('Form validation failed.');
         }
@@ -194,51 +176,151 @@ $(document).ready(function () {
         var currentSchoolID = schoolIDColumn.html();
 
         // Replace the columns with input fields
-        firstNameColumn.html(`<input type="text" id="${id}" class="form-control fname" value="" placeholder="` + currentFirstName + '">');
-        lastNameColumn.html(`<input type="text" id="${id}" class="form-control lname" value="" placeholder="` + currentLastName + '">');
-        schoolIDColumn.html(`<input type="number" id="${id}" class="form-control scid" value="" placeholder="` + currentSchoolID + '" min="1">');
+        firstNameColumn.html(`<div class="col">
+                                <input type="text" id="${id}" class="form-control ufname" value="" placeholder="${currentFirstName}">
+                                <div id="${id}" class="ufname-status" style="width: 100%; display: none;">
+                                    <small id="ufname-status">Cannot be empty</small><br>
+                                </div>
+                            </div>`);
 
-        // Change the edit button to an update button
+        lastNameColumn.html(`<div class="col">
+                                <input type="text" id="${id}" class="form-control ulname" value="" placeholder="${currentLastName}">
+                                <div id="${id}" class="ulname-status" style="width: 100%; display: none;">
+                                    <small id="ulname-status">Cannot be empty</small><br>
+                                </div>
+                            </div>`);
+
+        schoolIDColumn.html(`<div class="col">
+                                <input type="text" id="${id}" class="form-control scid" value="" placeholder="${currentSchoolID}" min="1" maxlength="6">
+                                <div id="${id}" class="scid-status" style="width: 100%; display: none;">
+                                    <small id="scid-status">Cannot be empty</small><br>
+                                </div>
+                                <div id="${id}" class="scid-status-num" style="width: 100%; display: none;">
+                                    <small id="scid-status-num">Only a number > 0</small><br>
+                                </div>
+                            </div>`);
+
         $(this).removeClass('edit btn-primary').addClass('update btn-primary').text('Update');
     });
 
-    // Update button click event handler
+    function isEmpty(value) {
+        return $.trim(value) === '';
+    }
+
+    function shakeStatus(statusDiv) {
+        statusDiv.show();
+        statusDiv.effect("shake", { times: 2, distance: 10 }, 400);
+    }
+
+    $('#lname').on('focus', function () {
+        $('.lname-status').hide();
+    });
+
+    $('#id').on('focus', function () {
+        $('.id-status').hide();
+    });
+
+    $('#fname').on('focus', function () {
+        $('.fname-status').hide();
+    });
+
+    $('#class-id').on('focus', function () {
+        $('.class-status').hide();
+    });
+
+    $(document).on('focus', '.ufname', function () {
+        var id = $(this).attr('id');
+        $(`#${id}.ufname-status`).hide();
+    });
+
+    $(document).on('focus', '.ulname', function () {
+        var id = $(this).attr('id');
+        $(`#${id}.ulname-status`).hide();
+    });
+    
+    $(document).on('focus', '.scid', function () {
+        var id = $(this).attr('id');
+        $(`#${id}.scid-status`).hide();
+    });
+
+    $(document).on('focus', '.scid', function () {
+        var id = $(this).attr('id');
+        $(`#${id}.scid-status-num`).hide();
+    });
+
     $(document).on('click', '.update', function () {
         var id = $(this).attr('id');
-        var fnColumn = $(`#${id}.fname`);
-        var lnColumn = $(`#${id}.lname`);
+        var fnColumn = $(`#${id}.ufname`);
+        var lnColumn = $(`#${id}.ulname`);
         var scIDColumn = $(`#${id}.scid`);
 
+        var firstNameColumn = $(`#${id}.fn-cell`);
+        var lastNameColumn = $(`#${id}.ln-cell`);
+        var schoolIDColumn = $(`#${id}.scid-cell`);
+
+        var isValid = true;
+
+        if (fnColumn.val() == '') {
+            shakeStatus($('.ufname-status'));
+            isValid = false;
+        }
+
+        if (lnColumn.val() == '') {
+            shakeStatus($('.ulname-status'));
+            isValid = false;
+        }
+
+        if (scIDColumn.val() == '') {
+            shakeStatus($('.scid-status'));
+            isValid = false;
+        }
+
+        if (isNaN(scIDColumn.val()) || parseInt(scIDColumn.val()) <= 0) {
+            shakeStatus($('.scid-status-num'));
+            isValid = false;
+        }
+
+        if (!isValid) {
+            // If any field is empty, return without performing the update
+            return;
+        }
+
         $(this).removeClass('update btn-primary').addClass('edit btn-primary').text('Edit');
-        if (fnColumn.val() == '' || lnColumn.val() == '' || scIDColumn.val() == '') {
-            var firstNameColumn = $(`#${id}.fn-cell`);
-            var lastNameColumn = $(`#${id}.ln-cell`);
-            var schoolIDColumn = $(`#${id}.scid-cell`);
+        firstNameColumn.html(fnColumn.val());
+        lastNameColumn.html(lnColumn.val());
+        schoolIDColumn.html(scIDColumn.val());
 
-            firstNameColumn.html(fnColumn.attr('placeholder'));
-            lastNameColumn.html(lnColumn.attr('placeholder'));
-            schoolIDColumn.html(scIDColumn.attr('placeholder'));
-        }
-        else {
-            var updatedFirstName = fnColumn.val();
-            var updatedLastName = lnColumn.val();
-            var updatedSchoolID = scIDColumn.val();
+        var data = {
+            fname: fnColumn.val(),
+            lname: lnColumn.val(),
+            scid: scIDColumn.val()
+        };
 
-            var data = {}
-            data.fname = updatedFirstName;
-            data.lname = updatedLastName;
-            data.scid = updatedSchoolID;
-
-            AJAX("https://localhost:7083/update", "put", data, "JSON", Success, Error);
-        }
+        AJAX(`https://localhost:7083/update?fname=${data.fname}&lname=${data.lname}&scid=${data.scid}&stid=${id}`, "put", data, "JSON", ManipulationSuccess, Error);
     });
+
 
     // Delete button click event handler
     $(document).on('click', '.delete', function () {
         var studentID = $(this).attr('id');
-
-        AJAX("https://localhost:7083/delete", "delete", id, "JSON", Success, Error);
+        AJAX("https://localhost:7083/delete?stid=" + studentID, "delete", id, "JSON", ManipulationSuccess, Error);
     });
+
+    function ManipulationSuccess(response) {
+        console.log('Reached success');
+        $('#fname').val("");
+        $('#lname').val("");
+        $('#id').val("");
+        $('#class-id').val("");
+        AJAX("https://localhost:7083/retrieve", 'get', "", "JSON", Success, Error);
+        $('.status-update').text(response.status);
+        console.log(response.status);
+    }
+
+    function Error(response) {
+        console.log('reached error');
+        console.log(response);
+    }
 
     function AJAX(url, method, data, dataType, successMethod, errorMethod) {
         let ajaxOptions = {};

@@ -164,6 +164,7 @@ $(document).ready(function () {
         rawData = JSON.parse(response);
         console.log(rawData);
         data = rawData.data;
+        console.log(data);
         var table = "<table class='table'>" +
             "<thead>" +
             "<tr>" +

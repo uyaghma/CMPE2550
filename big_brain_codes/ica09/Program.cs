@@ -107,94 +107,113 @@ namespace ica09
 
             app.MapPut("/update", (string fname, string lname, int scid, int stid) =>
             {
+                string status = "";
                 using (SqlConnection con = new(conData))
                 {
                     try
                     {
                         con.Open();
-                        string query = $"UPDATE Students (first_name, last_name, school_id) VALUES ({CleanInputs(fname)}, {CleanInputs(lname)}, {scid}) WHERE student_id={stid}";
+                        string query = $"UPDATE Students SET first_name='{CleanInputs(fname)}', last_name='{CleanInputs(lname)}', school_id={scid} WHERE student_id={stid}";
+                        Console.WriteLine(query);
 
                         using (SqlCommand cmd = new(query, con))
                         {
                             int rows = cmd.ExecuteNonQuery();
 
                             if (rows < 0)
-                                return "Failed to update successfully";
+                                status = "Error updating";
                             else
-                                return "Updated successfully";
+                                status = "Updated successfully";
                         }
                     }
                     catch (SqlException ex)
                     {
-                        return ex.ToString();
+                        status = "SQL error: " + ex.ToString();
                     }
                 }
+                return new
+                {
+                    status
+                };
             });
 
             app.MapDelete("/delete", (int stid) =>
             {
+                string status;
                 using (SqlConnection con = new(conData))
                 {
                     try
                     {
                         con.Open();
-                        string query = $"DELETE * FROM class_to_student WHERE student_id={stid}";
+                        string query = $"DELETE FROM class_to_student WHERE student_id={stid}; DELETE FROM Results WHERE student_id={stid}; DELETE FROM Students WHERE student_id={stid};";
 
                         using (SqlCommand cmd = new(query, con))
                         {
                             int rows = cmd.ExecuteNonQuery();
+                            if (rows < 0) status = "Error deleting record";
+                            else status = "Record deleted";
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        status = "SQL error: " + ex.ToString();            }
+                }
+                return new
+                {
+                    status
+                };
+            });
 
-                            if (rows < 0) return "Delete not successful";
+            app.MapPost("/add", (info sub) =>
+            {
+                string status = "";
+                using (SqlConnection con = new SqlConnection(conData))
+                {
+                    try
+                    {
+                        con.Open();
+                        string query = $"INSERT INTO Students (first_name, last_name, school_id) VALUES ('{sub.fname}', '{sub.lname}', {sub.scid}); SELECT SCOPE_IDENTITY();";
+
+                        using (SqlCommand cmd = new SqlCommand(query, con))
+                        {
+                            object result = cmd.ExecuteScalar();
+
+                            if (result != null)
+                            {
+                                int stid = Convert.ToInt32(result);
+
+                                foreach (int classId in sub.cid)
+                                {
+                                    query = $"INSERT INTO class_to_student (class_id, student_id) VALUES ({classId}, {stid})";
+                                    using (SqlCommand command = new SqlCommand(query, con))
+                                    {
+                                        int rows = command.ExecuteNonQuery();
+                                        if (rows <= 0)
+                                            status = "Failed to update successfully";
+                                    }
+                                }
+                                status = "Added student successfully";
+                            }
                             else
                             {
-                                query = $"DELETE * FROM Results WHERE student_id={stid}";
-                                rows = cmd.ExecuteNonQuery();
-                                if (rows < 0) return "Delete not successful";
-                                else
-                                {
-                                    query = $"DELETE * FROM Students WHERE student_id={stid}";
-                                    rows = cmd.ExecuteNonQuery();
-                                    if (rows < 0) return "Delete not successful";
-                                    else return "Record successfully deleted";
-                                }
+                                status = "Failed to insert student record";
                             }
                         }
                     }
                     catch (SqlException ex)
                     {
-                        return ex.ToString();
+                        status = "SQL error: " + ex.ToString();
                     }
                 }
-            });
-
-            app.MapPost("/add", (string fname, string lname, int scid, int[] cid) =>
-            {
-                using (SqlConnection con = new(conData))
+                return new
                 {
-                    try
-                    {
-                        con.Open();
-                        string query = $"INSERT into Students (first_name, last_name, school_id) VALUES ({fname}, {lname}, {scid})";
-
-                        using (SqlCommand cmd = new(query, con))
-                        {
-                            int rows = cmd.ExecuteNonQuery();
-
-                            if (rows < 0)
-                                return "Failed to update successfully";
-                            else
-                                return "Updated successfully";
-                        }
-                    }
-                    catch (SqlException ex)
-                    {
-                        return ex.ToString();
-                    }
-                }
+                    status
+                };
             });
 
             app.Run();
         }
+        record info(string fname, string lname, int scid, int[] cid);
     }
 
 }

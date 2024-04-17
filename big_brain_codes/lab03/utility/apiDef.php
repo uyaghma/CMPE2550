@@ -128,8 +128,7 @@ class API
     {
         $filter = isset($data) ? $data : '';
 
-        $query = "SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC";
-        $query .= $filter != "" ? " WHERE name like '%$filter%' OR message like '%$filter%'" : "";
+        $query = $filter != "" ? "SELECT * FROM messages m JOIN roles r ON m.role=r.role_id WHERE name like '%$filter%' OR message like '%$filter%' ORDER BY message_id DESC" : "SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC";
 
         error_log($query);
         return $this->SQL($query);

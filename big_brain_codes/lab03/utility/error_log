@@ -38,3 +38,595 @@
 [09-Apr-2024 10:52:13 UTC] DELETE FROM messages WHERE message_id=
 [09-Apr-2024 10:52:13 UTC] sql function
 [09-Apr-2024 10:52:13 UTC] Connection is successful
+[10-Apr-2024 03:12:26 UTC] Connection is successful
+[10-Apr-2024 03:12:26 UTC] Inside ws.php
+[10-Apr-2024 21:06:34 UTC] Connection is successful
+[10-Apr-2024 21:06:34 UTC] Inside ws.php
+[10-Apr-2024 21:06:34 UTC] big_brain
+[10-Apr-2024 21:06:45 UTC] Connection is successful
+[10-Apr-2024 21:06:45 UTC] Inside ws.php
+[10-Apr-2024 21:06:45 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:06:45 UTC] Before returning results
+[10-Apr-2024 21:06:45 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:06:45 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:06:45 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:06:45 UTC] Connection is successful
+[10-Apr-2024 21:06:45 UTC] Inside ws.php
+[10-Apr-2024 21:06:45 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:06:45 UTC] FetchMessages/
+[10-Apr-2024 21:06:45 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:06:45 UTC] Before calling Example function
+[10-Apr-2024 21:06:45 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:06:45 UTC] sql function
+[10-Apr-2024 21:06:45 UTC] Connection is successful
+[10-Apr-2024 21:06:45 UTC] inside select query
+[10-Apr-2024 21:06:45 UTC] Inside Response function
+[10-Apr-2024 21:06:45 UTC] Inside Response Status  function
+[10-Apr-2024 21:06:45 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:06:51 UTC] Inside API.php GET:{"request":"FetchMessages\/root","role":"1"}
+[10-Apr-2024 21:06:51 UTC] Inside API.php Request:"FetchMessages\/root"
+[10-Apr-2024 21:06:51 UTC] Connection is successful
+[10-Apr-2024 21:06:51 UTC] Inside ws.php
+[10-Apr-2024 21:06:51 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:06:51 UTC] FetchMessages/root
+[10-Apr-2024 21:06:51 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:06:51 UTC] Before calling Example function
+[10-Apr-2024 21:06:51 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC WHERE name like '%root%' OR message like '%root%'
+[10-Apr-2024 21:06:51 UTC] sql function
+[10-Apr-2024 21:06:51 UTC] Connection is successful
+[10-Apr-2024 21:07:04 UTC] Inside API.php GET:{"request":"FetchMessages\/new","role":"1"}
+[10-Apr-2024 21:07:04 UTC] Inside API.php Request:"FetchMessages\/new"
+[10-Apr-2024 21:07:04 UTC] Connection is successful
+[10-Apr-2024 21:07:04 UTC] Inside ws.php
+[10-Apr-2024 21:07:04 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:07:04 UTC] FetchMessages/new
+[10-Apr-2024 21:07:04 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:07:04 UTC] Before calling Example function
+[10-Apr-2024 21:07:04 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC WHERE name like '%new%' OR message like '%new%'
+[10-Apr-2024 21:07:04 UTC] sql function
+[10-Apr-2024 21:07:04 UTC] Connection is successful
+[10-Apr-2024 21:07:22 UTC] Inside API.php GET:{"request":"FetchMessages"}
+[10-Apr-2024 21:07:22 UTC] Inside API.php Request:"FetchMessages"
+[10-Apr-2024 21:07:22 UTC] Connection is successful
+[10-Apr-2024 21:07:22 UTC] Inside ws.php
+[10-Apr-2024 21:07:22 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:07:22 UTC] FetchMessages
+[10-Apr-2024 21:07:22 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:07:22 UTC] Before calling Example function
+[10-Apr-2024 21:07:22 UTC] sql function
+[10-Apr-2024 21:07:22 UTC] Connection is successful
+[10-Apr-2024 21:07:22 UTC] inside select query
+[10-Apr-2024 21:07:22 UTC] sql function
+[10-Apr-2024 21:07:22 UTC] Connection is successful
+[10-Apr-2024 21:07:22 UTC] Inside Response function
+[10-Apr-2024 21:07:22 UTC] Inside Response Status  function
+[10-Apr-2024 21:07:22 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:07:31 UTC] Inside API.php GET:{"request":"FetchMessages\/Test","role":"1"}
+[10-Apr-2024 21:07:31 UTC] Inside API.php Request:"FetchMessages\/Test"
+[10-Apr-2024 21:07:31 UTC] Connection is successful
+[10-Apr-2024 21:07:31 UTC] Inside ws.php
+[10-Apr-2024 21:07:31 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:07:31 UTC] FetchMessages/Test
+[10-Apr-2024 21:07:31 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:07:31 UTC] Before calling Example function
+[10-Apr-2024 21:07:31 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC WHERE name like '%Test%' OR message like '%Test%'
+[10-Apr-2024 21:07:31 UTC] sql function
+[10-Apr-2024 21:07:31 UTC] Connection is successful
+[10-Apr-2024 21:07:42 UTC] Inside API.php GET:{"request":"FetchMessages\/update\/13"}
+[10-Apr-2024 21:07:42 UTC] Inside API.php Request:"FetchMessages\/update\/13"
+[10-Apr-2024 21:07:42 UTC] Connection is successful
+[10-Apr-2024 21:07:42 UTC] Inside ws.php
+[10-Apr-2024 21:07:42 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:07:42 UTC] FetchMessages/update/13
+[10-Apr-2024 21:07:42 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:07:42 UTC] Before calling Example function
+[10-Apr-2024 21:07:42 UTC] sql function
+[10-Apr-2024 21:07:42 UTC] Connection is successful
+[10-Apr-2024 21:07:42 UTC] Inside Response function
+[10-Apr-2024 21:07:42 UTC] Inside Response Status  function
+[10-Apr-2024 21:07:42 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:07:44 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:07:44 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:07:44 UTC] Connection is successful
+[10-Apr-2024 21:07:44 UTC] Inside ws.php
+[10-Apr-2024 21:07:44 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:07:44 UTC] Before returning results
+[10-Apr-2024 21:07:44 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:07:44 UTC] Connection is successful
+[10-Apr-2024 21:07:44 UTC] Inside ws.php
+[10-Apr-2024 21:07:44 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:07:44 UTC] FetchMessages/
+[10-Apr-2024 21:07:44 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:07:44 UTC] Before calling Example function
+[10-Apr-2024 21:07:44 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:07:44 UTC] sql function
+[10-Apr-2024 21:07:44 UTC] Connection is successful
+[10-Apr-2024 21:07:44 UTC] inside select query
+[10-Apr-2024 21:07:44 UTC] Inside Response function
+[10-Apr-2024 21:07:44 UTC] Inside Response Status  function
+[10-Apr-2024 21:07:44 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:07:47 UTC] Inside API.php GET:{"request":"FetchMessages\/delete\/13"}
+[10-Apr-2024 21:07:47 UTC] Inside API.php Request:"FetchMessages\/delete\/13"
+[10-Apr-2024 21:07:47 UTC] Connection is successful
+[10-Apr-2024 21:07:47 UTC] Inside ws.php
+[10-Apr-2024 21:07:47 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:07:47 UTC] FetchMessages/delete/13
+[10-Apr-2024 21:07:47 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:07:47 UTC] Before calling Example function
+[10-Apr-2024 21:07:47 UTC] DELETE FROM messages WHERE message_id=13
+[10-Apr-2024 21:07:47 UTC] sql function
+[10-Apr-2024 21:07:47 UTC] Connection is successful
+[10-Apr-2024 21:07:47 UTC] Inside Response function
+[10-Apr-2024 21:07:47 UTC] Inside Response Status  function
+[10-Apr-2024 21:07:47 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:07:49 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:07:49 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:07:49 UTC] Connection is successful
+[10-Apr-2024 21:07:49 UTC] Inside ws.php
+[10-Apr-2024 21:07:49 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:07:49 UTC] Before returning results
+[10-Apr-2024 21:07:49 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:07:49 UTC] Connection is successful
+[10-Apr-2024 21:07:49 UTC] Inside ws.php
+[10-Apr-2024 21:07:49 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:07:49 UTC] FetchMessages/
+[10-Apr-2024 21:07:49 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:07:49 UTC] Before calling Example function
+[10-Apr-2024 21:07:49 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:07:49 UTC] sql function
+[10-Apr-2024 21:07:49 UTC] Connection is successful
+[10-Apr-2024 21:07:49 UTC] inside select query
+[10-Apr-2024 21:07:49 UTC] Inside Response function
+[10-Apr-2024 21:07:49 UTC] Inside Response Status  function
+[10-Apr-2024 21:07:49 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:07:53 UTC] Connection is successful
+[10-Apr-2024 21:07:53 UTC] Inside ws.php
+[10-Apr-2024 21:08:15 UTC] Connection is successful
+[10-Apr-2024 21:08:15 UTC] Inside ws.php
+[10-Apr-2024 21:08:15 UTC] gomenasorry
+[10-Apr-2024 21:08:17 UTC] Connection is successful
+[10-Apr-2024 21:08:17 UTC] Inside ws.php
+[10-Apr-2024 21:08:17 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:08:17 UTC] Before returning results
+[10-Apr-2024 21:08:17 UTC] Array
+(
+    [user_id] => 23
+    [username] => gomenasorry
+    [pass] => $2y$10$dF1NEQvBlRurnitNSl3A9utB1gGoabHwF/zt25fXFKdP1G0f861VC
+    [role_id] => 4
+    [name] => member
+    [description] => steve
+)
+
+[10-Apr-2024 21:08:18 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:08:18 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:08:18 UTC] Connection is successful
+[10-Apr-2024 21:08:18 UTC] Inside ws.php
+[10-Apr-2024 21:08:18 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:08:18 UTC] FetchMessages/
+[10-Apr-2024 21:08:18 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:08:18 UTC] Before calling Example function
+[10-Apr-2024 21:08:18 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:08:18 UTC] sql function
+[10-Apr-2024 21:08:18 UTC] Connection is successful
+[10-Apr-2024 21:08:18 UTC] inside select query
+[10-Apr-2024 21:08:18 UTC] Inside Response function
+[10-Apr-2024 21:08:18 UTC] Inside Response Status  function
+[10-Apr-2024 21:08:18 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:08:25 UTC] Inside API.php GET:{"request":"FetchMessages\/update\/11"}
+[10-Apr-2024 21:08:25 UTC] Inside API.php Request:"FetchMessages\/update\/11"
+[10-Apr-2024 21:08:25 UTC] Connection is successful
+[10-Apr-2024 21:08:25 UTC] Inside ws.php
+[10-Apr-2024 21:08:25 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:08:25 UTC] FetchMessages/update/11
+[10-Apr-2024 21:08:25 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:08:25 UTC] Before calling Example function
+[10-Apr-2024 21:08:25 UTC] sql function
+[10-Apr-2024 21:08:25 UTC] Connection is successful
+[10-Apr-2024 21:08:25 UTC] Inside Response function
+[10-Apr-2024 21:08:25 UTC] Inside Response Status  function
+[10-Apr-2024 21:08:25 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:08:34 UTC] Inside API.php GET:{"request":"FetchMessages\/delete\/11"}
+[10-Apr-2024 21:08:34 UTC] Inside API.php Request:"FetchMessages\/delete\/11"
+[10-Apr-2024 21:08:34 UTC] Connection is successful
+[10-Apr-2024 21:08:34 UTC] Inside ws.php
+[10-Apr-2024 21:08:34 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:08:34 UTC] FetchMessages/delete/11
+[10-Apr-2024 21:08:34 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:08:34 UTC] Before calling Example function
+[10-Apr-2024 21:08:34 UTC] DELETE FROM messages WHERE message_id=11
+[10-Apr-2024 21:08:34 UTC] sql function
+[10-Apr-2024 21:08:34 UTC] Connection is successful
+[10-Apr-2024 21:08:34 UTC] Inside Response function
+[10-Apr-2024 21:08:34 UTC] Inside Response Status  function
+[10-Apr-2024 21:08:34 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:08:40 UTC] Inside API.php GET:{"request":"FetchMessages\/new","role":"4"}
+[10-Apr-2024 21:08:40 UTC] Inside API.php Request:"FetchMessages\/new"
+[10-Apr-2024 21:08:40 UTC] Connection is successful
+[10-Apr-2024 21:08:40 UTC] Inside ws.php
+[10-Apr-2024 21:08:40 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:08:40 UTC] FetchMessages/new
+[10-Apr-2024 21:08:40 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:08:40 UTC] Before calling Example function
+[10-Apr-2024 21:08:40 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC WHERE name like '%new%' OR message like '%new%'
+[10-Apr-2024 21:08:40 UTC] sql function
+[10-Apr-2024 21:08:40 UTC] Connection is successful
+[10-Apr-2024 21:10:35 UTC] Connection is successful
+[10-Apr-2024 21:10:35 UTC] Inside ws.php
+[10-Apr-2024 21:10:35 UTC] big_brain
+[10-Apr-2024 21:10:36 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:10:36 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:10:36 UTC] Connection is successful
+[10-Apr-2024 21:10:36 UTC] Inside ws.php
+[10-Apr-2024 21:10:36 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:10:36 UTC] Before returning results
+[10-Apr-2024 21:10:36 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:10:36 UTC] Connection is successful
+[10-Apr-2024 21:10:36 UTC] Inside ws.php
+[10-Apr-2024 21:10:36 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:10:36 UTC] FetchMessages/
+[10-Apr-2024 21:10:36 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:10:36 UTC] Before calling Example function
+[10-Apr-2024 21:10:36 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:10:36 UTC] sql function
+[10-Apr-2024 21:10:36 UTC] Connection is successful
+[10-Apr-2024 21:10:36 UTC] inside select query
+[10-Apr-2024 21:10:36 UTC] Inside Response function
+[10-Apr-2024 21:10:36 UTC] Inside Response Status  function
+[10-Apr-2024 21:10:36 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:10:39 UTC] Inside API.php GET:{"request":"FetchMessages\/new","role":"1"}
+[10-Apr-2024 21:10:39 UTC] Inside API.php Request:"FetchMessages\/new"
+[10-Apr-2024 21:10:39 UTC] Connection is successful
+[10-Apr-2024 21:10:39 UTC] Inside ws.php
+[10-Apr-2024 21:10:39 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:10:39 UTC] FetchMessages/new
+[10-Apr-2024 21:10:39 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:10:39 UTC] Before calling Example function
+[10-Apr-2024 21:10:39 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC WHERE name like '%new%' OR message like '%new%'
+[10-Apr-2024 21:10:39 UTC] sql function
+[10-Apr-2024 21:10:39 UTC] Connection is successful
+[10-Apr-2024 21:10:41 UTC] Inside API.php GET:{"request":"FetchMessages\/new","role":"1"}
+[10-Apr-2024 21:10:41 UTC] Inside API.php Request:"FetchMessages\/new"
+[10-Apr-2024 21:10:41 UTC] Connection is successful
+[10-Apr-2024 21:10:41 UTC] Inside ws.php
+[10-Apr-2024 21:10:41 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:10:41 UTC] FetchMessages/new
+[10-Apr-2024 21:10:41 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:10:41 UTC] Before calling Example function
+[10-Apr-2024 21:10:41 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC WHERE name like '%new%' OR message like '%new%'
+[10-Apr-2024 21:10:41 UTC] sql function
+[10-Apr-2024 21:10:41 UTC] Connection is successful
+[10-Apr-2024 21:11:14 UTC] Connection is successful
+[10-Apr-2024 21:11:14 UTC] Inside ws.php
+[10-Apr-2024 21:11:14 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:11:14 UTC] Before returning results
+[10-Apr-2024 21:11:14 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:11:14 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:11:14 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:11:14 UTC] Connection is successful
+[10-Apr-2024 21:11:14 UTC] Inside ws.php
+[10-Apr-2024 21:11:14 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:11:14 UTC] FetchMessages/
+[10-Apr-2024 21:11:14 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:11:14 UTC] Before calling Example function
+[10-Apr-2024 21:11:14 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:11:14 UTC] sql function
+[10-Apr-2024 21:11:14 UTC] Connection is successful
+[10-Apr-2024 21:11:14 UTC] inside select query
+[10-Apr-2024 21:11:14 UTC] Inside Response function
+[10-Apr-2024 21:11:14 UTC] Inside Response Status  function
+[10-Apr-2024 21:11:14 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:11:48 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:11:48 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:11:48 UTC] Connection is successful
+[10-Apr-2024 21:11:48 UTC] Inside ws.php
+[10-Apr-2024 21:11:48 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:11:48 UTC] Before returning results
+[10-Apr-2024 21:11:48 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:11:48 UTC] Connection is successful
+[10-Apr-2024 21:11:48 UTC] Inside ws.php
+[10-Apr-2024 21:11:48 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:11:48 UTC] FetchMessages/
+[10-Apr-2024 21:11:48 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:11:48 UTC] Before calling Example function
+[10-Apr-2024 21:11:48 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:11:48 UTC] sql function
+[10-Apr-2024 21:11:48 UTC] Connection is successful
+[10-Apr-2024 21:11:48 UTC] inside select query
+[10-Apr-2024 21:11:48 UTC] Inside Response function
+[10-Apr-2024 21:11:48 UTC] Inside Response Status  function
+[10-Apr-2024 21:11:48 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:12:12 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:12:12 UTC] Connection is successful
+[10-Apr-2024 21:12:12 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:12:12 UTC] Inside ws.php
+[10-Apr-2024 21:12:12 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:12:12 UTC] Before returning results
+[10-Apr-2024 21:12:12 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:12:12 UTC] Connection is successful
+[10-Apr-2024 21:12:12 UTC] Inside ws.php
+[10-Apr-2024 21:12:12 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:12:12 UTC] FetchMessages/
+[10-Apr-2024 21:12:12 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:12:12 UTC] Before calling Example function
+[10-Apr-2024 21:12:12 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:12:12 UTC] sql function
+[10-Apr-2024 21:12:12 UTC] Connection is successful
+[10-Apr-2024 21:12:12 UTC] inside select query
+[10-Apr-2024 21:12:12 UTC] Inside Response function
+[10-Apr-2024 21:12:12 UTC] Inside Response Status  function
+[10-Apr-2024 21:12:12 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:12:17 UTC] Inside API.php GET:{"request":"FetchMessages\/new","role":"1"}
+[10-Apr-2024 21:12:17 UTC] Inside API.php Request:"FetchMessages\/new"
+[10-Apr-2024 21:12:17 UTC] Connection is successful
+[10-Apr-2024 21:12:17 UTC] Inside ws.php
+[10-Apr-2024 21:12:17 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:12:17 UTC] FetchMessages/new
+[10-Apr-2024 21:12:17 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:12:17 UTC] Before calling Example function
+[10-Apr-2024 21:12:17 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC WHERE name like '%new%' OR message like '%new%'
+[10-Apr-2024 21:12:17 UTC] sql function
+[10-Apr-2024 21:12:17 UTC] Connection is successful
+[10-Apr-2024 21:13:03 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:13:03 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:13:03 UTC] Connection is successful
+[10-Apr-2024 21:13:03 UTC] Inside ws.php
+[10-Apr-2024 21:13:03 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:13:03 UTC] Before returning results
+[10-Apr-2024 21:13:03 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:13:03 UTC] Connection is successful
+[10-Apr-2024 21:13:03 UTC] Inside ws.php
+[10-Apr-2024 21:13:03 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:13:03 UTC] FetchMessages/
+[10-Apr-2024 21:13:03 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:13:03 UTC] Before calling Example function
+[10-Apr-2024 21:13:03 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:13:03 UTC] sql function
+[10-Apr-2024 21:13:03 UTC] Connection is successful
+[10-Apr-2024 21:13:03 UTC] inside select query
+[10-Apr-2024 21:13:03 UTC] Inside Response function
+[10-Apr-2024 21:13:03 UTC] Inside Response Status  function
+[10-Apr-2024 21:13:03 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:13:24 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:13:24 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:13:24 UTC] Connection is successful
+[10-Apr-2024 21:13:24 UTC] Inside ws.php
+[10-Apr-2024 21:13:24 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:13:24 UTC] Before returning results
+[10-Apr-2024 21:13:24 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:13:24 UTC] Connection is successful
+[10-Apr-2024 21:13:24 UTC] Inside ws.php
+[10-Apr-2024 21:13:24 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:13:24 UTC] FetchMessages/
+[10-Apr-2024 21:13:24 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:13:24 UTC] Before calling Example function
+[10-Apr-2024 21:13:24 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:13:24 UTC] sql function
+[10-Apr-2024 21:13:24 UTC] Connection is successful
+[10-Apr-2024 21:13:24 UTC] inside select query
+[10-Apr-2024 21:13:24 UTC] Inside Response function
+[10-Apr-2024 21:13:24 UTC] Inside Response Status  function
+[10-Apr-2024 21:13:24 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:13:31 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:13:31 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:13:31 UTC] Connection is successful
+[10-Apr-2024 21:13:31 UTC] Inside ws.php
+[10-Apr-2024 21:13:31 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:13:31 UTC] Before returning results
+[10-Apr-2024 21:13:31 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:13:31 UTC] Connection is successful
+[10-Apr-2024 21:13:31 UTC] Inside ws.php
+[10-Apr-2024 21:13:31 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:13:31 UTC] FetchMessages/
+[10-Apr-2024 21:13:31 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:13:31 UTC] Before calling Example function
+[10-Apr-2024 21:13:31 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC
+[10-Apr-2024 21:13:31 UTC] sql function
+[10-Apr-2024 21:13:31 UTC] Connection is successful
+[10-Apr-2024 21:13:31 UTC] inside select query
+[10-Apr-2024 21:13:31 UTC] Inside Response function
+[10-Apr-2024 21:13:31 UTC] Inside Response Status  function
+[10-Apr-2024 21:13:31 UTC] After returning data back to client inside API.php
+[10-Apr-2024 21:13:45 UTC] Inside API.php GET:{"request":"FetchMessages\/new","role":"1"}
+[10-Apr-2024 21:13:45 UTC] Inside API.php Request:"FetchMessages\/new"
+[10-Apr-2024 21:13:45 UTC] Connection is successful
+[10-Apr-2024 21:13:45 UTC] Inside ws.php
+[10-Apr-2024 21:13:45 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:13:45 UTC] FetchMessages/new
+[10-Apr-2024 21:13:45 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:13:45 UTC] Before calling Example function
+[10-Apr-2024 21:13:45 UTC] SELECT * FROM messages m JOIN roles r ON m.role=r.role_id ORDER BY message_id DESC WHERE name like '%new%' OR message like '%new%'
+[10-Apr-2024 21:13:45 UTC] sql function
+[10-Apr-2024 21:13:45 UTC] Connection is successful
+[10-Apr-2024 21:16:56 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:16:56 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:16:56 UTC] Connection is successful
+[10-Apr-2024 21:16:56 UTC] Inside ws.php
+[10-Apr-2024 21:16:56 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:16:56 UTC] Before returning results
+[10-Apr-2024 21:16:56 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:16:56 UTC] Connection is successful
+[10-Apr-2024 21:16:56 UTC] Inside ws.php
+[10-Apr-2024 21:16:56 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:16:56 UTC] FetchMessages/
+[10-Apr-2024 21:16:56 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:16:56 UTC] Before calling Example function
+[10-Apr-2024 21:16:56 UTC] 
+[10-Apr-2024 21:16:56 UTC] sql function
+[10-Apr-2024 21:16:56 UTC] Connection is successful
+[10-Apr-2024 21:16:56 UTC] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php:152
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(152): mysqli_query(Object(mysqli), '')
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(135): API->SQL('')
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(79): API->Get('')
+#3 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(218): API->FetchMessages(Array)
+#4 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/api.php(11): API->processAPI()
+#5 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php on line 152
+[10-Apr-2024 21:17:10 UTC] Connection is successful
+[10-Apr-2024 21:17:10 UTC] Inside ws.php
+[10-Apr-2024 21:17:10 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:17:10 UTC] Before returning results
+[10-Apr-2024 21:17:10 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:17:10 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:17:10 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:17:10 UTC] Connection is successful
+[10-Apr-2024 21:17:10 UTC] Inside ws.php
+[10-Apr-2024 21:17:10 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:17:10 UTC] FetchMessages/
+[10-Apr-2024 21:17:10 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:17:10 UTC] Before calling Example function
+[10-Apr-2024 21:17:10 UTC] 
+[10-Apr-2024 21:17:10 UTC] sql function
+[10-Apr-2024 21:17:10 UTC] Connection is successful
+[10-Apr-2024 21:17:10 UTC] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php:152
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(152): mysqli_query(Object(mysqli), '')
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(135): API->SQL('')
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(79): API->Get('')
+#3 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(218): API->FetchMessages(Array)
+#4 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/api.php(11): API->processAPI()
+#5 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php on line 152
+[10-Apr-2024 21:17:12 UTC] Inside API.php GET:{"request":"FetchMessages\/"}
+[10-Apr-2024 21:17:12 UTC] Inside API.php Request:"FetchMessages\/"
+[10-Apr-2024 21:17:12 UTC] Connection is successful
+[10-Apr-2024 21:17:12 UTC] Inside ws.php
+[10-Apr-2024 21:17:12 UTC] Inside MyselectQuery function
+[10-Apr-2024 21:17:12 UTC] Before returning results
+[10-Apr-2024 21:17:12 UTC] Array
+(
+    [user_id] => 36
+    [username] => big_brain
+    [pass] => $2y$10$RIa9KuInED3SQwD4.mzYI.fu9Txtg758ut69qeRcieCltNcTkS/Ii
+    [role_id] => 1
+    [name] => root
+    [description] => the goat
+)
+
+[10-Apr-2024 21:17:12 UTC] Connection is successful
+[10-Apr-2024 21:17:12 UTC] Inside ws.php
+[10-Apr-2024 21:17:12 UTC] PHP Warning:  Undefined array key "action" in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/ws.php on line 7
+[10-Apr-2024 21:17:12 UTC] FetchMessages/
+[10-Apr-2024 21:17:12 UTC] Inside API.PHP after constructor call
+[10-Apr-2024 21:17:12 UTC] Before calling Example function
+[10-Apr-2024 21:17:12 UTC] 
+[10-Apr-2024 21:17:12 UTC] sql function
+[10-Apr-2024 21:17:12 UTC] Connection is successful
+[10-Apr-2024 21:17:12 UTC] PHP Fatal error:  Uncaught ValueError: mysqli_query(): Argument #2 ($query) cannot be empty in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php:152
+Stack trace:
+#0 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(152): mysqli_query(Object(mysqli), '')
+#1 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(135): API->SQL('')
+#2 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(79): API->Get('')
+#3 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php(218): API->FetchMessages(Array)
+#4 /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/api.php(11): API->processAPI()
+#5 {main}
+  thrown in /home/uyaghma1/public_html/CMPE2550_Projects/big_brain_codes/lab03/utility/apiDef.php on line 152
