@@ -13,9 +13,11 @@
 </head>
 
 <body>
-    <header>
-        <h1 class="display-1">Welcome to Tim Hortons</h1>
-    </header>
+    <div>
+        <header>
+            <h1 class="display-1">Welcome to Tim Hortons</h1>
+        </header>
+    </div>
 
     <div class="container-fluid parent">
         <div class="container-sm main">
@@ -23,47 +25,50 @@
                 <h3 style="text-align: center; margin: 2rem auto 1rem auto;">Past Orders</h3>
                 <div class="form-group">
                     <label for="custID">Customer ID</label>
-                    <input type="text" class="form-control col-sm-7" name="custID" id="custID"
-                        placeholder="Customer ID">
+                    <input type="text" class="form-control" name="custID" id="custID" placeholder="Customer ID">
                     <div class="custIDinfo" style="display: none;">
                         <small id="custIDinfo"></small>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="location-select">Location</label>
-                    <select class="form-control col-sm-7" name="location-select" id="location-select">
+                    <select class="form-control" name="location-select" id="location-select">
 
                     </select>
                     <div class="locinfo" style="display: none;">
                         <small id="locinfo">You must select a location</small>
                     </div>
-                </div>  
+                </div>
+                <div class="form-group error" style="display: none;">
+
+                </div>
                 <div class="form-group" id="button" style="margin-top: 2rem;">
-                    <div class="col-sm-7">
+                    <div>
                         <a type='button' class='btn btn-primary rounded-lg get-orders form-control'>Get Orders</a>
                     </div>
                 </div>
                 <div class="form-group" id="place">
-                    <p>Want to place an order? <a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" id="order">Click Here</a></p>
+                    <p>Want to place an order? <a href="#"
+                            class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                            id="order">Click Here</a></p>
                 </div>
             </div>
 
             <div class="container-sm order-form" style="display: none;">
                 <h3 style="text-align: center; margin: 2rem auto 1rem auto;">Order</h3>
                 <div class="form-group order-id" style="display: none;">
-                    
+
                 </div>
                 <div class="form-group">
                     <label for="customerID">Customer ID</label>
-                    <input type="text" name="customerID" id="customerID" class="form-control col-sm-7"
-                        placeholder="Enter ID">
+                    <input type="text" name="customerID" id="customerID" class="form-control" placeholder="Enter ID">
                     <div class="customerIDinfo" style="display: none;">
                         <small id="customerIDinfo">Customer ID must be a number</small>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="">Item</label>
-                    <select class="form-control col-sm-7" name="item-select" id="item-select">
+                    <select class="form-control" name="item-select" id="item-select">
 
                     </select>
                     <div class="iteminfo" style="display: none;">
@@ -72,14 +77,14 @@
                 </div>
                 <div class="form-group">
                     <label for="count">Number of Items</label>
-                    <input type="text" name="count" id="count" class="form-control col-sm-7" placeholder="Count">
+                    <input type="text" name="count" id="count" class="form-control" placeholder="Count">
                     <div class="countinfo" style="display: none;">
                         <small id="countinfo">Number must be > 0</small>
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="">Payment Method [credit/debit/cash]</label>
-                    <select class="form-control col-sm-7" name="payment-select" id="payment-select">
+                    <select class="form-control" name="payment-select" id="payment-select">
 
                     </select>
                     <div class="paymentinfo" style="display: none;">
@@ -88,33 +93,49 @@
                 </div>
                 <div class="form-group">
                     <label for="location2-select">Location</label>
-                    <select class="form-control col-sm-7" name="location2-select" id="location2-select">
+                    <select class="form-control" name="location2-select" id="location2-select">
 
                     </select>
                     <div class="loc2info" style="display: none;">
                         <small id="loc2info">You must select a location</small>
                     </div>
                 </div>
+                <div class="form-group error" style="display: none;">
+
+                </div>
                 <div class="form-group button" id="button" style="margin-top: 2rem;">
-                    <div class="col-sm-7">
-                        <a type='button' class='btn btn-primary rounded-lg place-order form-control' id="send-order">Place Order</a>
+                    <div>
+                        <a type='button' class='btn btn-primary rounded-lg place-order form-control'
+                            id="send-order">Place Order</a>
                     </div>
                 </div>
                 <div class="form-group" id="place">
-                    <p>Want to retrieve old orders? <a href="#" class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover" id="order2">Click Here</a></p>
+                    <p>Want to retrieve old orders? <a href="#"
+                            class="link-primary link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+                            id="order2">Click Here</a></p>
                 </div>
             </div>
         </div>
-        <div class="container-sm order-output">
+        <div class="container-sm order-confirmation" style="display: none;">
+            <div class="container-sm order-status">
+
+            </div>
+            <div class="container-sm receipt">
+
+            </div>
+        </div>
+        <div class="container-sm order-output" style="display: none;">
             <div class="container-sm header" style="margin: 2rem auto 1rem auto;">
 
             </div>
             <div class="container-sm output">
 
             </div>
+            <div class="container-sm message" style="margin: 2rem auto 1rem auto;">
+
+            </div>
         </div>
     </div>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>

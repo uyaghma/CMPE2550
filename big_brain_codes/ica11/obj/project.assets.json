@@ -3223,23 +3223,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\uyghu\\.nuget\\packages\\": {},
+    "C:\\Users\\uyaghma1\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\uyghu\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica11\\ica11.csproj",
+      "projectUniqueName": "C:\\Users\\uyaghma1\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica11\\ica11.csproj",
       "projectName": "ica11",
-      "projectPath": "C:\\Users\\uyghu\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica11\\ica11.csproj",
-      "packagesPath": "C:\\Users\\uyghu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\uyghu\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica11\\obj\\",
+      "projectPath": "C:\\Users\\uyaghma1\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica11\\ica11.csproj",
+      "packagesPath": "C:\\Users\\uyaghma1\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\uyaghma1\\OneDrive - NAIT\\Semester 3\\CMPE2550\\big_brain_codes\\ica11\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\uyghu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\uyaghma1\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -3248,6 +3248,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3260,11 +3261,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -3295,7 +3291,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
   }
