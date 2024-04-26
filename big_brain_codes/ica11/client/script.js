@@ -239,6 +239,7 @@ $(document).ready(function () {
         $('.button').html(orderbutton);
         $('.order-status').html('');
         $('.receipt').html('');
+        $('.order-status').hide();
     })
 
     function SelectionSuccess(response) {
@@ -396,9 +397,7 @@ $(document).ready(function () {
                 <td colspan="2">${response['locName']}</td>
             </tr>
         </table>
-    
         <hr>
-    
         <table class="items">
             <tr>
                 <td class="bold">${response['itemName']}</td>
@@ -406,9 +405,7 @@ $(document).ready(function () {
                 <td class="right">${response['itemPrice']}</td>
             </tr>
         </table>
-    
         <hr>
-    
         <table class="totals">
             <tr>
                 <td colspan="3" class="small-font">Subtotal</td>

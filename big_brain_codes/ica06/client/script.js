@@ -11,6 +11,12 @@ $(document).ready(function () {
         var quantity = $("#quantity").val();
         var payment = $("#payment").val();
         
+        if (name == "" || location == "" || item == "" || quantity == 0 || payment == "")
+        {
+            $(".order-deets").html("Fields cannot be left empty!");
+            return;
+        }
+
         var data = {};
         data.name = name;
         data.location = location;

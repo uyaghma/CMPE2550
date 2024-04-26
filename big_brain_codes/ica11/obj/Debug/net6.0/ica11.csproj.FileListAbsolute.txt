@@ -141,9 +141,9 @@ C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Deb
 C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.ica11.props
 C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\staticwebassets.pack.json
 C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\scopedcss\bundle\ica11.styles.css
-C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\ica11.csproj.CopyComplete
 C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\ica11.dll
 C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\refint\ica11.dll
 C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\ica11.pdb
 C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\ica11.genruntimeconfig.cache
 C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\ref\ica11.dll
+C:\Users\uyghu\OneDrive - NAIT\Semester 3\CMPE2550\big_brain_codes\ica11\obj\Debug\net6.0\ica11.csproj.Up2Date
